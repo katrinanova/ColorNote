@@ -3,24 +3,24 @@
 ## New Session
 ![new-session]
 
-## Feed Show (landing page)
-![feed-show]
+## Notebook Show (landing page)
+![notebook-show]
 
-## Blog Show
-![blog-show]
+## Note New
+![note-new]
 
-## Post Show
-![post-show]
+## Notebook new
+![notebook_new]
 
-## Post Form
-![post-form]
+## Notebooks Index
+![notebooks-index]
 
 ## Search Results
 ![search-results]
 
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
+[new-session]: ./wireframes/session_new.jpg
+[notebook-show]: ./wireframes/notebook_show.jpg
+[note-new]: ./wireframes/note_new.jpg
+[notebook-new]: ./wireframes/notebook_new.jpg
+[notebooks-index]: ./wireframes/notebooks_index.jpg
 [search-results]: ./wireframes/search_results.png

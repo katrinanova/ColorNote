@@ -2,23 +2,21 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: http://
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+Colornote is a clone of Evernotr built on Rails and Backbone. Users can:
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
-
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] Create accounts
+- [ ] Create sessions (log in)
+- [ ] Create notebooks
+- [ ] Create notes in notebooks
+- [ ] Save or edit notes automatically
+- [ ] Add image to note
+- [ ] Add link to source of note if applicable
+- [ ] Share link to note
+- [ ] Share notebook
+- [ ] Typeahead search bar
 
 ## Design Docs
 * [View Wireframes][views]
@@ -29,63 +27,53 @@ Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
+### Phase 1: User Authentication (~1 day)
 I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
+App Academy. The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on to phase 2.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+### Phase 2: Creating Notebooks and Notes via Backbone (~2 days)
+I will add API routes to serve notebook and note data as JSON, then add Backbone models and collections that fetch data from those routes. The 'NotesShow' view will be implemented as Backbone composite view. By the end of this phase, users will be able to create notebook and notes inside a Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Editing and Displaying Notes (~2 days)
+I plan to use third-party libraries to add functionality to the `NoteForm` and
+`NoteShow` views in this phase. First I'll need to add a Markdown editor to the
+`NoteForm`, and make sure that the Markdown is properly escaped and formatted in
+the `NoteShow` view. I also plan to integrate Filepicker for file upload so
+users can add images to notes.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: Sharing Notes and Notebooks (~1-2 days)
+
+I will add a functionality to extract and hash the link to notebook
+or single note and send it via email.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Searching for Notes (~2 days)
+I'll need to add `search` routes to Notes controller. On the
+Backbone side, there will be a `SearchResults` composite view.
+This view will use notes collection, but it will fetch from
+the new `search` route.
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
-- [ ] Multiple sessions/session management
-- [ ] User avatars
-- [ ] Typeahead search bar
+- [ ] Add friends
+- [ ] Have public notes and private notes
+- [ ] Share notes with certain groups of friends
+- [ ] Make a screenshot of a webpage
+- [ ] Read/Create/Edit a note simultaneously with a friend
+- [ ] Leave comment for a note
+- [ ] Leave comment for a comment
+- [ ] Like note/comment
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
