@@ -1,4 +1,4 @@
-Colornote.Collections.Notebooks = Backbone.Collection.Extend({
+Colornote.Collections.Notebooks = Backbone.Collection.extend({
   url: 'api/notebooks',
 
   getOrFetch: function(id) {
