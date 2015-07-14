@@ -34,7 +34,7 @@ App Academy. The most important part of this phase will be pushing the app to He
 [Details][phase-one]
 
 ### Phase 2: Creating Notebooks and Notes via Backbone (~2 days)
-I will add API routes to serve notebook and note data as JSON, then add Backbone models and collections that fetch data from those routes. The 'NotesShow' view will be implemented as Backbone composite view. By the end of this phase, users will be able to create notebook and notes inside a Backbone app.
+I will add API routes to serve notebook and note data as JSON, then add Backbone models and collections that fetch data from those routes. The 'NotebooksShow' view will be implemented as Backbone composite view. By the end of this phase, users will be able to create notebook and notes inside a Backbone app.
 
 [Details][phase-two]
 

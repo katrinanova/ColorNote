@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   validates :password, length: { in: 6..12, allow_nil: true }
   validates :password_digest, presence: { message: "Password can't be blank." }
 
+  has_many :notebooks
+
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)
