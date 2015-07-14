@@ -6,7 +6,7 @@
 ## New Session
 ![new-session]
 
-## Notebook Show (landing page)
+## Notebook Show
 ![notebook-show]
 
 ## Notebook new
