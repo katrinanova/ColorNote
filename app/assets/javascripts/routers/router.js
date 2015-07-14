@@ -15,15 +15,13 @@ Colornote.Routers.Router = Backbone.Router.extend({
     this._currentView&&this._currentViews.remove;
     this._currentView = view;
     this.$rootEl.html(view.render().$el)
-  }
+  },
 
-  notesIndex: function() {
-    var view = new Colornote.Views.NotesIndex({notes: ColornoteNotes});
-
-
-  }
-  noteNew: function() {
-
-  }
+  // notesIndex: function() {
+  //   var view = new Colornote.Views.NotesIndex({notes: ColornoteNotes});
+  // },
+  //
+  // noteNew: function() {
+  // }
 
 })
