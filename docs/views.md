@@ -18,9 +18,10 @@
 ## Search Results
 ![search-results]
 
-[new-session]: ./wireframes/session_new.jpg
+[landing-page]: ./wireframes/landing_page.jpg
+[new-session]: ./wireframes/new_session.jpg
 [notebook-show]: ./wireframes/notebook_show.jpg
 [note-new]: ./wireframes/note_new.jpg
 [notebook-new]: ./wireframes/notebook_new.jpg
 [notebooks-index]: ./wireframes/notebooks_index.jpg
-[search-results]: ./wireframes/search_results.png
+[search-results]: ./wireframes/search_results.jpg
