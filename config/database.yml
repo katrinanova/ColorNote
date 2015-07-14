@@ -22,8 +22,14 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
-  database: color_note_development
+  adapter: postgresql
+  database: name_of_your_project_development
+  host: localhost
+  username: appacademy
+# development:
+#   <<: *default
+#   database: color_note_development
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
