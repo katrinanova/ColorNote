@@ -1,4 +1,4 @@
-class BoardsController < ApiController
+class BoardsController < ApplicationController
   def create
     @notebook = current_user.notebooks.new(notebook_params)
 
