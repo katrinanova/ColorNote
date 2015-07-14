@@ -8,8 +8,13 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   initialize: function() {
+    this.$rootEl = $("#main")
+  },
 
-    // this.$rootEl =
+  swapViews: function(view) {
+    this._currentView&&this._currentViews.remove;
+    this._currentView = view;
+    this.$rootEl.html(view.render().$el)
   }
 
   // notesIndex: function() {
@@ -17,5 +22,6 @@ Colornote.Routers.Router = Backbone.Router.extend({
   //
   //
   // }
+  noteNew: function
 
 })

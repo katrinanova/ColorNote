@@ -1,5 +1,5 @@
 Colornote.Collections.Notebooks = Backbone.Collection.extend({
-  url: 'api/notebooks',
+  url: '/api/notebooks',
 
   getOrFetch: function(id) {
     var that = this
