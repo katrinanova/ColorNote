@@ -1,8 +1,8 @@
 # Color-note
 
-[Heroku link][heroku]
+[https://colornote.herokuapp.com/][heroku]
 
-[heroku]: http://
+[heroku]: http://colornote.herokuapp.com/
 
 ## Minimum Viable Product
 Colornote is a clone of Evernotr built on Rails and Backbone. Users can:
