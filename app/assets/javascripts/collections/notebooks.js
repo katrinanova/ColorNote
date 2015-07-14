@@ -1,3 +1,19 @@
 Colornote.Collections.Notebooks = Backbone.Collection.Extend({
-  url: 'api/notebooks'
+  url: 'api/notebooks',
+
+  getOrFetch: function(id) {
+    var that = this
+    var notebook = this.get(id)
+    if (!notebook) {
+      notebook = new Colornote.Models.Notebook({id: id});
+      notobook.fetch({
+        success: function() {
+          that.add(notebook)
+        }
+      })
+    } else {
+      notebook.fetch();
+    }
+    return notebook;
+  }
 })
