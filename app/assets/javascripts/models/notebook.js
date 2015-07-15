@@ -1,3 +1,3 @@
-Colornote.Models.Notebooks = Backbone.Model.extend({
+Colornote.Models.Notebook = Backbone.Model.extend({
   urlRoot: '/api/notebooks'
 });
