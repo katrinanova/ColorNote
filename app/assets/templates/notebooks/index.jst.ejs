@@ -1,3 +1,11 @@
 <h2>NOTEBOOKS</h2>
 
 <a href="#/notebooks/new">Create Notebook</a>
+
+<ul>
+  <% notebooks.forEach(function(notebook){ %>
+    <li>
+      <a href="#/notebooks/<%= notebook.escape("id")%>"><%= notebook.escape("title") %></a>
+    </li>
+  <% }) %>
+</ul>
