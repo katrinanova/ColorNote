@@ -2,13 +2,17 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   template: JST["notebooks/new"],
 
   className: "notebook-new",
-  tagName: "form",
 
   events: {
     "submit form": "submit"
   },
 
+  initialize: function(){
+
+  },
+
   render: function() {
+    console.log("new notebook");
     var content = this.template({notebook: this.model});
     this.$el.html(content);
     return this;

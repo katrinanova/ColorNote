@@ -32,9 +32,10 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   notebookNew: function() {
+    debugger
     var notebook = new Colornote.Models.Notebook();
     var view = new Colornote.Views.NotebookNew({collection: Colornote.notebooks, model: notebook});
-    this._swapViews;
+    this._swapViews(view);
   },
 
   noteNew: function() {
@@ -44,6 +45,7 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   _swapViews: function(view) {
+    debugger
     this._currentView&&this._currentView.remove;
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
