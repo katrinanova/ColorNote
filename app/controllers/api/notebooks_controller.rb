@@ -23,7 +23,7 @@ class Api::NotebooksController < ApplicationController
   def show
     @notebook = Notebook.includes(:notes).find(params[:id])
 
-    if @notebook.id == current_user_id
+    if @notebook.user_id == current_user_id
       render :show
     else
       render json: ["You do not have an access to view this notebook"], status: 403

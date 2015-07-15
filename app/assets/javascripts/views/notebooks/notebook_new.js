@@ -4,7 +4,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   className: "notebook-new",
 
   events: {
-    "submit form": "submit"
+    "click .create": "submit"
   },
 
   initialize: function(){
@@ -19,9 +19,10 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   },
 
   submit: function(event) {
+    debugger
     var that = this
     event.preventDefault();
-    var params = this.$el.serializeJSON();
+    var params = this.$("form").serializeJSON();
     this.model.set(params);
     this.model.save({}, {
       success: function() {
