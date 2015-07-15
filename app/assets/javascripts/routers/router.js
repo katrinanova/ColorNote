@@ -1,6 +1,6 @@
 Colornote.Routers.Router = Backbone.Router.extend({
   routes: {
-    '': 'notesIndex',
+    'notes': 'notesIndex',
     'notebooks': 'notebooksIndex',
     'notebooks/new': 'notebookNew',
     'notes/new': 'noteNew',
@@ -26,7 +26,6 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   notebooksIndex: function() {
-    debugger
     Colornote.notebooks.fetch();
     var view = new Colornote.Views.NotebooksIndex({collection: Colornote.notebooks});
     this._swapViews(view);
@@ -45,7 +44,7 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   _swapViews: function(view) {
-    this._currentView&&this._currentViews.remove;
+    this._currentView&&this._currentView.remove;
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
   }
