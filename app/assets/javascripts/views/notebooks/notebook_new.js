@@ -1,0 +1,29 @@
+Colornote.Views.NotebookNew = Backbone.View.extend({
+  template: JST["notebooks/new"],
+
+  className: "notebook-new",
+  tagName: "form",
+
+  events: {
+    "submit form": "submit"
+  },
+
+  render: function() {
+    var content = this.template({notebook: this.model});
+    this.$el.html(content);
+    return this;
+  },
+
+  submit: function(event) {
+    var that = this
+    event.preventDefault();
+    var params = this.$el.serializeJSON();
+    this.model.set(params);
+    this.model.save({}, {
+      success: function() {
+        that.collection.add(that.model);
+        Backbone.history.navigate("notebooks/" + that.model.id, {trigger: true});
+      }
+    })
+  }
+});

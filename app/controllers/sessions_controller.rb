@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(*credentials)
     if @user
       login!(@user)
-      redirect_to user_url(@user)
+      redirect_to "/home"
     else
       flash.now[:notices] = ["Invalid credentials."]
       @user = User.new
