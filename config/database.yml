@@ -23,7 +23,7 @@ default: &default
 
 development:
   adapter: postgresql
-  database: name_of_your_project_development
+  database: color_note_development
   host: localhost
   username: appacademy
 # development:
