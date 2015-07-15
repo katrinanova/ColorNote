@@ -1,6 +1,10 @@
 <h2>CREATE NOTE</h2>
 
 <form>
+  <select name="notebook_id">
+  <% current_user.notebooks.forEach(function(notebook){ %>
+    <option value="<%= notebook.escape("id")%>"><%= notebook.escape("title")%></option>
+  <% }) %>
   <input type="text" name="title">
   <br>
   <textarea name="body"></textarea>
