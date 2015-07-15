@@ -4,7 +4,8 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   className: "notebook-new",
 
   events: {
-    "click .create": "submit"
+    "click .create": "submit",
+    "click .cancel": "back"
   },
 
   initialize: function(){
@@ -28,5 +29,11 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
         Backbone.history.navigate("notebooks/" + that.model.id, {trigger: true});
       }
     })
+  },
+
+  back: function() {
+    Backbone.history.navigate(
+    )
+
   }
 });

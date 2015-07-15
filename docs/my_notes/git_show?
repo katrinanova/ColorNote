@@ -1,0 +1,25 @@
+initial commit
+☀ ~/Desktop/color_note/colornote/app/assets$ cd ..
+☀ ~/Desktop/color_note/colornote/app$ cd ..
+☀ ~/Desktop/color_note/colornote$ ls
+Gemfile		Rakefile	config		docs		public
+Gemfile.lock	app		config.ru	lib		test
+README.md	bin		db		log		vendor
+☀ ~/Desktop/color_note/colornote$ cd spec
+-bash: cd: spec: No such file or directory
+☀ ~/Desktop/color_note/colornote$ cd app
+☀ ~/Desktop/color_note/colornote/app$ cd spec
+-bash: cd: spec: No such file or directory
+☀ ~/Desktop/color_note/colornote/app$ ;s
+-bash: syntax error near unexpected token `;'
+☀ ~/Desktop/color_note/colornote/app$ ls
+assets		controllers	helpers		mailers		models		views
+☀ ~/Desktop/color_note/colornote/app$ cd ..
+☀ ~/Desktop/color_note/colornote$ cd ..
+☀ ~/Desktop/color_note$ ls
+Gemfile		Rakefile	colornote	db		log		test
+Gemfile.lock	app		config		docs		public		tmp
+README.md	bin		config.ru	lib		spec		vendor
+☀ ~/Desktop/color_note$ git show HEAD~3:/app/assets/templates/notebooks/index.jst.ejs
+fatal: Path '/app/assets/templates/notebooks/index.jst.ejs' does not exist in 'HEAD~3'
+☀ ~/Desktop/color_note$ 
