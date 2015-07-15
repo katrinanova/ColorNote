@@ -1,4 +1,4 @@
-class NotesController < ApplicationController
+class Api::NotesController < ApplicationController
  before_action :require_notebook_member!
 
  def create

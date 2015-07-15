@@ -13,21 +13,22 @@ Colornote.Routers.Router = Backbone.Router.extend({
 
   // will include composite view - noteShow
   notesIndex: function() {
-    ColornoteNotes.fetch();
-    var view = new Colornote.Views.NotesIndex({collection: ColornoteNotes});
+    Colornote.notes.fetch();
+    var view = new Colornote.Views.NotesIndex({collection: Colornote.notes});
     this._swapViews(view);
   },
 
   // will include composite view - noteShow
   notebookShow: function(id) {
-    var notebook = ColornoteNotebooks.getOrFetch(id);
+    var notebook = Colornote.notebooks.getOrFetch(id);
     var view = new Colornote.Views.NotebookShow({model: notebook});
     this._swapViews;
   },
 
   notebooksIndex: function() {
-    ColornoteNotebooks.fetch();
-    var view = new Colornote.Views.NotebooksIndex({collection: ColornoteNotebooks});
+    debugger
+    Colornote.notebooks.fetch();
+    var view = new Colornote.Views.NotebooksIndex({collection: Colornote.notebooks});
     this._swapViews(view);
   },
 
@@ -47,6 +48,6 @@ Colornote.Routers.Router = Backbone.Router.extend({
     this._currentView&&this._currentViews.remove;
     this._currentView = view;
     this.$rootEl.html(view.render().$el);
-  },
+  }
 
 })

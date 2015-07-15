@@ -25,7 +25,7 @@ development:
   adapter: postgresql
   database: color_note_development
   host: localhost
-  username: appacademy
+
 # development:
 #   <<: *default
 #   database: color_note_development
