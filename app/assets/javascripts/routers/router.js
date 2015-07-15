@@ -20,7 +20,6 @@ Colornote.Routers.Router = Backbone.Router.extend({
 
   // will include composite view - noteShow
   notebookShow: function(id) {
-    debugger
     var notebook = Colornote.notebooks.getOrFetch(id);
     var view = new Colornote.Views.NotebookShow({model: notebook});
     console.log("swapping to show view");

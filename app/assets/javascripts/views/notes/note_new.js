@@ -1,7 +1,7 @@
-Colornote.Views.NotebookNew = Backbone.View.extend({
-  template: JST["notebooks/new"],
+Colornote.Views.NoteNew = Backbone.View.extend({
+  template: JST["notes/new"],
 
-  className: "notebook-new",
+  className: "note-new",
 
   events: {
     "click .create": "submit"
@@ -12,7 +12,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   },
 
   render: function() {
-    var content = this.template({notebook: this.model});
+    var content = this.template({note: this.model});
     this.$el.html(content);
     return this;
   },
@@ -25,7 +25,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
     this.model.save({}, {
       success: function() {
         that.collection.add(that.model);
-        Backbone.history.navigate("notebooks/" + that.model.id, {trigger: true});
+        Backbone.history.navigate("notes/" + that.model.id, {trigger: true});
       }
     })
   }
