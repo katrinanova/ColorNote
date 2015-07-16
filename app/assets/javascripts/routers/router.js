@@ -26,21 +26,23 @@ Colornote.Routers.Router = Backbone.Router.extend({
     this._swapViews(view);
   },
 
-  notebooksIndex: function(view) {
+  notebooksIndex: function() {
     Colornote.notebooks.fetch();
     var view = new Colornote.Views.NotebooksIndex({collection: Colornote.notebooks});
     this._swapViews(view);
   },
 
-  notebookNew: function(view) {
+  notebookNew: function() {
     var notebook = new Colornote.Models.Notebook();
     var view = new Colornote.Views.NotebookNew({collection: Colornote.notebooks, model: notebook});
     this._swapViews(view);
   },
 
-  noteNew: function(view) {
+  noteNew: function() {
+    debugger
+    var notebooks = Colornote.currentUser.get("notebooks");
     var note = new Colornote.Models.Note();
-    var view = new Colornote.Views.NoteNew({model: note});
+    var view = new Colornote.Views.NoteNew({model: note, collection: notebooks});
     this._swapViews(view);
   },
 

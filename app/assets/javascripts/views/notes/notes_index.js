@@ -1,4 +1,4 @@
-Colornote.Views.NotesIndex = Backbone.View.extend({
+Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   template: JST["notes/index"],
 
   className: "notes-index",

@@ -12,7 +12,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   render: function() {
-    var content = this.template({note: this.model});
+    var content = this.template({note: this.model, notebooks: this.collection});
     this.$el.html(content);
     return this;
   },
