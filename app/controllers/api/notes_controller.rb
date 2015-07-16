@@ -1,6 +1,11 @@
 class Api::NotesController < ApplicationController
  before_action :require_notebook_member!
 
+ def index
+   @notes = current_user.notes.all
+ end
+
+
  def create
    @note = current_notebook.notes.new(note_params)
 

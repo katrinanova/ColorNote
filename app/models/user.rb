@@ -1,3 +1,4 @@
+
 class User < ActiveRecord::Base
   attr_reader :password
 
@@ -11,9 +12,9 @@ class User < ActiveRecord::Base
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)
-    user_by_un = User.find_by_email(email)
-    return nil unless user_by_un
-    user_by_un.is_password?(password) ? user_by_un : nil
+    user = User.find_by_email(email)
+    return nil unless user
+    user.is_password?(password) ? user : nil
   end
 
   def self.generate_session_token

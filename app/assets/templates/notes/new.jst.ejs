@@ -2,7 +2,7 @@
 
 <form>
   <select name="notebook_id">
-  <% current_user.notebooks.forEach(function(notebook){ %>
+  <% Colornote.currentUser.get("notebooks").forEach(function(notebook){ %>
     <option value="<%= notebook.escape("id")%>"><%= notebook.escape("title")%></option>
   <% }) %>
   <input type="text" name="title">

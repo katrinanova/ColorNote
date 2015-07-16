@@ -2,6 +2,14 @@ class SessionsController < ApplicationController
 
   before_filter :require_current_user!, :only => [:destroy]
 
+  def show
+    if current_user
+      render :show
+    else
+      render json: {}
+    end
+  end
+
   def new
     @user = User.new
   end
