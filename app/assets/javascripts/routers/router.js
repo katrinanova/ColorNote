@@ -39,8 +39,7 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   noteNew: function() {
-    debugger
-    var notebooks = Colornote.currentUser.get("notebooks");
+    var notebooks = Colornote.currentUser.notebooks();
     var note = new Colornote.Models.Note();
     var view = new Colornote.Views.NoteNew({model: note, collection: notebooks});
     this._swapViews(view);

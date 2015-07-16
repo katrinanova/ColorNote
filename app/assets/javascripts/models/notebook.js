@@ -3,7 +3,7 @@ Colornote.Models.Notebook = Backbone.Model.extend({
 
   notes: function () {
     this._notes = this._notes ||
-      new Colornote.Collections.Notes([], { notebook: this }); //used it in collection
+      new Colornote.Collections.Notes(); 
     return this._notes;
   },
 

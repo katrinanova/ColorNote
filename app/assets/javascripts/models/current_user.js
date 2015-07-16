@@ -3,14 +3,14 @@ Colornote.Models.CurrentUser = Backbone.Model.extend({
 
   notebooks: function() {
     this._notebooks = this._notebooks ||
-      new Colornote.Collections.Notebooks([], {user: this})
-    return this._notes
+      new Colornote.Collections.Notebooks();   //([], {user: this})
+    return this._notebooks;
   },
 
   parse: function(load) {
     if (load.notebooks) {
       this.notebooks().set(load.notebooks);
-      delete load.notebooks
+      delete load.notebooks;
     }
     return load;
   }

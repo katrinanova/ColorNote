@@ -2,9 +2,9 @@ Colornote.Collections.Notes = Backbone.Collection.extend({
   url: '/api/notes',
   model: Colornote.Models.Note,
 
-  initialize: function(models, options) {
-    this.notebook = options.notebook
-  },
+  // initialize: function(models, options) {
+  //   this.notebook = options.notebook
+  // },
 
   getOrFetch: function(id) {
     var that = this
