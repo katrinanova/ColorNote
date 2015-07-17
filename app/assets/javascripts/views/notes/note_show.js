@@ -1,4 +1,4 @@
-Colornote.Views.NoteShow = Backbone.CompositeView.extend({
+Colornote.Views.NoteShow = Backbone.View.extend({
   template: JST["notes/show"],
 
   initialize: function() {
@@ -8,8 +8,6 @@ Colornote.Views.NoteShow = Backbone.CompositeView.extend({
   render: function() {
     var content = this.template({note: this.model});
     this.$el.html(content);
-    this.attachSubviews;
-
     return this;
   }
 })

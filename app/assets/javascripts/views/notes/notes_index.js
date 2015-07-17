@@ -5,16 +5,33 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   initialize: function() {
     this.listenTo(this.collection, "sync", this.render);
-    if (this.collection.length === 0) { return }
+  },
 
-    var note = this.collection.first();
-    var noteShowView = new Colornote.Views.NoteShow({model: note});
-    this.addSubview(".note-show", noteShowView);
+  events: {
+    "click .note-clickable": "switchNote"
   },
 
   render: function() {
     var content = this.template({notes: this.collection});
     this.$el.html(content);
+
+    if (!this.currentView && this.collection.length > 0) {
+      var note = this.collection.first();
+      this.currentNoteView = new Colornote.Views.NoteShow({model: note}); //?
+      this.addSubview(".note-show", this.currentNoteView);
+    }
+
+    this.attachSubviews();
+
     return this;
+  },
+
+  switchNote: function(event) {
+    event.preventDefault();
+    var id = $(event.currentTarget).attr("data-id");
+    var note = this.collection.getOrFetch(id);
+    this.removeSubview(".note-show", this.currentNoteView)
+    this.currentView = new Colornote.Views.NoteShow({model: note});
+    this.addSubview(".note-show", this.currentView)
   }
 })

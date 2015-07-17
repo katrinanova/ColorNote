@@ -1,8 +1,8 @@
 <h2>NOTES</h2>
 
-
-
 <% notes.forEach(function(note){ %>
-  <%= note.escape("title") %>
+  <div class="note-clickable" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></div>
   <br>
 <% }) %>
+
+<div class="note-show"></div>

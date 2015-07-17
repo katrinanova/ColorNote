@@ -13,7 +13,7 @@ Colornote.Views.NotebookShow = Backbone.CompositeView.extend({
   render: function() {
     var content = this.template({notebook: this.model});
     this.$el.html(content);
-    this.attachSubviews;
+    this.attachSubviews();
 
     return this;
   }

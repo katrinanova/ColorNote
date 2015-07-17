@@ -19,6 +19,11 @@ class Api::NotesController < ApplicationController
    end
  end
 
+ def show
+   @note = Note.find(params[:id])
+   render :show
+ end
+
  def destroy
    @note = Note.find(params[:id])
    @note.destroy
@@ -47,6 +52,6 @@ class Api::NotesController < ApplicationController
  end
 
  def note_params
-   params.require(:note).permit(:title, :notebook_id, :ord)
+   params.require(:note).permit(:title, :notebook_id, :body)
  end
 end

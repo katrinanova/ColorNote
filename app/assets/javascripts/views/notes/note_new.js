@@ -19,7 +19,6 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   submit: function(event) {
-        debugger
     var that = this
     event.preventDefault();
     var params = this.$("form").serializeJSON();
@@ -28,7 +27,6 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     this.model.save({}, {
       success: function() {
         that.collection.add(that.model);
-        debugger
         Backbone.history.navigate("notes/" + that.model.id, {trigger: true});
       }
     })
