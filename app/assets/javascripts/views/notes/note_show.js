@@ -1,12 +1,12 @@
 Colornote.Views.NoteShow = Backbone.View.extend({
   template: JST["notes/show"],
 
-  initialize: function() {
-    this.listenTo(this.model, "sync", function(this.model, resp, options){
-      if (options.silent) {
-        return } else {
-          this.render }.bind(this));
-  },
+  // initialize: function() {
+  //   this.listenTo(this.model, "sync", function(this.model, resp, options){
+  //     if (options.silent) {
+  //       return } else {
+  //         this.render }.bind(this));
+  // },
 
   events: {
     "keyup": "saveNote",
