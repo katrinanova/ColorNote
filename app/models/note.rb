@@ -1,4 +1,4 @@
 class Note < ActiveRecord::Base
-  validates :notebook_d, presence: true
+  validates :notebook_id, presence: true
   belongs_to :notebook
 end

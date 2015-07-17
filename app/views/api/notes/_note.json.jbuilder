@@ -1,1 +1,1 @@
-json.(note, :id, :title, :body, :noteboot_id)
+json.(note, :id, :title, :body, :notebook_id)

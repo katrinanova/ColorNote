@@ -22,7 +22,6 @@ Colornote.Routers.Router = Backbone.Router.extend({
   notebookShow: function(id) {
     var notebook = Colornote.notebooks.getOrFetch(id);
     var view = new Colornote.Views.NotebookShow({model: notebook});
-    console.log("swapping to show view");
     this._swapViews(view);
   },
 

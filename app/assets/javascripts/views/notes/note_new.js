@@ -4,11 +4,12 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   className: "note-new",
 
   events: {
-    "click .create": "submit"
+    "click .done-note": "submit"
   },
 
-  initialize: function(){
-
+  initialize: function() {
+    this.listenTo(this.collection, "sync", this.render);
+    this.listenTo(Colornote.currentUser, "sync", this.render)
   },
 
   render: function() {
@@ -18,13 +19,16 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   submit: function(event) {
+        debugger
     var that = this
     event.preventDefault();
     var params = this.$("form").serializeJSON();
+
     this.model.set(params);
     this.model.save({}, {
       success: function() {
         that.collection.add(that.model);
+        debugger
         Backbone.history.navigate("notes/" + that.model.id, {trigger: true});
       }
     })

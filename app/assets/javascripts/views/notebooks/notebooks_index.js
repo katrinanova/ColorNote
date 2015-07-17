@@ -6,11 +6,6 @@ Colornote.Views.NotebooksIndex = Backbone.View.extend({
 
   initialize: function() {
     this.listenTo(this.collection, "sync", this.render);
-    
-
-    var note = this.notes().first;
-    var noteShowView = new Colornote.Views.NoteShow({model: note});
-    this.addSubview(".note-show", noteShowView);
   },
 
   render: function() {
