@@ -1,6 +1,7 @@
 <h2>Show/edit note</h2>
 
-<%= note.escape("title") %>
-<br>
-<br>
-<%= note.escape("body") %>
+<form>
+  <input type="text" name="title" value=<%= note.escape("title")%>>
+  <br>
+  <textarea name="body"><%= note.escape("body")%></textarea>
+</form>

@@ -4,7 +4,8 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   className: "note-new",
 
   events: {
-    "click .done-note": "submit"
+    "click .done-note": "submit",
+    "click .cancel-note": "goBack"
   },
 
   initialize: function() {
@@ -30,5 +31,9 @@ Colornote.Views.NoteNew = Backbone.View.extend({
         Backbone.history.navigate("notes/" + that.model.id, {trigger: true});
       }
     })
+  },
+
+  goBack: function() {
+    window.history.back();
   }
 });

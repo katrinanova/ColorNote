@@ -15,9 +15,10 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     var content = this.template({notes: this.collection});
     this.$el.html(content);
 
-    if (!this.currentView && this.collection.length > 0) {
+
+    if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
       var note = this.collection.first();
-      this.currentNoteView = new Colornote.Views.NoteShow({model: note}); //?
+      this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
       this.addSubview(".note-show", this.currentNoteView);
     }
 
@@ -31,7 +32,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     var id = $(event.currentTarget).attr("data-id");
     var note = this.collection.getOrFetch(id);
     this.removeSubview(".note-show", this.currentNoteView)
-    this.currentView = new Colornote.Views.NoteShow({model: note});
-    this.addSubview(".note-show", this.currentView)
+    this.currentNoteView = new Colornote.Views.NoteShow({model: note});
+    this.addSubview(".note-show", this.currentNoteView)
   }
 })
