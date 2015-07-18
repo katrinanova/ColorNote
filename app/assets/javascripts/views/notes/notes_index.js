@@ -4,7 +4,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   className: "notes-index",
 
   initialize: function() {
-    this.listenTo(this.collection, "sync", this.render);
+    this.listenTo(this.collection, "sync reset", this.render);
   },
 
   events: {

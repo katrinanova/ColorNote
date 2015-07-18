@@ -6,6 +6,7 @@ window.Colornote = {
   Mixins: {},
   initialize: function() {
     Colornote.notes = new Colornote.Collections.Notes();
+    Colornote.notes.fetch();
     Colornote.notebooks = new Colornote.Collections.Notebooks();
     Colornote.currentUser = new Colornote.Models.CurrentUser();
     Colornote.currentUser.fetch();

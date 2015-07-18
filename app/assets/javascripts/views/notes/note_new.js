@@ -9,8 +9,9 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.listenTo(this.collection, "sync", this.render);
-    this.listenTo(Colornote.currentUser, "sync", this.render)
+    this.listenTo(this.collection, "sync add", this.render);
+    this.listenTo(Colornote.currentUser, "sync", this.render);
+    this.listenTo(Colornote.notebooks, "sync add", this.render);
   },
 
   render: function() {
@@ -28,7 +29,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     this.model.save({}, {
       success: function() {
         that.collection.add(that.model);
-        Backbone.history.navigate("notes/" + that.model.id, {trigger: true});
+        Backbone.history.navigate("", {trigger: true});
       }
     })
   },

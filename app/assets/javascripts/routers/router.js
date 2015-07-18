@@ -1,6 +1,6 @@
 Colornote.Routers.Router = Backbone.Router.extend({
   routes: {
-    'notes': 'notesIndex',
+    '': 'notesIndex',
     'notebooks': 'notebooksIndex',
     'notebooks/new': 'notebookNew',
     'notes/new': 'noteNew',
