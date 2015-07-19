@@ -8,14 +8,17 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     "click .cancel-note": "goBack"
   },
 
-  initialize: function() {
+  initialize: function(options) {
     this.listenTo(this.collection, "sync add", this.render);
     this.listenTo(Colornote.currentUser, "sync", this.render);
     this.listenTo(Colornote.notebooks, "sync add", this.render);
+
+    this.notebooks = options.notebooks;
   },
 
   render: function() {
-    var content = this.template({note: this.model, notebooks: this.collection});
+    console.log("render NoteNew");
+    var content = this.template({note: this.model, notebooks: Colornote.notebooks});
     this.$el.html(content);
     return this;
   },

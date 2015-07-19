@@ -1,13 +1,25 @@
 <h2>CREATE NOTE</h2>
 
 <form>
+  <label>Select notebook:
   <select name="notebook_id">
   <% notebooks.forEach(function(notebook){ %>
     <option value="<%= notebook.escape("id")%>"><%= notebook.escape("title")%></option>
   <% }) %>
-  <input type="text" name="title">
+</select>
+</label>
+  <label>Select color:
+  <select name="color">
+    <option value="">None</option>
+    <option value="R">RED</option>
+    <option value="B">BLUE</option>
+    <option value="G">GREEN</option>
+  </select>
+</label>
   <br>
-  <textarea name="body"></textarea>
+  <input type="text" name="title" placeholder="Title your note">
+  <br>
+  <textarea name="body" placeholder="Drag files here or just start typing..."></textarea>
   <button class="cancel-note">Cancel</button>
   <button class="done-note">Done</button>
 </form>

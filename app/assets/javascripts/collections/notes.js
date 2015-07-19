@@ -6,8 +6,8 @@ Colornote.Collections.Notes = Backbone.Collection.extend({
   //   this.notebook = options.notebook
   // },
 
-  comparator: function(post) {
-    return - new Date(post.get('updated_at')).getTime();
+  comparator: function(note) {
+    return - new Date(note.get('updated_at')).getTime();
   },
 
   getOrFetch: function(id) {

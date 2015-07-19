@@ -32,7 +32,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     var id = $(event.currentTarget).attr("data-id");
     var note = this.collection.getOrFetch(id);
     this.removeSubview(".note-show", this.currentNoteView)
-    this.currentNoteView = new Colornote.Views.NoteShow({model: note});
+    this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection});
     this.addSubview(".note-show", this.currentNoteView)
   }
 })
