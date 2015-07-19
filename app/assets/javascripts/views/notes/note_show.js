@@ -13,10 +13,12 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   // },
 
   initialize: function() {
-    this.listenTo(this.model, "sync", function(){
-      if (this.silent) {
-        return } else {
-          this.render }}.bind(this));
+    this.listenTo(Colornote.notebooks, "sync", this.render);
+    this.listenTo(this.model, "sync", this.render);
+    // this.listenTo(this.model, "sync", function(){
+    //   if (this.silent) {
+    //     return } else {
+    //       this.render }}.bind(this));
   },
 
 
@@ -26,8 +28,16 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   },
 
   render: function() {
-    console.log("rendering")
-    var content = this.template({note: this.model});
+    console.log("render NoteShow")
+    var notebook_id = this.model.get("notebook_id");
+    // var notebook = Colornote.notebooks.getOrFetch(notebook_id);
+    // why I get in inf loop? if I fetch notebook sync triggered on collection?
+    var notebook = Colornote.notebooks.get(notebook_id);
+    var theRest = Colornote.notebooks.clone()
+    theRest.remove(notebook);
+    var content = this.template({note: this.model, notebook_id: notebook_id, notebook: notebook, theRest: theRest});
+    // it gives me Cannot read property 'escape' of undefined
+    // but later rerenders ok
     this.$el.html(content);
     return this;
   },

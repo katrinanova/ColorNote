@@ -21,6 +21,8 @@ Colornote.Routers.Router = Backbone.Router.extend({
   // will include composite view - noteShow
   notebookShow: function(id) {
     var notebook = Colornote.notebooks.getOrFetch(id);
+    // notebook does not have tytle in attributes? still fetching?
+    //why Colornote.Notebooks empty?
     var view = new Colornote.Views.NotebookShow({model: notebook});
     this._swapViews(view);
   },

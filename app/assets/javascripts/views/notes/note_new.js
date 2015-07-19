@@ -38,6 +38,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   goBack: function() {
+    debugger
     window.history.back();
   }
 });

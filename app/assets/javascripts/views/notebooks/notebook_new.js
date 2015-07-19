@@ -5,7 +5,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
 
   events: {
     "click .create": "submit",
-    "click .cancel": "back"
+    "click .cancel": "goBack"
   },
 
   initialize: function(){
@@ -32,9 +32,8 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
     })
   },
 
-  back: function() {
-    Backbone.history.navigate(
-    )
-
+  goBack: function() {
+    debugger
+    window.history.back();
   }
 });
