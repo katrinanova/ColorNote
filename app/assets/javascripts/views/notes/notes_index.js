@@ -4,7 +4,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   className: "notes-index",
 
   initialize: function() {
-    this.listenTo(this.collection, "sync reset", this.render);
+    this.listenToOnce(this.collection, "sync", this.render);
   },
 
   events: {
@@ -21,8 +21,10 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
     if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
       var note = this.collection.first();
+      // note.fetch();
       this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
       this.addSubview(".note-show", this.currentNoteView);
+      console.log(this.currentNoteView)
     }
 
     this.attachSubviews();

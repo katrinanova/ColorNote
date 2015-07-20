@@ -1,23 +1,28 @@
-<% console.log("notes in notes_index: ") %>
-<% console.log(notes) %>
+<div class="right">
+  <h2>EDIT NOTE</h2>
 
-
-{"notes":[{"id":1,"title":"title!","body":null,"notebook_id":1},{"id":2,"title":"423rqw","body":null,"notebook_id":1}]}
-
-[{"id":1,"notebook_id":1,"title":"title!","body":null,"created_at":"2015-07-17T14:25:12.484Z","updated_at":"2015-07-17T14:25:54.658Z"},{"id":2,"notebook_id":1,"title":"423rqw","body":null,"created_at":"2015-07-17T14:58:19.886Z","updated_at":"2015-07-17T14:58:19.886Z"}]
-
-
-
-<h2>Show/edit note</h2>
-
-<%= note.escape("title") %>
-<br>
-<br>
-<%= note.escape("body") %>
-
-events: {
-  "keyup:title keydown:title keyup:title keydown:title": "saveNote"
-},
+  <form>
+  <label>Move note:
+  <select name="notebook_id">
+    <option value="<%= notebook_id %>" selected><%= notebook.escape("title") %></option>
+  <% theRest.forEach(function(notebook){ %>
+    <option value="<%= notebook.escape("id")%>"><%= notebook.escape("title")%></option>
+  <% }) %>
+  </select>
+  </label>
+  <label>Change color:
+  <select name="color">
+    <option value="">None</option>
+    <option value="R">RED</option>
+    <option value="B">BLUE</option>
+    <option value="G">GREEN</option>
+  </select>
+  <br>
+  </label>
+    <input class="note-title" type="text" name="title" value=<%= note.escape("title")%>>
+    <br>
+    <textarea class="note-body" name="body"><%= note.escape("body")%></textarea>
+  </form>
 
 
 <header>
