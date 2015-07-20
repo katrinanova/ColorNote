@@ -14,6 +14,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   render: function() {
     var content = this.template({notes: this.collection});
     this.$el.html(content);
+    if (this.collection.length === 0) {
+      this.$(".left").addClass("stretch")
+    }
 
 
     if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
