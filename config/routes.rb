@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :notebooks, except: :edit
     resources :notes
   end
+
+  get "/auth/:provider/callback", to: "sessions#omni"
 end

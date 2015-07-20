@@ -27,10 +27,22 @@ class SessionsController < ApplicationController
     end
   end
 
+  def omni
+    @user = User.find_or_create_by_auth_hash(auth_hash)
+    login!(@user)
+    redirect_to "/home"
+  end
+
   def destroy
     current_user.reset_session_token!
     session[:session_token] = nil
     redirect_to new_session_url
+  end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
 
 end

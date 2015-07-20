@@ -1,5 +1,5 @@
 class Notebook < ActiveRecord::Base
-  validates :title, uniqueness: true
+  validates :title, uniqueness: { scope: :user_id }
 
   belongs_to :user
   has_many :notes
