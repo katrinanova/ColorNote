@@ -1,18 +1,26 @@
-<ul class="sidebar">
-  <li>
-    <a href="#/notes/new">New Note</a>
-  </li>
-  <li>
-    <a href="#">Notes</a>
-  </li>
-  <li>
-    <a href="#/notebooks">Notebooks</a>
-  </li>
-  <li>
-    <a href="#/notebooks/new">Create Notebook</a>
-  </li>
-</ul>
 
-<div id="main"></div>
+  <div class="sidebar">
+    <ul class="commands">
+      <li>
+        <a href="#/notes/new">New Note</a>
+      </li>
+      <li>
+        <a href="#">Notes</a>
+      </li>
+      <li>
+        <a href="#/notebooks">Note books</a>
+      </li>
+      <li>
+        <a href="#/notebooks/new">New Note book</a>
+      </li>
+    </ul>
+
+    <div class="logout">
+      <%= button_to "Log Out", session_url, :method => :delete %>
+    </div>
+  </div>
+
+  <div id="main"></div>
+
 
 <script>$(Colornote.initialize);</script>

@@ -13,3 +13,167 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /*Reset CSS*/
+ html, body, div, ul, li, form, input, button, label, a,
+ select, textarea, label {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font: inherit;
+   box-sizing: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   color: inherit;
+   background: transparent;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ html {
+   background: yellow;
+   height: 100%;
+   overflow: hidden;
+ }
+
+ body {
+
+   height:100%;
+   position: relative;
+   overflow: hidden;
+   font-family: sans-serif;
+   color: grey;
+
+
+ }
+
+ .group:after {
+   display: block;
+   content: "";
+   clear: both;
+ }
+
+/*Sidebar-----------------------------*/
+
+ .sidebar {
+   background: #4db0de;
+
+   position: absolute;
+   width: 70px;
+   height: 100%;
+   overflow: auto;
+
+ }
+
+ a {
+   display: block;
+   margin: 20px;
+   color: white;
+ }
+
+ .logout {
+   color: white;
+   margin: 20px;
+   display: inline;
+   bottom: 0;
+   /*why body is not parent?*/
+ }
+
+ #main {
+   position: absolute;
+   left:70px;
+   width: 100%;
+   background: orange;
+   height: 100%;
+
+ }
+
+ /*Left side----------------------------*/
+
+ .left {
+   border-left: 2px solid darkgrey;
+   border-right: 2px solid darkgrey;
+   position: absolute;
+   left:0px;
+   width: 450px;
+   background: white;
+   z-index: 1;
+   height: 100%;
+   /*why body is not parent?*/
+ }
+
+ h2 {
+   background: #8bd3b2;
+   color: white;
+   padding: 18px;
+   border-top: 2px solid #4db0de;
+   border-bottom: 2px solid #4db0de;
+ }
+
+
+
+ .note-clickable {
+   padding: 20px;
+   display: block;
+   border-bottom: 1px solid darkgrey;
+ }
+
+ .note-clickable:hover {
+   background: #8bd3b2;
+   color: #4db0de;
+   font-weight: bold;
+ }
+
+ .note-count {
+   color: #4db0de;
+   padding: 20px;
+   display: block;
+   border-bottom: 1px solid darkgrey;
+ }
+
+
+/*Right side--------------*/
+
+ .right {
+   top:0px;
+   position: absolute;
+   display:block;
+   left: 450px;
+   width: 100%;
+   background: white;
+   height: 100%;
+   /*why body is not parent?*/
+ }
+
+ form {
+   margin: 20px;
+ }
+
+ .note-title {
+   color: #4db0de;
+   margin: 20px;
+   font-size: 18px;
+ }
+
+ textarea {
+   color: grey;
+   border: none;
+   font-size: 16px;
+   margin: 0 20px;
+ }
+
+
+
+ /*.all-content {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: red;

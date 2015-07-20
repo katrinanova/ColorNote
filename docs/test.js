@@ -18,3 +18,15 @@
 events: {
   "keyup:title keydown:title keyup:title keydown:title": "saveNote"
 },
+
+
+<header>
+  <% if flash[:notices] %>
+    <div class="notices">
+      <% flash[:notices].each do |msg| %>
+        <p><b><%= msg %></b></p>
+      <% end %>
+    </div>
+  <% end %>
+
+</header>
