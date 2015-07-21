@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
   end
 
   def omni
+    print "session omni"
     @user = User.find_or_create_by_auth_hash(auth_hash)
     login!(@user)
     redirect_to "/home"

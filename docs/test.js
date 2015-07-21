@@ -1,3 +1,26 @@
+<div class="left">
+
+  <h2>NOTES</h2>
+
+
+  <% if (notes.length === 1) { %>
+    <div class="note-count">1 note</div>
+  <% } else { %>
+    <div class="note-count"><%= notes.length %> notes</div>
+  <% } %>
+
+  <ul class="notes-clickable">
+  <% notes.forEach(function(note){ %>
+    <li class="note-clickable" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
+  <% }) %>
+  </ul>
+</div>
+
+<div class="note-show"></div>
+
+
+
+
 <div class="right">
   <h2>EDIT NOTE</h2>
 

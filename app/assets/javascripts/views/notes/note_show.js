@@ -1,17 +1,6 @@
 Colornote.Views.NoteShow = Backbone.View.extend({
   template: JST["notes/show"],
 
-  // initiaize: function(){
-  //   this.listenTo(this.model, "sync", this.render)
-  // },
-  //
-  // initialize: function() {
-  //   this.listenTo(this.model, "sync", function(this.model, resp, options){
-  //     if (options.silent) {
-  //       return } else {
-  //         this.render }.bind(this));
-  // },
-
   initialize: function(options) {
     this.listenTo(Colornote.notebooks, "sync", this.render);
     this.listenTo(this.model, "sync", function() {
@@ -21,12 +10,8 @@ Colornote.Views.NoteShow = Backbone.View.extend({
       } else {
       this.render();
     };
+  });
     this.book = options.book;
-    })
-    // this.listenTo(this.model, "sync", function(){
-    //   if (this.silent) {
-    //     return } else {
-    //       this.render }}.bind(this));
   },
 
 
