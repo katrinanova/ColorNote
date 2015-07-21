@@ -32,6 +32,8 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
     })
   },
 
+
+
   goBack: function(event) {
     event.preventDefault();
     window.history.back();

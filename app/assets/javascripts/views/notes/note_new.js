@@ -23,16 +23,25 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     return this;
   },
 
-  submit: function(event) {
-    var that = this
-    event.preventDefault();
-    var params = this.$("form").serializeJSON();
 
-    this.model.set(params);
-    this.model.save({}, {
+  submit: function(event) {
+    event.preventDefault();
+
+    var title = this.$("#note-title").val();
+    var body = this.$("#note-body").val();
+    var file = this.$("#note-file")[0].files[0];
+
+    var formData = new FormData();
+    formData.append("note[title]", title);
+    formData.append("note[body]", body);
+    //how do I upload to different tables?
+    formData.append("upload[uploded]", file)
+
+    var that = this
+    this.model.saveFormData(formData, {
       success: function() {
         that.collection.add(that.model);
-        Backbone.history.navigate("", {trigger: true});
+        Backbone.history.navigate("notebooks/" + that.model.id, {trigger: true});
       }
     })
   },

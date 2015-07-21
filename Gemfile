@@ -31,6 +31,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk', '~> 1.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

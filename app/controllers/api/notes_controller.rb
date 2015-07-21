@@ -11,6 +11,9 @@ class Api::NotesController < ApplicationController
 
  def create
    @note = current_notebook.notes.new(note_params)
+   if params[:upload]
+     @note.uploads.new(uploaded: params[:upload][:uploded])
+   end
 
    if @note.save
      render json: @note
@@ -32,6 +35,9 @@ class Api::NotesController < ApplicationController
 
  def update
    @note = current_notebook.notes.find(params[:id])
+   if params[:upload]
+     @note.uploads.new(uploaded: params[:upload][:uploded])
+   end
 
    if @note.update_attributes(note_params)
      render json: @note
@@ -53,5 +59,8 @@ class Api::NotesController < ApplicationController
 
  def note_params
    params.require(:note).permit(:title, :notebook_id, :body)
+
  end
+
+
 end
