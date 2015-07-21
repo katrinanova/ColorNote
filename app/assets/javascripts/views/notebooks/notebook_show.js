@@ -7,9 +7,9 @@ Colornote.Views.NotebookShow = Backbone.CompositeView.extend({
     this.notes = this.model.notes();
     this.notes.sort();
 
-    var notesView = new Colornote.Views.NotesIndex({collection: this.notes});
+    var notesView = new Colornote.Views.NotesIndex({collection: this.notes, book: true});
     //notes are empty, but by the time I pass them to noteShow they are full?
-    this.addSubview(".notes", notesView);
+    this.addSubview("#notes", notesView);
   },
 
   render: function() {

@@ -5,7 +5,7 @@
 <ul>
   <% notebooks.forEach(function(notebook){ %>
     <li>
-      <a href="#/notebooks/<%= notebook.escape("id")%>"><%= notebook.escape("title") %></a>
+      <a class="notebook-clickable" href="#/notebooks/<%= notebook.escape("id")%>"><%= notebook.escape("title") %></a>
     </li>
   <% }) %>
 </ul>

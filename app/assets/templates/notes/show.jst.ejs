@@ -1,5 +1,5 @@
 <div class="right">
-  <h2>EDIT NOTE</h2>
+  <h2>Type here, it saves automatically...</h2>
 
   <form>
   <label>Move note:
@@ -19,7 +19,7 @@
   </select>
   <br>
   </label>
-    <input class="note-title" type="text" name="title" value=<%= note.escape("title")%>>
+    <input id="note-title" type="text" name="title" value=<%= note.escape("title")%>>
     <br>
     <textarea class="note-body" name="body"><%= note.escape("body")%></textarea>
   </form>

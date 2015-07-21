@@ -12,7 +12,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   //         this.render }.bind(this));
   // },
 
-  initialize: function() {
+  initialize: function(options) {
     this.listenTo(Colornote.notebooks, "sync", this.render);
     this.listenTo(this.model, "sync", function() {
       if (this.silent) {
@@ -20,7 +20,8 @@ Colornote.Views.NoteShow = Backbone.View.extend({
         return;
       } else {
       this.render();
-      }
+    };
+    this.book = options.book;
     })
     // this.listenTo(this.model, "sync", function(){
     //   if (this.silent) {
@@ -35,7 +36,6 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   },
 
   render: function() {
-    console.log("render NoteShow")
     // var notebook_id = this.model.get("notebook_id");
 
     // var notebook = Colornote.notebooks.getOrFetch(notebook_id);
@@ -51,7 +51,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     // it gives me Cannot read property 'escape' of undefined
     // but later rerenders ok
 
-    var content = this.template({note: this.model, notebook: notebook, theRest: theRest});
+    var content = this.template({note: this.model, notebook: notebook, theRest: theRest, book: this.book});
 
     this.$el.html(content);
     return this;
