@@ -26,8 +26,8 @@ Colornote.Models.Note = Backbone.Model.extend({
       success: function(resp) {
         model.set(model.parse(resp));
         model.trigger('sync', model, resp, options);
-        ooptions.success && options.success(model, resp, options);
-        //when was model saved?
+        options.success && options.success(model, resp, options); // do i have to pass model resp option?
+        //when was model saved? options?
       },
       error: function(resp) {
         options.error && options.errorr(model, resp, options);

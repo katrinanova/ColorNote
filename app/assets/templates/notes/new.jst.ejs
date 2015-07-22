@@ -2,9 +2,15 @@
 
 <form class="create-note">
   <label>Select notebook:
-  <select name="notebook_id">
+  <select id="note-notebook-id" name="notebook_id">
+
   <% notebooks.forEach(function(notebook){ %>
-    <option value="<%= notebook.escape("id")%>"><%= notebook.escape("title")%></option>
+    <% console.log("first: " + notebooks.first().escape("id")) %>
+    <% if (notebook === notebooks.first()) { %>
+      <option value='<%= notebooks.first().escape("id")%>' selected><%= notebooks.first().escape("title")%></option> %>
+      <% } else { %>
+     <option value='<%= notebook.escape("id")%>'><%= notebook.escape("title")%></option>
+     <% } %>
   <% }) %>
 </select>
 </label>
@@ -20,7 +26,7 @@
   <input id="note-title" type="text" name="title" placeholder="Title your note">
   <br>
   <textarea id="note-body" name="body" placeholder="Drag files here or just start typing..."></textarea>
-  <input id="note-file" type="file" name="upload" placeholder="file placeholder">
+  <input id="note-file" type="file" name="upload">
   <button class="cancel-note">Cancel</button>
   <button class="done-note">Done</button>
 </form>

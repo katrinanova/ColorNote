@@ -10,7 +10,7 @@ class Api::NotesController < ApplicationController
 
 
  def create
-   @note = current_notebook.notes.new(note_params)
+   @note = Note.new(note_params)
    if params[:upload]
      @note.uploads.new(uploaded: params[:upload][:uploded])
    end
@@ -34,7 +34,10 @@ class Api::NotesController < ApplicationController
  end
 
  def update
-   @note = current_notebook.notes.find(params[:id])
+  #  do I need current_notebook? @note = current_notebook.notes.find(params[:id])
+
+   @note = Note.find(params[:id])
+
    if params[:upload]
      @note.uploads.new(uploaded: params[:upload][:uploded])
    end
@@ -49,6 +52,7 @@ class Api::NotesController < ApplicationController
  private
 
  def current_notebook
+  #  why it doesnt break
    if params[:id]
      @note = Note.find(params[:id])
      @notebook = @note.notebook

@@ -4,7 +4,7 @@
   <form>
   <label>Move note:
   <select name="notebook_id">
-    <option value="<%= notebook.escape("id") %>" selected><%= notebook.escape("title") %></option>
+    <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
   <% theRest.forEach(function(book){ %>
     <option value="<%= book.escape("id")%>"><%= book.escape("title")%></option>
   <% }) %>
