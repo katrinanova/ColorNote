@@ -18,7 +18,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   events: {
     "keyup": "saveNote",
     "keydown": "saveNote",
-    // "change #note-file": "saveNote"
+    "change #note-file": "saveNote"
   },
 
   render: function() {
