@@ -26,7 +26,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
 
   submit: function(event) {
     event.preventDefault();
-    debugger
+
 
     var notebook_id = this.$("#note-notebook-id").val();
     var title = this.$("#note-title").val();
@@ -37,7 +37,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     formData.append("note[notebook_id]", notebook_id)
     formData.append("note[title]", title);
     formData.append("note[body]", body);
-    //how do I upload to different tables?
+
     if (file) {
       console.log("in if")
       formData.append("upload[uploded]", file)

@@ -3,10 +3,13 @@
 
   <form>
   <label>Move note:
-  <select name="notebook_id">
+  <select id="note-notebook-id" name="notebook_id">
+  <% notebooks.forEach(function(book){ %>
+    <% if (book === notebook) { %>
     <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
-  <% theRest.forEach(function(book){ %>
-    <option value="<%= book.escape("id")%>"><%= book.escape("title")%></option>
+    <% } else { %>
+    <option value='<%= book.escape("id")%>'><%= book.escape("title")%></option>
+    <% } %>
   <% }) %>
   </select>
   </label>
@@ -17,9 +20,17 @@
     <option value="B">BLUE</option>
     <option value="G">GREEN</option>
   </select>
-  <br>
   </label>
+   <br>
     <input id="note-title" type="text" name="title" value=<%= note.escape("title")%>>
-    <br>
-    <textarea class="note-body" name="body"><%= note.escape("body")%></textarea>
+  <br>
+      <input id="note-file" type="file" name="upload">
+  <br>
+  <br>
+    <textarea id="note-body" class="note-body" name="body"><%= note.escape("body")%></textarea>
+<br>
+
   </form>
+  <br>
+
+  <section class="images"></section>

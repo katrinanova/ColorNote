@@ -13,7 +13,7 @@ Colornote.Models.Note = Backbone.Model.extend({
   },
 
   saveFormData: function(formData, options) {
-    debugger
+
     var method = this.isNew() ? "POST" : "PUT";
     var model = this;
 
@@ -25,7 +25,7 @@ Colornote.Models.Note = Backbone.Model.extend({
       contentType: false,
       success: function(resp) {
         model.set(model.parse(resp));
-        model.trigger('sync', model, resp, options);
+        model.trigger('sync', model, resp, options);//do i have to give trigger options? how they will help?
         options.success && options.success(model, resp, options); // do i have to pass model resp option?
         //when was model saved? options?
       },
