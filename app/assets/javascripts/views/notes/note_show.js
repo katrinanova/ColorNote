@@ -23,6 +23,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
   render: function() {
     console.log("rendering note show")
+    var that = this;
     // var notebook_id = this.model.get("notebook_id");
 
     // var notebook = Colornote.notebooks.getOrFetch(notebook_id);
@@ -40,11 +41,16 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
     var content = this.template({note: this.model, notebook: notebook, notebooks: Colornote.notebooks});
 
-    if (this.model.uploads) {
-
-    }
-
     this.$el.html(content);
+
+    this.model.get("uploads").forEach(function(upload) {
+      if (upload.ttype.match("image")) {
+        that.$(".images").append("<img src=" + upload.url + ">")
+      } else {
+        that.$(".files").append('<a href="' + upload.url + '">' + upload.name + '</a>')
+      }
+    })
+
     return this;
   },
 
@@ -57,8 +63,6 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
   saveNote: function(event) {
 
-
-
     var notebook_id = this.$("#note-notebook-id").val();
     var title = this.$("#note-title").val();
     var body = this.$("#note-body").val();
@@ -70,9 +74,10 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     formData.append("note[body]", body);
 
     if (file) {
-      console.log("in if")
       formData.append("upload[uploded]", file)
     }
+
+
 
     var that = this
 
@@ -84,16 +89,11 @@ Colornote.Views.NoteShow = Backbone.View.extend({
       contentType: false,
       success: function(resp) {
         that.model.set(that.model.parse(resp));
-        that.model.save({}, {
-          silent: true,
-          success: function() {
-            that.silent = true
 
-            that.collection.add(that.model, { merge: true })
-          }
-        });
+        if (file) { that.model.trigger("sync") };
+        that.collection.add(that.model, { merge: true })
+
       }
     })
-
   }
 });

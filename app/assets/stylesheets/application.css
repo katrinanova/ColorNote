@@ -180,7 +180,7 @@
    background: #fdff76;
    border-left: 2px solid darkgrey;
    border-right: 2px solid darkgrey;
-   position: absolute;
+
    left:0px;
    top: 0;
    bottom: 0;
@@ -189,6 +189,8 @@
    overflow: auto;
    /*why body is not parent?*/
  }
+
+
 
  h2 {
    background: #8bd3b2;
@@ -252,11 +254,15 @@
 
  form {
    padding:20px;
-   position: absolute;
    width: calc(100% - 70px);
    height: 100%;
+ }
 
-
+ .files {
+   z-index: 1;
+   background: red;
+   display: block;
+   width: 100px;
  }
 
  #note-title {
@@ -265,11 +271,6 @@
 
    font-size: 18px;
  }
-
- textarea {
-
-
-}
 
 
  .note-body {

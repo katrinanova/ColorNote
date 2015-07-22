@@ -1,5 +1,5 @@
 json.(@notebook, :id, :title)
 
 json.notes @notebook.notes do |note|
-  json.(note, :id, :title, :body, :notebook_id, :updated_at)
+  json.partial! 'api/notes/note', note: note
 end

@@ -42,7 +42,7 @@ class Api::NotesController < ApplicationController
    end
 
    if @note.update_attributes(note_params)
-     render json: @note
+     render :show
    else
      render json: @note.errors.full_messages, status: :unprocessable_entity
    end

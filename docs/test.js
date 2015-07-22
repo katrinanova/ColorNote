@@ -1,3 +1,55 @@
+saveNote: function(event) {
+
+  var notebook_id = this.$("#note-notebook-id").val();
+  var title = this.$("#note-title").val();
+  var body = this.$("#note-body").val();
+  var file = this.$("#note-file")[0].files[0];
+
+  var formData = new FormData();
+  formData.append("note[notebook_id]", notebook_id)
+  formData.append("note[title]", title);
+  formData.append("note[body]", body);
+
+  if (file) {
+    formData.append("upload[uploded]", file)
+  }
+
+
+
+  var that = this
+
+  $.ajax({
+    url: _.result(this.model, "url"),
+    type: "PUT",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function(resp) {
+      that.model.set(that.model.parse(resp));
+      that.model.save({}, {
+        success: function() {
+          if (!file) { that.silent = true };
+
+
+          that.collection.add(that.model, { merge: true })
+        }
+      });
+    }
+  })
+}
+
+
+
+
+
+
+
+
+json.upload_urls note.uploads do |upload|
+  asset_path(upload.uploaded.url(:original))
+end
+
+
 
 note show:
 
