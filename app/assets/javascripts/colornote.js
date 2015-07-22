@@ -11,6 +11,7 @@ window.Colornote = {
     Colornote.notebooks.fetch();
     Colornote.currentUser = new Colornote.Models.CurrentUser();
     Colornote.currentUser.fetch();
+    Colornote.colors = ["Red", "Blue", "Green", "None"]
     new Colornote.Routers.Router;
     Backbone.history.start();
   }

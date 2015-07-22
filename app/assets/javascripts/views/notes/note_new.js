@@ -9,9 +9,9 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   initialize: function(options) {
-    this.listenTo(this.collection, "sync", this.render);
+    // this.listenTo(this.collection, "sync", this.render);
     // this.listenTo(Colornote.currentUser, "sync", this.render);
-    // this.listenTo(Colornote.notebooks, "sync", this.render);
+    this.listenTo(Colornote.notebooks, "sync", this.render);
 
     this.notebooks = options.notebooks;
   },
@@ -25,10 +25,14 @@ Colornote.Views.NoteNew = Backbone.View.extend({
 
 
   submit: function(event) {
+
     event.preventDefault();
+
+        debugger
 
 
     var notebook_id = this.$("#note-notebook-id").val();
+    var color = this.$("#note-color").val();
     var title = this.$("#note-title").val();
     var body = this.$("#note-body").val();
     var file = this.$("#note-file")[0].files[0];
@@ -37,6 +41,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     formData.append("note[notebook_id]", notebook_id)
     formData.append("note[title]", title);
     formData.append("note[body]", body);
+    formData.append("note[color]", color);
 
     if (file) {
       console.log("in if")

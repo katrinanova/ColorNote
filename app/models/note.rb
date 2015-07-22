@@ -3,4 +3,5 @@ class Note < ActiveRecord::Base
   belongs_to :notebook
   has_many :note_uploads
   has_many :uploads, through: :note_uploads
+  
 end

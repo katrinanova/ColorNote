@@ -187,12 +187,14 @@
    width: 450px;
    height: 100%;
    overflow: auto;
-   /*why body is not parent?*/
+   /*why it has to be absolute for scroling to work?*/
  }
 
 
 
  h2 {
+
+   z-index: 1;
    background: #8bd3b2;
    color: white;
    font-size: 26px;

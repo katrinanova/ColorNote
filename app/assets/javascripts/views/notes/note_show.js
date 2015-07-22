@@ -18,7 +18,9 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   events: {
     "keyup": "saveNote",
     "keydown": "saveNote",
-    "change #note-file": "saveNote"
+    "change #note-file": "saveNote",
+    "change #note-notebook-id": "saveNote",
+    "change #note-color": "saveNote"
   },
 
   render: function() {
@@ -42,14 +44,15 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     var content = this.template({note: this.model, notebook: notebook, notebooks: Colornote.notebooks});
 
     this.$el.html(content);
-
-    this.model.get("uploads").forEach(function(upload) {
-      if (upload.ttype.match("image")) {
-        that.$(".images").append("<img src=" + upload.url + ">")
-      } else {
-        that.$(".files").append('<a href="' + upload.url + '">' + upload.name + '</a>')
-      }
-    })
+    if (this.model.get("uploads")) {
+      this.model.get("uploads").forEach(function(upload) {
+        if (upload.ttype.match("image")) {
+          that.$(".images").append("<img src=" + upload.url + ">")
+        } else {
+          that.$(".files").append('<a href="' + upload.url + '">' + upload.name + '</a>')
+        }
+      })
+    }
 
     return this;
   },
@@ -64,6 +67,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   saveNote: function(event) {
 
     var notebook_id = this.$("#note-notebook-id").val();
+    var color = this.$("#note-color").val();
     var title = this.$("#note-title").val();
     var body = this.$("#note-body").val();
     var file = this.$("#note-file")[0].files[0];
@@ -72,6 +76,8 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     formData.append("note[notebook_id]", notebook_id)
     formData.append("note[title]", title);
     formData.append("note[body]", body);
+    formData.append("note[color]", color);
+
 
     if (file) {
       formData.append("upload[uploded]", file)

@@ -4,6 +4,10 @@
   <form>
   <label>Move note:
   <select id="note-notebook-id" name="notebook_id">
+
+
+  
+
   <% notebooks.forEach(function(book){ %>
     <% if (book === notebook) { %>
     <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
@@ -11,19 +15,34 @@
     <option value='<%= book.escape("id")%>'><%= book.escape("title")%></option>
     <% } %>
   <% }) %>
+
+
+
   </select>
   </label>
   <label>Change color:
-  <select name="color">
-    <option value="">None</option>
-    <option value="R">RED</option>
-    <option value="B">BLUE</option>
-    <option value="G">GREEN</option>
+  <select id="note-color" name="color">
+    <% Colornote.colors.forEach(function(color){ %>
+      <% if (note.get("color") === color ) { %>
+        <option value="<%= color %>" selected><%= color %></option>
+      <% } else { %>
+        <option value="<%= color %>"><%= color %></option>
+      <% } %>
+    <% }) %>
+
   </select>
   </label>
    <br>
-    <input id="note-title" type="text" name="title" value=<%= note.escape("title")%>>
-  <br>
+
+   <input id="note-title" type="text" name="title" value=<%= note.escape("title")%>>
+ <br>
+
+   <section class="images"></section>
+
+   <section class="files"></section>
+   <br>
+
+
       <input id="note-file" type="file" name="upload">
   <br>
   <br>
@@ -32,7 +51,3 @@
 
   </form>
   <br>
-
-  <section class="images"></section>
-
-  <section class="files"></section>
