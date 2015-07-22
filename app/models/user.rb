@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: { message: "Password can't be blank." }
 
   has_many :notebooks
+  has_many :notes, through: :notebooks
 
   before_validation :ensure_session_token
 

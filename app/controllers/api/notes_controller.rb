@@ -1,10 +1,9 @@
 class Api::NotesController < ApplicationController
 
  def index
-   @notes = []
-   current_user.notebooks.each do |notebook|
-     @notes.concat(notebook.notes)
-   end
+
+  #  note include uploads!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! prefetch before iterating (jbuilder)
+   @notes = current_user.notes.includes(:uploads)
    render :index
  end
 

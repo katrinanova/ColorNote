@@ -9,9 +9,9 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   initialize: function(options) {
-    this.listenTo(this.collection, "sync add", this.render);
-    this.listenTo(Colornote.currentUser, "sync", this.render);
-    this.listenTo(Colornote.notebooks, "sync add", this.render);
+    this.listenTo(this.collection, "sync", this.render);
+    // this.listenTo(Colornote.currentUser, "sync", this.render);
+    // this.listenTo(Colornote.notebooks, "sync", this.render);
 
     this.notebooks = options.notebooks;
   },
@@ -38,7 +38,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     formData.append("note[title]", title);
     formData.append("note[body]", body);
     //how do I upload to different tables?
-    if (!typeof file === undefined) {
+    if (file) {
       console.log("in if")
       formData.append("upload[uploded]", file)
     }
