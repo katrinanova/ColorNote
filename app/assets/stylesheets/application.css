@@ -53,6 +53,7 @@
    color: grey;
 
 
+
  }
 
  .group:after {
@@ -181,8 +182,11 @@
    border-right: 2px solid darkgrey;
    position: absolute;
    left:0px;
+   top: 0;
+   bottom: 0;
    width: 450px;
    height: 100%;
+   overflow: auto;
    /*why body is not parent?*/
  }
 
@@ -241,8 +245,8 @@
    background: white;
    height: 100%;
    border-left: 2px solid darkgrey;
+   overflow: auto;
 
-   z-index: 2;
 
  }
 
@@ -264,13 +268,7 @@
 
  textarea {
 
-    border: none;
-    overflow: auto;
-    outline: none;
 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
 }
 
 
@@ -298,15 +296,6 @@
    width: 100%;
  }
 
-
-
- /*.all-content {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   background: #d03594;*/
-
-   /*Form-------------*/
 
 
    input[type="text"],

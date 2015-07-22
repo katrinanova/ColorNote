@@ -26,6 +26,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
 
   submit: function(event) {
     event.preventDefault();
+    debugger
 
     var title = this.$("#note-title").val();
     var body = this.$("#note-body").val();

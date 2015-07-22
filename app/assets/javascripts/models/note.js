@@ -13,6 +13,7 @@ Colornote.Models.Note = Backbone.Model.extend({
   },
 
   saveFormData: function(formData, options) {
+    debugger
     var method = this.isNew() ? "POST" : "PUT";
     var model = this;
 
