@@ -3,11 +3,11 @@ Colornote.Views.Search = Backbone.View.extend({
   initialize: function () {
     // this.bindScroll(); //infinite scroll?
     // Colornote.searchResults = new Colornote.Collections.SearchResults();
-    this.listenTo(Colornote.searchResults, "sync", this.render);
+    // this.listenTo(Colornote.searchResults, "sync", this.render);
   },
 
   events: {
-    "change .query": "search"
+    "submit .search-form": "search"
   },
 
   template: JST.search,

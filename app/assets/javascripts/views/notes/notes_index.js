@@ -47,23 +47,23 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     console.log("renderSearch")
     var content = this.template({notes: Colornote.searchResults, book: false});
 
-    this.$(".left").addClass("stretch")
+    // this.$(".left").addClass("stretch")
 
     this.$el.html(content);
 
-    // (typeof this.currentNoteView === "undefined") &&
-    //   Colornote.searchResults.forEach(function(result) {
-    //
-    //     if (result instanceof Colornote.Models.Note) {
-    //       var note = result
-    //       this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
-    //       this.addSubview(".note-show", this.currentNoteView);
-    //
-    //     } else {
-    //       this.$(".left").addClass("stretch")
-    //     }
-    //   })
-    //
+    (typeof this.currentNoteView === "undefined") &&
+      Colornote.searchResults.forEach(function(result) {
+
+        if (result instanceof Colornote.Models.Note) {
+          var note = result
+          this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
+          this.addSubview(".note-show", this.currentNoteView);
+
+        } else {
+          this.$(".left").addClass("stretch")
+        }
+      })
+
     this.attachSubviews();
 
     return this;
@@ -96,14 +96,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     }
 
     this.render();
-  },
-
-  search: function () {
-    console.log("searching")
-  },
-
-  fun: function () {}
-
+  }
 })
 
 // Comment

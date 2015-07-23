@@ -1,23 +1,6 @@
 class Note < ActiveRecord::Base
   include PgSearch
-  multisearchable against: [:title, :body],
-                  :using => {
-                    :tsearch => {:prefix => true}
-                    # :trigram => {}
-                  }
-
-  # multisearchable :whose_name_starts_with,
-  #               :against => :name,
-  #               :using => {
-  #                 :tsearch => {:prefix => true}
-  #               }
-# end
-#
-# multisearchable :search_any_word,
-#                 :against => [:title, :body],
-#                 :using => {
-#                   :tsearch => {:any_word => true}
-#                 }
+  multisearchable against: [:title, :body]
 
   validates :notebook_id, presence: true
   belongs_to :notebook
