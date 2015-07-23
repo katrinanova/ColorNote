@@ -159,6 +159,8 @@
 
  .logout {
 
+   background: url("exit.png");
+
    position: absolute;
    color: white;
    margin: 0px;
