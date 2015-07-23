@@ -42,7 +42,5 @@ module ColorNote
        :secret_access_key => ENV["s3_secret_access_key"]
      }
    }
-
-   config.assets.initialize_on_precompile = false
   end
 end
