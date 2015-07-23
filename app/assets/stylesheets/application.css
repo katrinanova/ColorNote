@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+ #search {
+   background: yellow;
+ }
  /*Reset CSS*/
  html, h2, h1, body, div, ul, li, form, input, button, label, a,
  select, textarea, label {

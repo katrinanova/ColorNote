@@ -1,3 +1,103 @@
+Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
+  template: JST["notes/index"],
+
+  className: "notes-index",
+
+  initialize: function(options) {
+    this.listenToOnce(this.collection, "sync", this.render);
+
+    this.searchResults = new Colornote.Collections.SearchResults();
+    this.listenTo(this.searchResults, "sync", this.render);
+
+    this.book = options.book || false;
+    this.search = false;
+  },
+
+  events: {
+    "click .note-clickable": "switchNote",
+    "click div#search": "toggleSearchView"
+  },
+
+  render: function(options) {
+    var content = this.template({notes: this.collection, book: this.book});
+    this.$el.html(content);
+    if (this.collection.length === 0) {
+      this.$(".left").addClass("stretch")
+    }
+
+
+    if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
+      var note = this.collection.first();
+      // note.fetch();
+      this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
+      this.addSubview(".note-show", this.currentNoteView);
+    }
+
+    this.attachSubviews();
+    debugger
+
+    return this;
+  },
+
+  switchNote: function(event) {
+    event.preventDefault();
+    var id = $(event.currentTarget).attr("data-id");
+    var note = this.collection.getOrFetch(id);
+    this.removeSubview(".note-show", this.currentNoteView)
+    this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection, book: this.book});
+    this.addSubview(".note-show", this.currentNoteView)
+  },
+
+  toggleSearchView: function(event) {
+    if (this.search) {
+      remove
+      this.search = false
+    } else {
+      var searchView = new Colornote.Views.Search()
+      this.addSubview(".search-window", searchView);
+      this.search = true
+    }
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Search for Note or Notebook:<h2>
+
+<input type="text" class="query">
+
+<section class="results">
+  <% results.forEach(function (result) { %>
+    <article>
+      <% if (result instanceof Colornote.Models.Note) { %>
+        Note: <%= result.escape("title") %>
+      <% } else { %>
+        Notebook: <%= result.escape("title")%>
+      <% } %>
+    </article>
+  <% }) %>
+</section>
+
+
+
+
+
+
+
+
+
+
 saveNote: function(event) {
 
   var notebook_id = this.$("#note-notebook-id").val();

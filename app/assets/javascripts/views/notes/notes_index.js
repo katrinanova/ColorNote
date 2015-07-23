@@ -5,19 +5,28 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   initialize: function(options) {
     this.listenToOnce(this.collection, "sync", this.render);
-    this.book = options.book || false
+
+    Colornote.searchResults = new Colornote.Collections.SearchResults();
+    this.listenTo(Colornote.searchResults, "sync", this.renderSearch);
+
+    this.book = options.book || false;
+    this.search = false;
   },
 
   events: {
-    "click .note-clickable": "switchNote"
+    "click .note-clickable": "switchNote",
+    "click #search": "toggleSearchView",
+    "change .query": "search"
   },
 
-  render: function() {
+  render: function(options) {
     var content = this.template({notes: this.collection, book: this.book});
-    this.$el.html(content);
+
     if (this.collection.length === 0) {
       this.$(".left").addClass("stretch")
     }
+
+    this.$el.html(content);
 
 
     if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
@@ -32,12 +41,64 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     return this;
   },
 
+  renderSearch: function() {
+    console.log("renderSearch")
+    var content = this.template({notes: Colornote.searchResults, book: false});
+
+    this.$(".left").addClass("stretch")
+
+    this.$el.html(content);
+
+    // (typeof this.currentNoteView === "undefined") &&
+    //   Colornote.searchResults.forEach(function(result) {
+    //
+    //     if (result instanceof Colornote.Models.Note) {
+    //       var note = result
+    //       this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
+    //       this.addSubview(".note-show", this.currentNoteView);
+    //
+    //     } else {
+    //       this.$(".left").addClass("stretch")
+    //     }
+    //   })
+    //
+    this.attachSubviews();
+
+    return this;
+
+  },
+
   switchNote: function(event) {
     event.preventDefault();
+    debugger
     var id = $(event.currentTarget).attr("data-id");
+    var type = $(event.currentTarget).attr("data-type");
+
+    if (type === "Notebook") {
+      Backbone.history.navigate("notebooks/" + id, {trigger: true})
+    }
+
     var note = this.collection.getOrFetch(id);
     this.removeSubview(".note-show", this.currentNoteView)
     this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection, book: this.book});
     this.addSubview(".note-show", this.currentNoteView)
+  },
+
+  toggleSearchView: function(event) {
+    if (this.search) {
+      this.removeSubview(".search-window", this.searchView)
+      this.search = false
+    } else {
+      this.searchView = new Colornote.Views.Search()
+      this.addSubview(".search-window", this.searchView);
+      this.search = true
+    }
+
+    this.render();
+  },
+
+  search: function () {
+    console.log("searching")
   }
+
 })

@@ -4,6 +4,12 @@
     <h2>NOTES</h2>
     <% } %>
 
+    <div id="search">
+      Search
+    </div>
+
+    <section class="search-window"></section>
+
 
   <% if (notes.length === 1) { %>
     <div class="note-count">1 note</div>
@@ -11,9 +17,17 @@
     <div class="note-count"><%= notes.length %> notes</div>
   <% } %>
 
+
+
   <ul class="notes-clickable">
   <% notes.forEach(function(note){ %>
-    <li class="note-clickable" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
+
+    <% if (note instanceof Colornote.Models.Note) { %>
+      <li class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
+    <% } else { %>
+      <% debugger %>
+      <li class="note-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: <%= note.escape("title")%>
+    <% } %>
   <% }) %>
   </ul>
 </div>

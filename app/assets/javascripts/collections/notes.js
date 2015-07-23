@@ -15,7 +15,7 @@ Colornote.Collections.Notes = Backbone.Collection.extend({
     var note = this.get(id)
     if (!note) {
       note = new Colornote.Models.Note({id: id});
-      notobook.fetch({
+      note.fetch({
         success: function() {
           that.add(note)
         }
