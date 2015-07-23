@@ -1,0 +1,15 @@
+<h2>Search for Note or Notebook:<h2>
+
+<input type="text" class="query">
+
+<section class="results">
+  <% results.forEach(function (result) { %>
+    <article>
+      <% if (result instanceof Colornote.Models.Note) { %>
+        Note: <%= result.escape("title") %>
+      <% } else { %>
+        Notebook: <%= result.escape("title")%>
+      <% } %>
+    </article>
+  <% }) %>
+</section>

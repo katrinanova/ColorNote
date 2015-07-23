@@ -6,10 +6,11 @@
   <select id="note-notebook-id" name="notebook_id">
 
 
-  
+
 
   <% notebooks.forEach(function(book){ %>
-    <% if (book === notebook) { %>
+
+    <% if (book.id === notebook.id) { %>
     <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
     <% } else { %>
     <option value='<%= book.escape("id")%>'><%= book.escape("title")%></option>
@@ -34,7 +35,7 @@
   </label>
    <br>
 
-   <input id="note-title" type="text" name="title" value=<%= note.escape("title")%>>
+   <input id="note-title" type="text" name="title" value="<%= note.escape("title")%>">
  <br>
 
    <section class="images"></section>

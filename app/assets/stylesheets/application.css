@@ -187,6 +187,7 @@
    width: 450px;
    height: 100%;
    overflow: auto;
+   /* make parents 100% !!! */
    /*why it has to be absolute for scroling to work?*/
  }
 

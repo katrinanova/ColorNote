@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resource :session, only: [:show, :new, :create, :destroy]
 
   namespace :api, defaults: { format: :json } do
+    get '/search', to: 'searches#search'
     resources :notebooks, except: :edit
     resources :notes
   end
