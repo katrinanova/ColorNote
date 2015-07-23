@@ -27,7 +27,6 @@
     <% if (note instanceof Colornote.Models.Note) { %>
       <li class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
     <% } else { %>
-      <% debugger %>
       <li class="note-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: <%= note.escape("title")%>
     <% } %>
   <% }) %>

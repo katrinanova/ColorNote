@@ -160,6 +160,8 @@
  .logout {
 
    background: url("exit.png");
+   width: 30px;
+   height: auto;
 
    position: absolute;
    color: white;

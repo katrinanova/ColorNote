@@ -10,7 +10,6 @@ Colornote.Collections.SearchResults = Backbone.Collection.extend({
   },
 
   model: function (attrs) {
-    debugger
     var type = attrs._type;
     delete attrs._type;
 

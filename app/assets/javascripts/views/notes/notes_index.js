@@ -23,7 +23,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     var content = this.template({notes: this.collection, book: this.book});
 
     if (this.collection.length === 0) {
+      this.$el.html(content);
       this.$(".left").addClass("stretch")
+      return this;
     }
 
     this.$el.html(content);
@@ -70,7 +72,6 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   switchNote: function(event) {
     event.preventDefault();
-    debugger
     var id = $(event.currentTarget).attr("data-id");
     var type = $(event.currentTarget).attr("data-type");
 
@@ -99,6 +100,10 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   search: function () {
     console.log("searching")
-  }
+  },
+
+  fun: function () {}
 
 })
+
+// Comment
