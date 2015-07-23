@@ -1,3 +1,75 @@
+
+.note-clickable,
+.notebook-clickable {
+  color: grey;
+  padding: 20px;
+  display: block;
+  border-bottom: 1px solid darkgrey;
+}
+
+.color {
+  background: red;
+  position: relative;
+  height: 50px;
+
+
+}
+
+
+<meta charset="utf-8" />
+
+<div class="left">
+
+<% if (!book) { %>
+    <h2>NOTES</h2>
+    <% } %>
+
+    <div id="search">
+      🔍
+    </div>
+
+    <section class="search-window"></section>
+
+
+  <% if (notes.length === 1) { %>
+    <div class="note-count">1 note</div>
+  <% } else { %>
+    <div class="note-count"><%= notes.length %> notes</div>
+  <% } %>
+
+
+
+  <ul class="notes-clickable">
+  <% notes.forEach(function(note){ %>
+
+    <% if (note instanceof Colornote.Models.Note) { %>
+      <li class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
+    <% } else { %>
+      <li class="note-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: <%= note.escape("title")%>
+    <% } %>
+  <% }) %>
+  </ul>
+</div>
+
+<div class="note-show"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   template: JST["notes/index"],
 

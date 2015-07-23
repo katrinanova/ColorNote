@@ -21,16 +21,22 @@
 
 
 
-  <ul class="notes-clickable">
+  <div class="notes-clickable">
   <% notes.forEach(function(note){ %>
 
     <% if (note instanceof Colornote.Models.Note) { %>
-      <li class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>"><%= note.escape("title") %></li>
+      <section class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>">
+        <div class="note-title"><%= note.escape("title") %></div>
+        <div class="note-body"><%= note.escape("body")%></div>
+        <div class='<%="color " + note.escape("color") %>'></div>
+      </section>
     <% } else { %>
-      <li class="note-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: <%= note.escape("title")%>
+      <section>
+        <div class="note-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: <%= note.escape("title")%></div>
+      </section>
     <% } %>
   <% }) %>
-  </ul>
+</div>
 </div>
 
 <div class="note-show"></div>

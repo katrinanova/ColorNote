@@ -225,9 +225,53 @@
  .note-clickable,
  .notebook-clickable {
    color: grey;
-   padding: 20px;
+   height: 60px;
    display: block;
    border-bottom: 1px solid darkgrey;
+   overflow: hidden;
+
+ }
+
+ .color {
+   display: none;
+   box-shadow: -9px 12px 5px -6px rgba(0,0,0,0.75);
+   bottom: 185px;
+   position: relative;
+   height: 200px;
+   left: 410px;
+   transform: rotate(-30deg);
+   overflow: hidden;
+
+ }
+
+ .color.Blue {
+   background: #4db0de;
+   display: block;
+
+ }
+
+ .color.Green {
+   background: #8bd3b2;
+   display: block;
+ }
+
+ .color.Red {
+   background: red;
+   display: block;
+ }
+
+ .note-title {
+   position: relative;
+   top: 15%;
+   left: 20px;
+   color: black;
+ }
+
+ .note-body {
+   position: relative;
+   top: 35%;
+   left: 20px;
+
  }
 
  .note-clickable:hover {
