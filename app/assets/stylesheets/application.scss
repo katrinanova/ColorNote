@@ -155,18 +155,28 @@
    display: block;
    margin: 20px;
    color: white;
+   font-size:30px;
+ }
+
+ #search {
+   font-size: 30px;
+   position: absolute;
+   left:-50px;
+   top: 250px;
+   z-index: 1;
+   background: transparent;
  }
 
  .logout {
-   background-image: image-url("exit.png");
    width: 30px;
    height: auto;
+   font-size: 30px;
 
    position: absolute;
    color: white;
    margin: 0px;
    display: inline;
-   bottom: 80px;
+   bottom: 0px;
    /*why body is not parent?*/
  }
 
@@ -199,15 +209,17 @@
 
 
  h2 {
-
-   z-index: 1;
-   background: #8bd3b2;
+   background: #80C229;
    color: white;
    font-size: 26px;
    font-weight: bold;
    padding: 18px;
    border-top: 2px solid #4db0de;
    border-bottom: 2px solid #4db0de;
+ }
+
+ h2.auto {
+   color: #80C229
  }
 
  #notes {
@@ -225,21 +237,24 @@
  .note-clickable,
  .notebook-clickable {
    color: grey;
-   height: 60px;
+   height: 83px;
    display: block;
    border-bottom: 1px solid darkgrey;
    overflow: hidden;
+   border-top: 4px solid white;
+   border-bottom: 4px solid white;
+
 
  }
 
  .color {
    display: none;
-   box-shadow: -9px 12px 5px -6px rgba(0,0,0,0.75);
-   bottom: 185px;
+   box-shadow: -5px -5px 5px 0px rgba(0,0,0,0.75);
+   bottom: 243px;
    position: relative;
    height: 200px;
-   left: 410px;
-   transform: rotate(-30deg);
+   left: 400px;
+   transform: rotate(-44deg);
    overflow: hidden;
 
  }
@@ -251,7 +266,7 @@
  }
 
  .color.Green {
-   background: #8bd3b2;
+   background: #80C229;
    display: block;
  }
 
@@ -261,6 +276,8 @@
  }
 
  .note-title {
+   font-weight: bold;
+   color: gray;
    position: relative;
    top: 15%;
    left: 20px;
@@ -304,10 +321,27 @@
 
  }
 
- form {
-   padding:20px;
-   width: calc(100% - 70px);
-   height: 100%;
+ .note-options {
+   position: absolute;
+   width: 500px;
+   top:13px;
+   left: -10px;
+
+ }
+
+ .note-options > form {
+   padding:10px;
+  //  width: calc(100% - 70px);
+   font-weight: bold;
+   font-size: 20px;
+   width: 800px;
+  //  height: 100%;
+   color: white;
+   text-transform: uppercase;
+ }
+
+ .note-options > form > label {
+   padding: 20px;
  }
 
  .files {
@@ -319,9 +353,11 @@
 
  #note-title {
    color: #4db0de;
-   padding: 20px 0;
+   padding: 20px;
+   font-weight: bold;
+   width: 800px;
 
-   font-size: 18px;
+   font-size: 20px;
  }
 
 
@@ -336,13 +372,13 @@
 
  }
 
- select {
-   color: #cdcfd0;
- }
+ // select {
+ //   color: #cdcfd0;
+ // }
 
- label {
-   color: #cdcfd0;
- }
+ // label {
+ //   color: #cdcfd0;
+ // }
 
 .left.stretch {
    width: 100%;
