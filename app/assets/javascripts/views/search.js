@@ -21,6 +21,7 @@ Colornote.Views.Search = Backbone.View.extend({
 
   search: function (event) {
     event.preventDefault();
+    debugger
 
     Colornote.searchResults.query = this.$(".query").val(); //can assign like that? because it is object?
 

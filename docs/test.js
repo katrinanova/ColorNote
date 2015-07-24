@@ -1,4 +1,37 @@
 
+<div class="notes-clickable">
+  <% notes.forEach(function(note){ %>
+
+    <% if (note.escape("_type") === "Note") { %>
+      <section class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>">
+        <div class="note-title"><%= note.escape("title") %></div>
+        <div class="note-body"><%= note.escape("body")%></div>
+        <div class='<%="color " + note.escape("color") %>'></div>
+      </section>
+    <% } else { %>
+      <section class="note-clickable">
+        <div id="notebook-clickable" data-type="Notebook" data-id="<%=note.escape("id")%>">Notebook: </div>
+        <% debugger %>
+        <div class="notebook-title"><%= note.escape("title")%></div>
+      </section>
+    <% } %>
+  <% }) %>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 .note-clickable,
 .notebook-clickable {
   color: grey;

@@ -1,6 +1,9 @@
 Colornote.Views.NoteShow = Backbone.View.extend({
   template: JST["notes/show"],
 
+  className: "right",
+
+
   initialize: function(options) {
     this.listenTo(Colornote.notebooks, "sync", this.render);
     this.listenTo(this.model, "sync", function() {
@@ -49,7 +52,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
         if (upload.ttype.match("image")) {
           that.$(".images").append("<img src=" + upload.url + ">")
         } else {
-          that.$(".files").append('<a href="' + upload.url + '">' + upload.name + '</a>')
+          that.$(".files").append('<a href="' + upload.url + '">' + "📎" + upload.name + '</a>')
         }
       })
     }

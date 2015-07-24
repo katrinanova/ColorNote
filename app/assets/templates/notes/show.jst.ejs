@@ -1,54 +1,52 @@
-<div class="right">
+
   <h2 class="auto">Type here, it saves automatically...</h2>
 
-<section class="note-options">
-  <form>
-  <label>Move note:
-  <select id="note-notebook-id" name="notebook_id">
+  <section class="note-options">
+    <form>
+    <label>Move note:
+    <select id="note-notebook-id" name="notebook_id">
 
-  <% notebooks.forEach(function(book){ %>
+    <% notebooks.forEach(function(book){ %>
 
-    <% if (book.id === notebook.id) { %>
-    <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
-    <% } else { %>
-    <option value='<%= book.escape("id")%>'><%= book.escape("title")%></option>
-    <% } %>
-  <% }) %>
-  </select>
-  </label>
-
-  <label>Change color:
-  <select id="note-color" name="color">
-    <% Colornote.colors.forEach(function(color){ %>
-      <% if (note.get("color") === color ) { %>
-        <option value="<%= color %>" selected><%= color %></option>
+      <% if (book.id === notebook.id) { %>
+      <option value="<%= notebook.escape('id') %>" selected><%= notebook.escape("title") %></option>
       <% } else { %>
-        <option value="<%= color %>"><%= color %></option>
+      <option value='<%= book.escape("id")%>'><%= book.escape("title")%></option>
       <% } %>
     <% }) %>
+    </select>
+    </label>
 
-  </select>
-  </label>
-</form>
-</section>
+    <label>Change color:
+    <select id="note-color" name="color">
+      <% Colornote.colors.forEach(function(color){ %>
+        <% if (note.get("color") === color ) { %>
+          <option value="<%= color %>" selected><%= color %></option>
+        <% } else { %>
+          <option value="<%= color %>"><%= color %></option>
+        <% } %>
+      <% }) %>
 
-
-   <br>
-<form>
-   <input id="note-title" type="text" name="title" value="<%= note.escape("title")%>">
- <br>
-
-   <section class="images"></section>
-
-   <section class="files"></section>
-   <br>
-
-
-      <input id="note-file" type="file" name="upload">
-  <br>
-  <br>
-    <textarea id="note-body" class="note-body" name="body"><%= note.escape("body")%></textarea>
-<br>
-
+    </select>
+    </label>
   </form>
+  </section>
+
+
+   <br>
+  <form id ="note-show-form">
+     <input id="note-title" type="text" name="title" value="<%= note.escape("title")%>">
+
+     <section class="images"></section>
+
+     <section class="files"></section>
+
+
+
+     <input id="note-file" type="file" name="upload">
+
+     <textarea id="note-body"  name="body"><%= note.escape("body")%></textarea>
+     <br>
+
+    </form>
   <br>
