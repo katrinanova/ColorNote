@@ -65,15 +65,27 @@
  }
 
  /*Login------------------*/
+ form.login {
+   padding: 30px;
+   font-size: 25px;
+ }
+
+ form.login > input {
+   padding: 20px;
+ }
+
+ form.login > button:hover {
+   background: #80C229;
+ }
+
 .login > label {
   color: grey;
-  font-size: 20px;
 }
 
 .login > button {
   color: grey;
-  font-size: 20px;
   width: 250px;
+  color: white;
 }
 
 .landing {
@@ -139,6 +151,41 @@
   border-radius: 8px;
 }
 
+// .signin > a {
+//   position: absolute;
+//   // top: 120px;
+//   bottom: 50px;
+//   left: calc(50% - 135px);
+//   text-align: center;
+//   margin: 10px;
+//   padding: 10px;
+//   font-size: 20px;
+//   background: white;
+//   color: #d03594;
+//   border-radius: 8px;
+// }
+//
+// .twitter {
+//   position: absolute;
+//   // top: 120px;
+//   bottom: 50px;
+//   left: calc(50% - 135px);
+//   padding: 0px 0 0 0;
+//   width:270px;
+//   margin: 0 auto;
+//   border-radius: 8px;
+// }
+//
+// .twitter > a {
+//   text-align: center;
+//   margin: 10px;
+//   padding: 10px;
+//   font-size: 20px;
+//   background: #07b0ca;
+//   color: white;
+//   border-radius: 8px;
+// }
+
 /*Sidebar-----------------------------*/
 
  .sidebar {
@@ -195,10 +242,12 @@
  // Notebooks------------------------------------
 
   a.notebook-clickable {
-    border-bottom: 5 solid green;
-    color: green;
-
-    padding: 20px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    color: #4db0de;
+    padding: 20px 20px;
+    background: white;
+    font-size: 25px;
   }
 
 
@@ -208,7 +257,7 @@
 
  .left {
    background: #fdff76;
-   border-left: 2px solid darkgrey;
+
    border-right: 2px solid darkgrey;
    left:0px;
    top: 0;
@@ -250,7 +299,8 @@
  }
 
  h2.auto {
-   color: #80C229
+   color: #80C229;
+   height: 30px;
  }
 
  #notes {
@@ -301,12 +351,17 @@
    display: inline;
  }
 
+ .stretch-me {
+   height: 100%;
+ }
+
 
 
  .notes-clickable {
-
    height: 100%;
+   border-bottom: 5px solid white;
  }
+
 
  .color {
    display: none;
@@ -562,10 +617,20 @@
     color: black;
   }
 
-    /*Create note form---------------*/
 
+  // Notebook show-----------
+  #notebook-show-title {
+
+
+  }
+
+    /*Create note form---------------*/
+    .note-new {
+      height: calc(100% - 330px);
+    }
     form.create-note {
       padding: 30px;
+      height: 100%;
     }
 
     #note-new-title {
@@ -574,7 +639,7 @@
     }
 
     #note-new-body {
-      height: 400px;
+      height: 100%;
       padding: 20px;
       width: calc(100% - 40px)
     }
@@ -582,6 +647,10 @@
     #note-new-file {
       font-size: 16px;
       margin: 0 0 20px 0;
+    }
+
+    .create-note > label {
+      padding: 0 30px 0 0;
     }
 
     .create-note > input {

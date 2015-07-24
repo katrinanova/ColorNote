@@ -25,17 +25,17 @@ Colornote.Views.NoteNew = Backbone.View.extend({
 
 
   submit: function(event) {
+        debugger
 
     event.preventDefault();
 
-        debugger
 
 
     var notebook_id = this.$("#note-notebook-id").val();
     var color = this.$("#note-color").val();
-    var title = this.$("#note-title").val();
-    var body = this.$("#note-body").val();
-    var file = this.$("#note-file")[0].files[0];
+    var title = this.$(".nnnote-title").val();
+    var body = this.$(".nnnote-body").val();
+    var file = this.$(".fffile")[0].files[0];
 
     var formData = new FormData();
     formData.append("note[notebook_id]", notebook_id)
