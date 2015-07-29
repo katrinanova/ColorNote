@@ -40,7 +40,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
     this.attachSubviews();
 
+
     return this;
+
   },
 
   renderSearch: function() {
