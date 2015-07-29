@@ -72,17 +72,26 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   switchNote: function(event) {
     event.preventDefault();
-    var id = $(event.currentTarget).attr("data-id");
-    var type = $(event.currentTarget).attr("data-type");
 
-    if (type === "Notebook") {
-      Backbone.history.navigate("notebooks/" + id, {trigger: true})
+
+
+    var $notebook = $(event.currentTarget).find(".notebook-clickable")
+
+    if ($notebook.length > 0) {
+
+      var notebook_id = $notebook.attr("data-id")
+      Backbone.history.navigate("notebooks/" + notebook_id, {trigger: true})
+
+    } else {
+
+      var note_id = $(event.currentTarget).attr("data-id")
+
+      var note = this.collection.getOrFetch(note_id);
+      this.removeSubview(".note-show", this.currentNoteView)
+      this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection, book: this.book});
+      this.addSubview(".note-show", this.currentNoteView)
+
     }
-
-    var note = this.collection.getOrFetch(id);
-    this.removeSubview(".note-show", this.currentNoteView)
-    this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection, book: this.book});
-    this.addSubview(".note-show", this.currentNoteView)
   },
 
   toggleSearchView: function(event) {
