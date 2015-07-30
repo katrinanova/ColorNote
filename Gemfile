@@ -34,6 +34,7 @@ gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '~> 1.6'
 
 gem "pg_search"
+gem "font-awesome-sass"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

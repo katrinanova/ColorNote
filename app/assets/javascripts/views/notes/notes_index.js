@@ -14,6 +14,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   events: {
+    "click .trash-notes": "deleteNote",
     "click .note-clickable": "switchNote",
     "click #search": "toggleSearchView",
     "change .query": "search"
@@ -45,11 +46,15 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   },
 
+  deleteNote: function(event) {
+    console.log("fjds")
+    debugger
+
+  },
+
   renderSearch: function() {
     console.log("renderSearch")
     var content = this.template({notes: Colornote.searchResults, book: false});
-
-    // this.$(".left").addClass("stretch")
 
     this.$el.html(content);
 

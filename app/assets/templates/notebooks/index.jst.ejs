@@ -4,8 +4,9 @@
 
 <ul>
   <% notebooks.forEach(function(notebook){ %>
-    <li>
+    <li class="notebooks-index">
       <a class="notebook-clickable" href="#/notebooks/<%= notebook.escape("id")%>"><%= notebook.escape("title") %></a>
+      <i class="fa fa-trash trash-notebooks"></i>
     </li>
   <% }) %>
 </ul>
