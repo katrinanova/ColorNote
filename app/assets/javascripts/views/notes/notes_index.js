@@ -51,6 +51,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     event.preventDefault();
     event.stopPropagation()
     debugger
+
     var that = this
 
     var $section = $((event.currentTarget).parentElement);
@@ -59,6 +60,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
     if (note_id) {
       var note = this.collection.get(note_id)
+
+      Colornote.Views.Message.render({message: 'Are you sure you want to delete "' + note.get('title') +'"?'})
+
       note.destroy({
         success() {
           that.collection.remove(note)
