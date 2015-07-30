@@ -30,6 +30,11 @@ class Api::NotesController < ApplicationController
    @note = Note.find(params[:id])
    @note.destroy
    render json: {}
+
+  # @note = Note.find(id)
+  # @note.destroy
+  # render json: {}
+  #
  end
 
  def update

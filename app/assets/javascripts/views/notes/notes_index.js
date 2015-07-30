@@ -4,7 +4,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   className: "notes-index",
 
   initialize: function(options) {
-    this.listenToOnce(this.collection, "sync", this.render);
+    this.listenTo(this.collection, "sync", this.render);
 
     Colornote.searchResults = new Colornote.Collections.SearchResults();
     this.listenTo(Colornote.searchResults, "sync", this.renderSearch);
@@ -14,13 +14,14 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .trash-notes": "deleteNote",
+    "click .note-clickable > .trash-notes": "deleteNote",
     "click .note-clickable": "switchNote",
     "click #search": "toggleSearchView",
     "change .query": "search"
   },
 
   render: function(options) {
+    console.log("rendering notes index")
     var content = this.template({notes: this.collection, book: this.book});
 
     if (this.collection.length === 0) {
@@ -47,8 +48,30 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   deleteNote: function(event) {
-    console.log("fjds")
+    event.preventDefault();
+    event.stopPropagation()
     debugger
+    var that = this
+
+    var $section = $((event.currentTarget).parentElement);
+
+    var note_id = $section.attr("data-id")
+
+    if (note_id) {
+      var note = this.collection.get(note_id)
+      note.destroy({
+        success() {
+          that.collection.remove(note)
+        }
+      });
+      that.render();
+
+    } else {
+      var notebook_id = $section.find(".notebook-clickable").attr("data_id")
+      var notebook = Colornote.notebooks.getOrFetch(notebook_id)
+      // do i need getOrFetch?
+      notebook.destroy()
+    }
 
   },
 
@@ -78,9 +101,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   switchNote: function(event) {
+    // why it is calling swichNote after deleting the note???
+    console.log("switch note")
     event.preventDefault();
-
-
 
     var $notebook = $(event.currentTarget).find(".notebook-clickable")
 

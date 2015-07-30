@@ -6,16 +6,17 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(Colornote.notebooks, "sync", this.render);
-    this.listenTo(this.model, "sync", function() {
-      if (this.silent) {
-        this.silent = false;
-        return;
-      } else {
-      this.render();
-    };
-  });
-    this.book = options.book;
+  //   this.listenTo(this.model, "sync", function() {
+  //     if (this.silent) {
+  //       this.silent = false;
+  //       return;
+  //     } else {
+  //     this.render();
+  //   };
+  // });
+  //   this.book = options.book;
   },
+  // get rid of silent, not using anymore
 
 
   events: {

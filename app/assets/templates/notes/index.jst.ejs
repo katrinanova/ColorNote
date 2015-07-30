@@ -21,6 +21,7 @@
     <% notes.forEach(function(note){ %>
 
       <% if (note instanceof Colornote.Models.Note) { %>
+      
         <section class="note-clickable" data-type="Note" data-id="<%=note.escape("id")%>">
 
           <div class="note-title"><%= note.escape("title") %></div>
