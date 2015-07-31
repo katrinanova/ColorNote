@@ -9,6 +9,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   },
 
   initialize: function(){
+
     this.listenTo(this.collection, "sync add", this.render)
 
   },
@@ -16,6 +17,11 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   render: function() {
     var content = this.template({notebook: this.model});
     this.$el.html(content);
+
+    if (Colornote.message) {
+      this.$(".errors").append(Colornote.message)
+    }
+
     return this;
   },
 

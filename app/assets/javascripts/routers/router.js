@@ -40,6 +40,11 @@ Colornote.Routers.Router = Backbone.Router.extend({
   },
 
   noteNew: function() {
+    if (Colornote.notebooks.length === 0) {
+      Colornote.message = "Please create at least one notebook to store your notes.";
+      Backbone.history.navigate("/notebooks/new", {trigger: true})
+      return
+    }
     var notebooks = Colornote.notebooks;
     var notes = Colornote.notes;
     var note = new Colornote.Models.Note();
