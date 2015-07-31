@@ -11,8 +11,10 @@ class Api::NotebooksController < ApplicationController
   end
 
   def destroy
+
     @notebook = current_user.notebooks.find(params[:id])
-    @notebook.try(:destroy)
+
+    @notebook.destroy
     render json: {}
   end
 

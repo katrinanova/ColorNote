@@ -1,6 +1,7 @@
 class Notebook < ActiveRecord::Base
 
-  validates :title, presence: true;
+  validates :title, presence: true
+  has_many :notes, dependent: :destroy
 
 
   include PgSearch
@@ -12,5 +13,4 @@ class Notebook < ActiveRecord::Base
   validates :title, uniqueness: { scope: :user_id }
 
   belongs_to :user
-  has_many :notes
 end
