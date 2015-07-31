@@ -639,17 +639,20 @@
     margin: 0 auto;
   }
 
+
   .create-notebook > input {
     background: white;
     display: block;
     margin: 0 auto;
-    font-size: 28px;
+    font-size: 38px;
     text-align: center;
   }
 
   .buttons {
-
-    width: 350px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    width: 450px;
     margin: 0 auto;
 
   }
@@ -657,8 +660,12 @@
   button {
     padding: 10px;
     background: #4db0de;
-    width: 140px;
+    width: 200px;
     border-radius: 5%;
+  }
+
+  button:hover {
+    background: #80C229;
   }
 
   .cancel {
@@ -684,6 +691,7 @@
     .note-new {
       height: calc(100% - 330px);
     }
+
     form.create-note {
       padding: 30px;
       height: 100%;
@@ -730,6 +738,15 @@
       margin: 0 auto;
     }
 
+    .create-note > button {
+      color: white;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+      width: 200px;
+      margin: 0 auto;
+
+    }
 
 
 
@@ -737,6 +754,9 @@
 
 
 
+
+
+      
 //
 // input,
 // label,
