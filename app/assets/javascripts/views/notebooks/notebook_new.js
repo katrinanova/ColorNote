@@ -28,6 +28,13 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
       success: function() {
         that.collection.add(that.model);
         Backbone.history.navigate("notebooks/" + that.model.id, {trigger: true});
+      },
+      error: function(notebook, response) {
+        var $errorsEl = that.$(".errors")
+        var errors = JSON.parse(response.responseText)
+        errors.forEach( function(error) {
+          $errorsEl.append("  " + error + ".  ")
+        })
       }
     })
   },

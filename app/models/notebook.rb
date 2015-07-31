@@ -1,4 +1,8 @@
 class Notebook < ActiveRecord::Base
+
+  validates :title, presence: true;
+
+
   include PgSearch
   multisearchable against: :title,
                   :using => {
