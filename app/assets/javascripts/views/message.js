@@ -1,9 +1,16 @@
-Colornote.Views.Message = Backbone.View.extend({
+Colornote.Views.Message = Backbone.CompositeView.extend({
 
-  template = JST.message,
+
+  template: JST.message,
+
+  initialize: function(options) {
+    this.message = options.message;
+  },
+
+
 
   render: function () {
-    var content = this.template({results: Colornote.searchResults});
+    var content = this.template({message: this.message});
     this.$el.html(content);
 
     return this;

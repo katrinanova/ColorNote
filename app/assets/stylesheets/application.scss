@@ -244,13 +244,18 @@
 
  // Notebooks------------------------------------
 
-  a.notebook-clickable {
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    color: #4db0de;
-    padding: 20px 20px;
-    background: white;
+ li.notebooks-index {
+   border-top: 5px solid white;
+   border-bottom: 5px solid white;
+   background: white;
+   padding: 10px;
+   margin: 20px 30px;
+   color: #4db0de;
+ }
+
+  a.notebook-link {
     font-size: 25px;
+    color: #4db0de;
   }
 
   .trash-notebooks {
@@ -267,12 +272,15 @@
     position: relative;
   }
 
-  a.notebook-clickable:hover + .trash-notebooks {
+  li.notebooks-index:hover .trash-notebooks {
     display: inline;
-
   }
 
-  a.notebook-clickable:hover {
+  li.notebooks-index:hover a.notebook-link {
+    color: white;
+  }
+
+  li.notebooks-index:hover {
     color: white;
     background: #4db0de;
   }
@@ -303,6 +311,7 @@
    position: absolute;
    font-size: 20px;
    color: black;
+   display: none;
 
 
  }

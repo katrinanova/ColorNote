@@ -50,7 +50,6 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   deleteNote: function(event) {
     event.preventDefault();
     event.stopPropagation()
-    debugger
 
     var that = this
 
@@ -61,26 +60,32 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     if (note_id) {
       var note = this.collection.get(note_id)
 
-      Colornote.Views.Message.render({message: 'Are you sure you want to delete "' + note.get('title') +'"?'})
+      // var messageView = new Colornote.Views.Message({message: 'Are you sure you want to delete "' + note.get('title') +'"?'})
+      // that.addSubview(messageView)
 
       note.destroy({
         success() {
           that.collection.remove(note)
         }
       });
-      that.render();
+
 
     } else {
-      var notebook_id = $section.find(".notebook-clickable").attr("data_id")
-      var notebook = Colornote.notebooks.getOrFetch(notebook_id)
-      // do i need getOrFetch?
-      notebook.destroy()
+      var notebook_id = $section.find(".notebook-clickable").attr("data-id")
+      var notebook = Colornote.notebooks.get(notebook_id)
+      notebook.destroy({
+        sucess() {
+          Colornote.notebooks.remove(notebook)
+        }
+      })
     }
+    that.render();
 
   },
 
   renderSearch: function() {
     console.log("renderSearch")
+    debugger
     var content = this.template({notes: Colornote.searchResults, book: false});
 
     this.$el.html(content);
