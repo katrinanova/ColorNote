@@ -6,6 +6,11 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
   initialize: function(options) {
     this.listenTo(Colornote.notebooks, "sync", this.render);
+    // this.listenTo(this.model, "change:color", this.model.trigger("add"));
+    // trigger something to cause collection trigger sync?
+
+
+
   //   this.listenTo(this.model, "sync", function() {
   //     if (this.silent) {
   //       this.silent = false;
