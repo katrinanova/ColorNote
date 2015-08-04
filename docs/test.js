@@ -1,4 +1,41 @@
 
+<div class="landing">
+  <div class="frame2">
+
+    <div class="clips">
+      <img class="black" src="assets/clips.png">
+
+
+    </div>
+
+
+
+
+   <div class="signup">
+    <a href="<%= new_user_url%>">Sign up <br> Now!</a>
+    <img class="signup" src="assets/red-signup.png">
+
+   </div>
+
+    <div class="signin">
+      <a href="<%= new_session_url%>">or Sign In</a>
+    </div>
+
+    <div class="twitter">
+      <a href="/auth/twitter">Sign in with Twitter</a>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
 <div class="notes-clickable">
   <% notes.forEach(function(note){ %>
 
