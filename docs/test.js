@@ -1,3 +1,28 @@
+<img class="black" src="<%= image_url('clips.png')%>">
+
+
+<img class="r-signup" src='<%= image_url("r-signup.png")%>'>
+<img class="r-demo" src='<%= image_url("r-demo.png")%>'>
+<img class="r-signin" src="<%= image_url('r-signin.png')%>">
+<img class="r-twitter" src='<%= image_url("r-twitter.png")%>'>
+<img class="r-facebook" src='<%= image_url("r-facebook.png")%>'>
+
+
+a.l-signin:hover,
+a.l-signup:hover,
+a.l-demo:hover,
+a.l-twitter:hover,
+a.l-facebook:hover ~ img.black {
+  display: none;
+}
+
+
+
+
+
+
+
+
 
 <div class="landing">
   <div class="frame2">

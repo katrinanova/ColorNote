@@ -91,6 +91,9 @@
   color: white;
 }
 
+
+// Landing Page-----------------------
+
 .landing {
   position: absolute;
   width: 100%;
@@ -105,44 +108,13 @@
   width: 100%;
   background-image: image-url("frame.png");
   background-size: 100% 100%;
-
 }
-//
-// div.clips {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-// }
 
 .clips {
-  // float: left;
-  // top: 6%;
-  // left: calc(100% - 700px);
-  // left: 30%;
-  // transform: translate(-50%, -50%);
-  // right: calc(100% - 120%);
   position: absolute;
   height: 100%;
-
-
   right: 10%;
-
-
 }
-
-
-// <% if ($(".frame2").width() / $(".frame2").height < 0.97) { %>
-//   <% $(".clips").addClass(".middle") %>
-// <% } %>
-//
-// .clips.middle > img.black {
-//   position: absolute;
-//   // right: 10%;
-//   display: block;
-//   width: 100%;
-//   height: auto;
-//
-// }
 
 .clips > a {
   position: absolute;
@@ -151,8 +123,6 @@
   }
 
 .clips > img {
-  // position: absolute;
-
   width: auto;
   height: 100%;
   display: none;
@@ -164,26 +134,43 @@
 }
 
 a.l-signin {
-  // position: absolute;
   left: 45%;
   width: 40%;
   bottom: 20%;
   height: 10%;
   font-size: 0px;
-  background: red;
 }
 
 a.l-signup {
-
+  left: 47%;
+  width: 40%;
+  top: 16%;
+  height: 12%;
+  font-size: 0px;
 }
+
 a.l-demo {
-
+  left: 47%;
+  width: 45%;
+  top: 28%;
+  height: 12%;
+  font-size: 0px;
 }
+
 a.l-twitter {
-
+  left: 14%;
+  width: 15%;
+  top: 39%;
+  height: 12%;
+  font-size: 0px;
 }
-a.l-facebook {
 
+a.l-facebook {
+  left: 30%;
+  width: 12%;
+  top: 45%;
+  height: 12%;
+  font-size: 0px;
 }
 
 a.l-signin:hover ~ img.r-signin {
@@ -206,186 +193,29 @@ a.l-facebook:hover ~ img.r-facebook {
   display: block;
 }
 
-a.l-signin:hover,
-a.l-signup:hover,
-a.l-demo:hover,
-a.l-twitter:hover,
+
+
+a.l-signin:hover ~ img.black {
+  display: none;
+}
+
+a.l-signup:hover ~ img.black {
+  display: none;
+}
+
+a.l-demo:hover ~ img.black {
+  display: none;
+}
+
 a.l-facebook:hover ~ img.black {
   display: none;
 }
 
-
-// img.r-signup{
-//   position: absolute;
-//   display: block;
-// }
+a.l-twitter:hover ~ img.black {
+  display: none;
+}
 
 
-
-// .clips > img {
-//   top: 6%;
-//   right: -300px;
-//   // right: calc(100% - 120%);
-//   position: absolute;
-//   height: 100%;
-//   width: auto;
-// }
-
-
-
-
-
-
-// img.frame {
-//   width: 100%;
-//   height: 100%;
-//
-// }
-
-// img.frame {
-//   width: 100%;
-//   height: 100%;
-//
-// }
-
-// .signup {
-//   // top: 6%;
-//   // right: -300px;
-//   // right: calc(100% - 120%);
-//   top: 10%;
-//   right: 80px;
-//   position: absolute;
-//   height: 300px;
-//   width: 300px;
-//   background: red;
-//
-//   // padding: 380px 0 0 0;
-//   // width:100%;
-//   // border-radius: 8px;
-// }
-
-// .signup {
-//   // top: 6%;
-//   // right: -300px;
-//   // right: calc(100% - 120%);
-//
-//   position: absolute;
-//   background: red;
-
-
-
-  // padding: 380px 0 0 0;
-  // width:100%;
-  // border-radius: 8px;
-// }
-
-// .signup > a {
-//   margin: 20px;
-//   padding: 30px 20px;
-//   font-size: 60px;
-//   color: black;
-//   border-radius: 8px;
-//   text-align: center;
-//   // font-family: 'Brush Script MT';
-//   font-family: papyrus;
-//   font-weight: bold;
-// }
-
-// img.signup {
-//   top: 6%;
-//   right: -300px;
-//   // right: calc(100% - 120%);
-//   position: absolute;
-//   height: 100%;
-//   width: auto;
-//
-//
-// }
-
-// .signup > a:hover + img.signup {
-//   display: block;
-//
-// }
-
-
-// li.notebooks-index:hover .trash-notebooks {
-//   display: inline;
-// }
-//
-// .signin {
-//   padding: 0px 0 0 0;
-//   width:270px;
-//   margin: 0 auto;
-//   border-radius: 20px;
-// }
-//
-// .signin > a:hover,
-//
-// .twitter > a:hover {
-//   color: red;
-// }
-//
-// .signin > a {
-//   text-align: center;
-//   margin: 10px;
-//   padding: 10px;
-//   font-size: 20px;
-//   background: white;
-//   color: #d03594;
-//   border-radius: 8px;
-// }
-//
-// .twitter {
-//   padding: 0px 0 0 0;
-//   width:270px;
-//   margin: 0 auto;
-//   border-radius: 8px;
-// }
-//
-// .twitter > a {
-//   text-align: center;
-//   margin: 10px;
-//   padding: 10px;
-//   font-size: 20px;
-//   background: #07b0ca;
-//   color: white;
-//   border-radius: 8px;
-// }
-
-// .signin > a {
-//   position: absolute;
-//   // top: 120px;
-//   bottom: 50px;
-//   left: calc(50% - 135px);
-//   text-align: center;
-//   margin: 10px;
-//   padding: 10px;
-//   font-size: 20px;
-//   background: white;
-//   color: #d03594;
-//   border-radius: 8px;
-// }
-//
-// .twitter {
-//   position: absolute;
-//   // top: 120px;
-//   bottom: 50px;
-//   left: calc(50% - 135px);
-//   padding: 0px 0 0 0;
-//   width:270px;
-//   margin: 0 auto;
-//   border-radius: 8px;
-// }
-//
-// .twitter > a {
-//   text-align: center;
-//   margin: 10px;
-//   padding: 10px;
-//   font-size: 20px;
-//   background: #07b0ca;
-//   color: white;
-//   border-radius: 8px;
-// }
 
 /*Sidebar-----------------------------*/
 
