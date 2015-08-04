@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   get 'home', to: 'static_pages#root'
   resources :users
   resource :session, only: [:show, :new, :create, :destroy]
+  get '/shared/:link', to: 'shares#show'
 
   namespace :api, defaults: { format: :json } do
     get '/search', to: 'searches#search'
     resources :notebooks, except: :edit
     resources :notes
+
   end
 
   get "/auth/:provider/callback", to: "sessions#omni"

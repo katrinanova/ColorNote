@@ -7,4 +7,10 @@ class Note < ActiveRecord::Base
   has_many :note_uploads
   has_many :uploads, through: :note_uploads
 
+  before_validation :ensure_link
+
+  def ensure_link
+    self.link ||= SecureRandom::urlsafe_base64
+  end
+
 end

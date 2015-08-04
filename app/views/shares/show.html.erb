@@ -1,0 +1,7 @@
+<h1><%= @note.title %>
+
+<%= @note.body %>
+
+<% @note.uploads.each do |upload| %>
+  <%= upload %>
+<% end %>

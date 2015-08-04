@@ -146,7 +146,6 @@
 
 .clips > a {
   position: absolute;
-
   margin: 0;
   z-index: 1;
   }
@@ -165,8 +164,8 @@
 }
 
 a.l-signin {
-  position: absolute;
-  left: 50%;
+  // position: absolute;
+  left: 45%;
   width: 40%;
   bottom: 20%;
   height: 10%;
@@ -174,11 +173,44 @@ a.l-signin {
   background: red;
 }
 
+a.l-signup {
+
+}
+a.l-demo {
+
+}
+a.l-twitter {
+
+}
+a.l-facebook {
+
+}
+
 a.l-signin:hover ~ img.r-signin {
   display: block;
 }
 
-a.l-signin:hover ~ img.black {
+a.l-signup:hover ~ img.r-signup {
+  display: block;
+}
+
+a.l-demo:hover ~ img.r-demo {
+  display: block;
+}
+
+a.l-twitter:hover ~ img.r-twitter {
+  display: block;
+}
+
+a.l-facebook:hover ~ img.r-facebook {
+  display: block;
+}
+
+a.l-signin:hover,
+a.l-signup:hover,
+a.l-demo:hover,
+a.l-twitter:hover,
+a.l-facebook:hover ~ img.black {
   display: none;
 }
 
