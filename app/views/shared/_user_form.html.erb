@@ -1,20 +1,43 @@
 <% action = (type == :newuser) ? users_url : session_url %>
 <% button_text = (type == :newuser) ? "Sign Up" : "Log In" %>
 
-<form class="login" action="<%= action %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email:
-    <input id="email" type="email" value="<%= @user.email %>" name="user[email]">
-  </label>
-  <br>
-  <br>
 
-  <label>Password:
-    <input id="password" type="password" value="<%= @user.password %>" name="user[password]">
-  </label>
-  <br>
-  <br>
 
-  <button><%= button_text %></button>
 
-</form>
+<section class="landing">
+
+  <section class="frame2">
+    <div class="one-note">
+      <img src="<%= image_url('one-note.png')%>">
+      <div class="login-box"
+
+
+        <sectiion class="errors"></sectiion>
+
+
+
+        <form class="login" action="<%= action %>" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <label>Email:
+            <input id="email" type="email" value="<%= @user.email %>" name="user[email]">
+          </label>
+          <br>
+          <br>
+
+          <label>Password:
+            <input id="password" type="password" value="<%= @user.password %>" name="user[password]">
+          </label>
+          <br>
+          <br>
+
+          <button><%= button_text %></button>
+
+        </form>
+
+
+      </div>
+    </div>
+
+  </section>
+
+</section>

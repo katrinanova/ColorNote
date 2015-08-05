@@ -1,21 +1,3 @@
+<sectiion class="errors"></sectiion>
 
-
-<section class="landing">
-
-  <section class="frame2">
-    <div class="one-note">
-      <img src="<%= image_url('one-note.png')%>">
-      <div class="login-box"
-    
-
-        <sectiion class="errors"></sectiion>
-
-        <%= render 'shared/user_form', user: @user, type: :login %>
-      </div>
-    </div>
-
-
-
-  </section>
-
-</section>
+<%= render 'shared/user_form', user: @user, type: :login %>
