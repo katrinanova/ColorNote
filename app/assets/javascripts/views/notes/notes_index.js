@@ -17,7 +17,14 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     "click .note-clickable > .trash-notes": "deleteNote",
     "click .note-clickable": "switchNote",
     "click #search": "toggleSearchView",
-    "change .query": "search"
+    "change .query": "search",
+    "click a#notes": "refresh"
+  },
+
+  refresh: function() {
+      // Backbone.history.loadUrl("#");
+      Backbone.history.navigate('#', {trigger: true});
+      return false;
   },
 
   render: function(options) {
