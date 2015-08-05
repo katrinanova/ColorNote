@@ -384,6 +384,8 @@ a.l-twitter:hover ~ img.black {
     display: none;
   }
 
+
+
   .notebooks-index {
     position: relative;
   }
@@ -420,19 +422,32 @@ a.l-twitter:hover ~ img.black {
    overflow: auto;
  }
 
- .trash-notes {
-   left: 270px;
+ .fa-share-square-o  {
+   left: 280px;
    top: 10px;
    color: white;
    position: absolute;
-   font-size: 20px;
+   font-size: 23px;
    color: black;
    display: none;
+ }
 
-
+ .trash-notes {
+   left: 313px;
+   top: 8px;
+   color: white;
+   position: absolute;
+   font-size: 23px;
+   color: black;
+   display: none;
  }
 
  .note-clickable:hover .trash-notes {
+   display: inline;
+   position: absolute;
+ }
+
+ .note-clickable:hover .fa-share-square-o  {
    display: inline;
    position: absolute;
  }
@@ -874,9 +889,19 @@ a.l-twitter:hover ~ img.black {
 
     // Shared--------------------------------------
 
-    button.shared {
+    button.shared1 {
       position: absolute;
       left: calc(20% + 400px);
+      top: 10px;
+      background: #fdff76;
+      height: 30px;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    button.shared2 {
+      position: absolute;
+      left: calc(20% + 640px);
       top: 10px;
       background: #fdff76;
       height: 30px;
@@ -894,4 +919,19 @@ a.l-twitter:hover ~ img.black {
       top: 0;
       display: block;
       text-align: center;
+    }
+
+    section.note-shared {
+      padding: 30px;
+      height: 100%;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #4db0de;
+      font-size: 20px;
+      padding: 0 0 30px 0;
     }

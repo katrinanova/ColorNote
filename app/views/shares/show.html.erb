@@ -1,16 +1,21 @@
 <h2 class="shared1">Placeholder</h2>
 <h2 class="shared2">Don't have ColorNote yet?</h2>
 
-<button class="shared">
+<button class="shared1">
 <%= button_to "Sign Up Now!", new_user_url, method: :get %>
 </button>
 
-<button class="demo">or Try Demo</button>
+<button class="shared2">
+<%= button_to "or Try Demo!", demo_url, method: :get %>
+</button>
 
-<h1><%= @note.title %></h1>
+<section class="note-shared">
 
-<%= @note.body %>
+  <h1><%= @note.title %></h1>
 
-<% @note.uploads.each do |upload| %>
-  <%= upload %>
-<% end %>
+  <%= simple_format(@note.body) %>
+
+  <% @note.uploads.each do |upload| %>
+    <%= upload %>
+  <% end %>
+</section>
