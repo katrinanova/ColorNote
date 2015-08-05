@@ -14,6 +14,12 @@ class SessionsController < ApplicationController
     @user = User.new
   end
 
+  def demo_login
+    login!(User.first)
+    redirect_to "/home"
+  end
+
+
   def create
     credentials = [params[:user][:email], params[:user][:password]]
     @user = User.find_by_credentials(*credentials)

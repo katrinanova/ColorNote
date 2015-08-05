@@ -1,4 +1,13 @@
-<h1><%= @note.title %>
+<h2 class="shared1">Placeholder</h2>
+<h2 class="shared2">Don't have ColorNote yet?</h2>
+
+<button class="shared">
+<%= button_to "Sign Up Now!", new_user_url, method: :get %>
+</button>
+
+<button class="demo">or Try Demo</button>
+
+<h1><%= @note.title %></h1>
 
 <%= @note.body %>
 
