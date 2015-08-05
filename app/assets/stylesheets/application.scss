@@ -94,6 +94,38 @@
 
 // Landing Page-----------------------
 
+logo {
+
+  position: absolute;
+  left: 8%;
+  top: 10%;
+  width: 150px;
+}
+
+ul.points {
+  float: left;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.points > li {
+  margin: 40px;
+  color: #fdff76;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.points > li.two {
+  color: #89dce4;
+}
+
+.points > li.four {
+  color: #9cfea5;
+}
+
+
+
 .landing {
   position: absolute;
   width: 100%;
