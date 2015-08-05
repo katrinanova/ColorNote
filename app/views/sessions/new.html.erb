@@ -1,11 +1,21 @@
-<section class="login-window">
-  <section class="login-box">
 
-    <h2>Log In!</h2>
 
-    <sectiion class="errors"></sectiion>
+<section class="landing">
 
-    <%= render 'shared/user_form', user: @user, type: :login %>
+  <section class="frame2">
+    <div class="one-note">
+      <img src="<%= image_url('one-note.png')%>">
+      <div class="login-box"
+        <h4 class="login-sign">Log In!</h4>
+
+        <sectiion class="errors"></sectiion>
+
+        <%= render 'shared/user_form', user: @user, type: :login %>
+      </div>
+    </div>
+
+
+
   </section>
 
 </section>
