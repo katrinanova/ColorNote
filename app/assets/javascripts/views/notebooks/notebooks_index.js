@@ -28,7 +28,7 @@ Colornote.Views.NotebooksIndex = Backbone.View.extend({
 
     var notebook = this.collection.get(notebook_id)
     notebook.destroy({
-      sucess() {
+      sucess: function() {
         this.collection.remove(notebook)
       }
     })
