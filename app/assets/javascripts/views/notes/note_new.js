@@ -9,15 +9,12 @@ Colornote.Views.NoteNew = Backbone.View.extend({
   },
 
   initialize: function(options) {
-    // this.listenTo(this.collection, "sync", this.render);
-    // this.listenTo(Colornote.currentUser, "sync", this.render);
     this.listenTo(Colornote.notebooks, "sync", this.render);
 
     this.notebooks = options.notebooks;
   },
 
   render: function() {
-    console.log("render NoteNew");
     var content = this.template({note: this.model, notebooks: Colornote.notebooks});
     this.$el.html(content);
     return this;
@@ -25,11 +22,7 @@ Colornote.Views.NoteNew = Backbone.View.extend({
 
 
   submit: function(event) {
-        debugger
-
     event.preventDefault();
-
-
 
     var notebook_id = this.$("#note-notebook-id").val();
     var color = this.$("#note-color").val();
@@ -44,7 +37,6 @@ Colornote.Views.NoteNew = Backbone.View.extend({
     formData.append("note[color]", color);
 
     if (file) {
-      console.log("in if")
       formData.append("upload[uploded]", file)
     }
 
@@ -53,7 +45,6 @@ Colornote.Views.NoteNew = Backbone.View.extend({
       success: function() {
         that.collection.add(that.model);
         Backbone.history.navigate("notebooks/" + that.model.get("notebook_id"), {trigger: true});
-        // shouldn't i go to notebook id?
       }
     })
   },

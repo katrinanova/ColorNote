@@ -8,21 +8,7 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     this.listenTo(Colornote.notebooks, "sync", this.render);
     // this.listenTo(this.model, "change:color", this.model.trigger("add"));
     // trigger something to cause collection trigger sync?
-
-
-
-  //   this.listenTo(this.model, "sync", function() {
-  //     if (this.silent) {
-  //       this.silent = false;
-  //       return;
-  //     } else {
-  //     this.render();
-  //   };
-  // });
-  //   this.book = options.book;
   },
-  // get rid of silent, not using anymore
-
 
   events: {
     "keyup": "saveNote",
@@ -34,20 +20,10 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
   render: function() {
     var that = this;
-    // var notebook_id = this.model.get("notebook_id");
-
-    // var notebook = Colornote.notebooks.getOrFetch(notebook_id);
-    // why I get in inf loop? if I fetch notebook sync triggered on collection?
-
-    // var notebook = Colornote.notebooks.get(notebook_id);
 
     var notebook = this.model.notebook();
     var theRest = Colornote.notebooks.clone()
     theRest.remove(notebook);
-    // var content = this.template({note: this.model, notebook_id: notebook_id, notebook: notebook, theRest: theRest});
-
-    // it gives me Cannot read property 'escape' of undefined
-    // but later rerenders ok
 
     var content = this.template({note: this.model, notebook: notebook, notebooks: Colornote.notebooks});
 
@@ -65,13 +41,6 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     return this;
   },
 
-
-
-  // saveNote: function() {
-  //   var that = this;
-  //   this.model.save(null, 123, { silent:true })
-  // // }
-
   saveNote: function(event) {
 
     var notebook_id = this.$("#note-notebook-id").val();
@@ -86,14 +55,11 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     formData.append("note[body]", body);
     formData.append("note[color]", color);
 
-
     if (file) {
       formData.append("upload[uploded]", file)
-    }
+    };
 
-
-
-    var that = this
+    var that = this;
 
     $.ajax({
       url: _.result(this.model, "url"),
@@ -106,7 +72,6 @@ Colornote.Views.NoteShow = Backbone.View.extend({
 
         if (file) { that.model.trigger("sync") };
         that.collection.add(that.model, { merge: true })
-
       }
     })
   }

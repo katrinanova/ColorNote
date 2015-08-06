@@ -1,11 +1,5 @@
 Colornote.Views.Search = Backbone.View.extend({
 
-  initialize: function () {
-    // this.bindScroll(); //infinite scroll?
-    // Colornote.searchResults = new Colornote.Collections.SearchResults();
-    // this.listenTo(Colornote.searchResults, "sync", this.render);
-  },
-
   events: {
     "submit .search-form": "search"
   },
@@ -22,7 +16,7 @@ Colornote.Views.Search = Backbone.View.extend({
   search: function (event) {
     event.preventDefault();
 
-    Colornote.searchResults.query = this.$(".query").val(); //can assign like that? because it is object?
+    Colornote.searchResults.query = this.$(".query").val(); 
 
     Colornote.searchResults.fetch({
       data: {query: Colornote.searchResults.query}

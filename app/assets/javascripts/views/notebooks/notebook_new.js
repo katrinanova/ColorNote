@@ -9,9 +9,7 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
   },
 
   initialize: function(){
-
     this.listenTo(this.collection, "sync add", this.render)
-
   },
 
   render: function() {
@@ -44,8 +42,6 @@ Colornote.Views.NotebookNew = Backbone.View.extend({
       }
     })
   },
-
-
 
   goBack: function(event) {
     event.preventDefault();

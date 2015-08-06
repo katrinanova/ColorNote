@@ -26,7 +26,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
     if (this.collection.length === 0) {
       this.$el.html(content);
-      this.$(".left").addClass("stretch")
+      this.$(".left").addClass("stretch");
       return this;
     }
 
@@ -36,25 +36,21 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     if ((typeof this.currentNoteView === "undefined") && (this.collection.length > 0)) {
       var note = this.collection.first();
       // note.fetch();
-      this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
+      this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note});
       this.addSubview(".note-show", this.currentNoteView);
     }
 
     this.attachSubviews();
 
-
     return this;
-
   },
 
   deleteNote: function(event) {
     event.preventDefault();
-    event.stopPropagation()
+    event.stopPropagation();
 
-    var that = this
-
+    var that = this;
     var $section = $((event.currentTarget).parentElement);
-
     var note_id = $section.attr("data-id")
 
     if (note_id) {
@@ -74,7 +70,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
       var notebook_id = $section.find(".notebook-clickable").attr("data-id")
       var notebook = Colornote.notebooks.get(notebook_id)
       notebook.destroy({
-        sucess() {
+        sucess: function() {
           Colornote.notebooks.remove(notebook)
         }
       })
@@ -100,7 +96,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
         if (result instanceof Colornote.Models.Note) {
           var note = result
-          this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note}); //?
+          this.currentNoteView = new Colornote.Views.NoteShow({collection: this.collection, model: note});
           this.addSubview(".note-show", this.currentNoteView);
 
         } else {
@@ -115,11 +111,9 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   switchNote: function(event) {
-    // why it is calling swichNote after deleting the note???
-    console.log("switch note")
     event.preventDefault();
 
-    var $notebook = $(event.currentTarget).find(".notebook-clickable")
+    var $notebook = $(event.currentTarget).find(".notebook-clickable");
 
     if ($notebook.length > 0) {
 
@@ -131,17 +125,16 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
       var note_id = $(event.currentTarget).attr("data-id")
 
       var note = this.collection.getOrFetch(note_id);
-      this.removeSubview(".note-show", this.currentNoteView)
+      this.removeSubview(".note-show", this.currentNoteView);
       this.currentNoteView = new Colornote.Views.NoteShow({model: note, collection: this.collection, book: this.book});
       this.addSubview(".note-show", this.currentNoteView)
-
     }
   },
 
   toggleSearchView: function(event) {
     if (this.search) {
-      this.removeSubview(".search-window", this.searchView)
-      this.search = false
+      this.removeSubview(".search-window", this.searchView);
+      this.search = false;
     } else {
       this.searchView = new Colornote.Views.Search()
       this.addSubview(".search-window", this.searchView);
@@ -151,5 +144,3 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     this.render();
   }
 })
-
-// Comment

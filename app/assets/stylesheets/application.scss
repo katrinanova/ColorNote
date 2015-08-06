@@ -17,9 +17,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
- #search {
-   background: #fdff76;
- }
+
  /*Reset CSS*/
  html, h2, h1, body, div, ul, li, form, input, button, label, a,
  select, textarea, label, section {
@@ -44,7 +42,6 @@
  }
 
  html {
-  //  background: #fdff76;
    height: 100%;
    overflow: hidden;
  }
@@ -56,9 +53,6 @@
    overflow: hidden;
    font-family: sans-serif;
    color: grey;
-
-
-
  }
 
  .group:after {
@@ -325,7 +319,9 @@ a.l-twitter:hover ~ img.black {
    font-size:30px;
  }
 
+
  #search {
+   background: #fdff76;
    font-size: 30px;
    position: absolute;
    left:-50px;
