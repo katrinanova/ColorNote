@@ -22,7 +22,6 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   render: function(options) {
-    console.log("rendering notes index")
     var content = this.template({notes: this.collection, book: this.book});
 
     if (this.collection.length === 0) {
@@ -84,8 +83,14 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
   },
 
+  copyToClipboard: function(event) {
+    //not yet implemening copy to clip board, for now just show link
+    var link = $(event.currentTarget).attr("data-link");
+    var linkView = new Colornote.Views.noteLink({model: link});
+    this.addSubview(".link", linkView);
+  },
+
   renderSearch: function() {
-    console.log("renderSearch")
     var content = this.template({notes: Colornote.searchResults, book: false});
 
     this.$el.html(content);

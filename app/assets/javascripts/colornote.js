@@ -15,7 +15,7 @@ window.Colornote = {
     Colornote.colors = ["Red", "Blue", "Green", "None"]
     new Colornote.Routers.Router;
     Backbone.history.start();
-    Colornote.triggerNotesIndex()
+    Colornote.triggerNotesIndex();
   },
 
   triggerNotesIndex: function() {

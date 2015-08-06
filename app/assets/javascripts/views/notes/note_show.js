@@ -33,7 +33,6 @@ Colornote.Views.NoteShow = Backbone.View.extend({
   },
 
   render: function() {
-    console.log("rendering note show")
     var that = this;
     // var notebook_id = this.model.get("notebook_id");
 
