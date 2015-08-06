@@ -64,7 +64,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
       // that.addSubview(messageView)
 
       note.destroy({
-        success() {
+        success: function() {
           that.collection.remove(note)
         }
       });

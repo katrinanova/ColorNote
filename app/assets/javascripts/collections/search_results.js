@@ -3,9 +3,6 @@ Colornote.Collections.SearchResults = Backbone.Collection.extend({
   url: "api/search",
 
   parse: function (load) {
-    // if (load.total_count) {
-    //   this.total_count = load.total_count
-    // }
     return load.results;
   },
 

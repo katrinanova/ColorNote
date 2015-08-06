@@ -7,8 +7,8 @@ Colornote.Collections.Notebooks = Backbone.Collection.extend({
   },
 
   getOrFetch: function(id) {
-    var that = this
-    var notebook = this.get(id)
+    var that = this;
+    var notebook = this.get(id);
     if (!notebook) {
       notebook = new Colornote.Models.Notebook({id: id});
       notebook.fetch({

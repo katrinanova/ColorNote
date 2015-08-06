@@ -3,7 +3,7 @@ Colornote.Models.CurrentUser = Backbone.Model.extend({
 
   notebooks: function() {
     this._notebooks = this._notebooks ||
-      new Colornote.Collections.Notebooks();   //([], {user: this})
+      new Colornote.Collections.Notebooks();
     return this._notebooks;
   },
 

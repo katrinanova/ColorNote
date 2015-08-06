@@ -2,10 +2,6 @@ Colornote.Collections.Notes = Backbone.Collection.extend({
   url: '/api/notes',
   model: Colornote.Models.Note,
 
-  // initialize: function(models, options) {
-  //   this.notebook = options.notebook
-  // },
-
   comparator: function(note) {
     return - new Date(note.get('updated_at')).getTime();
   },

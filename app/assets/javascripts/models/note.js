@@ -25,9 +25,8 @@ Colornote.Models.Note = Backbone.Model.extend({
       contentType: false,
       success: function(resp) {
         model.set(model.parse(resp));
-        model.trigger('sync', model, resp, options);//do i have to give trigger options? how they will help?
-        options.success && options.success(model, resp, options); // do i have to pass model resp option?
-        //when was model saved? options?
+        model.trigger('sync', model, resp, options);
+        options.success && options.success(model, resp, options); 
       },
       error: function(resp) {
         options.error && options.errorr(model, resp, options);
