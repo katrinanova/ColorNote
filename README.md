@@ -1,4 +1,4 @@
-# Color-note
+# ColorNote
 
 [https://colornote.herokuapp.com/][heroku]
 
