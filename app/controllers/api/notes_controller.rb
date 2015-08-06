@@ -1,8 +1,6 @@
 class Api::NotesController < ApplicationController
 
  def index
-
-  #  note include uploads!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! prefetch before iterating (jbuilder)
    @notes = current_user.notes.includes(:uploads)
    render :index
  end
@@ -30,16 +28,9 @@ class Api::NotesController < ApplicationController
    @note = Note.find(params[:id])
    @note.destroy
    render json: {}
-
-  # @note = Note.find(id)
-  # @note.destroy
-  # render json: {}
-  #
  end
 
  def update
-  #  do I need current_notebook? @note = current_notebook.notes.find(params[:id])
-
    @note = Note.find(params[:id])
 
    if params[:upload]
@@ -56,7 +47,6 @@ class Api::NotesController < ApplicationController
  private
 
  def current_notebook
-  #  why it doesnt break
    if params[:id]
      @note = Note.find(params[:id])
      @notebook = @note.notebook
@@ -67,8 +57,6 @@ class Api::NotesController < ApplicationController
 
  def note_params
    params.require(:note).permit(:title, :notebook_id, :body, :color, :updated_at)
-
  end
-
 
 end

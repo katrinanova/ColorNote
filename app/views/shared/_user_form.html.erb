@@ -2,8 +2,6 @@
 <% button_text = (type == :newuser) ? "Sign Up" : "Log In" %>
 
 
-
-
 <section class="landing">
 
   <section class="frame2">
@@ -11,10 +9,7 @@
       <img src="<%= image_url('one-note.png')%>">
       <div class="login-box"
 
-
         <sectiion class="errors"></sectiion>
-
-
 
         <form class="login" action="<%= action %>" method="POST">
           <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -33,7 +28,6 @@
           <button><%= button_text %></button>
 
         </form>
-
 
       </div>
     </div>

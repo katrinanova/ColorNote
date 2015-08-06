@@ -61,14 +61,16 @@
    clear: both;
  }
 
+ #main {
+   position: absolute;
+   left:70px;
+   width: calc(100% - 70px);
+   background: #fdff76;
+   height: 100%;
+
+ }
+
  /*Login------------------*/
- // Login-window--------------------------------------------------
-
- // .login-window {
- //   background-image: image-url("seamless.jpg");
- //   // background-size: 100%;
- // }
-
 
  .login-box {
    position: absolute;
@@ -93,11 +95,6 @@
    width: 380px;
    font-size: 20px;
  }
-
-//  input:-webkit-autofill {
-//     -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
-//     -webkit-text-fill-color: #333;
-// }
 
  .one-note > img {
    position: absolute;
@@ -171,8 +168,6 @@ ul.points {
 .points > li.four {
   color: #9cfea5;
 }
-
-
 
 .landing {
   position: absolute;
@@ -272,8 +267,6 @@ a.l-facebook:hover ~ img.r-facebook {
   display: block;
 }
 
-
-
 a.l-signin:hover ~ img.black {
   display: none;
 }
@@ -319,7 +312,6 @@ a.l-twitter:hover ~ img.black {
    font-size:30px;
  }
 
-
  #search {
    background: #fdff76;
    font-size: 30px;
@@ -340,17 +332,9 @@ a.l-twitter:hover ~ img.black {
    margin: 0px;
    display: inline;
    bottom: 0px;
-   /*why body is not parent?*/
  }
 
- #main {
-   position: absolute;
-   left:70px;
-   width: calc(100% - 70px);
-   background: #fdff76;
-   height: 100%;
 
- }
 
  /*Left side----------------------------*/
 
@@ -381,8 +365,6 @@ a.l-twitter:hover ~ img.black {
     display: none;
   }
 
-
-
   .notebooks-index {
     position: relative;
   }
@@ -402,11 +384,7 @@ a.l-twitter:hover ~ img.black {
 
 
 
-
-
   // Left-------------------------------------------------------
-
-
 
  .left {
    background: #fdff76;
@@ -466,8 +444,6 @@ a.l-twitter:hover ~ img.black {
    left: 22px;
  }
 
-
-
  h2 {
    background: #80C229;
    color: white;
@@ -509,8 +485,6 @@ a.l-twitter:hover ~ img.black {
    height: 91;
  }
 
-
-
  .note-clickable {
    color: grey;
    height: 83px;
@@ -536,8 +510,6 @@ a.l-twitter:hover ~ img.black {
    height: 100%;
  }
 
-
-
  .notes-clickable {
    height: 100%;
  }
@@ -545,7 +517,6 @@ a.l-twitter:hover ~ img.black {
  .note-clickable:last-child {
    border-bottom: 8px solid white;
  }
-
 
  .color {
    display: none;
@@ -589,16 +560,12 @@ a.l-twitter:hover ~ img.black {
  }
 
  #note-file {
-
    padding: 20px 30px;
-
  }
 
  input {
    border: 1px solid white;
  }
-
-
 
  .note-clickable:hover {
    background: #8bd3b2;
@@ -641,10 +608,6 @@ a.l-twitter:hover ~ img.black {
    height: auto;
  }
 
- // .right > textarea {
- //   height: 300px;
- // }
-
  .note-options {
    position: absolute;
    width: 500px;
@@ -655,11 +618,9 @@ a.l-twitter:hover ~ img.black {
 
  .note-options > form {
    padding:10px;
-  //  width: calc(100% - 70px);
    font-weight: bold;
    font-size: 20px;
    width: 800px;
-  //  height: 100%;
    color: white;
    text-transform: uppercase;
  }
@@ -689,7 +650,6 @@ a.l-twitter:hover ~ img.black {
    width:100%;
  }
 
-
  #note-body {
    padding: 0 30px;
    display: block;
@@ -699,8 +659,7 @@ a.l-twitter:hover ~ img.black {
    border: none;
    font-size: 16px;
    text-align: justify;
-
-    left: 20px;
+   left: 20px;
  }
 
  .note-body {
@@ -718,25 +677,13 @@ a.l-twitter:hover ~ img.black {
     left: -10px;
   }
 
-  // position: relative;
-  // top: 35%;
-  // left: 20px;
-
- // select {
- //   color: #cdcfd0;
- // }
-
- // label {
- //   color: #cdcfd0;
- // }
-
 .left.stretch {
    width: 100%;
  }
 
+ // Form Reset---------------------------
 
-
-   input[type="text"],
+  input[type="text"],
   input[type="password"],
   input[type="email"],
   input[type="submit"] {
@@ -758,6 +705,7 @@ a.l-twitter:hover ~ img.black {
     cursor: pointer;
   }
 
+
   /*Create notebook form---------------*/
   .create-notebook {
     padding: 100px 0 0 0;
@@ -766,7 +714,6 @@ a.l-twitter:hover ~ img.black {
     background: #fdff76;
     margin: 0 auto;
   }
-
 
   .create-notebook > input {
     background: white;
@@ -815,140 +762,134 @@ a.l-twitter:hover ~ img.black {
     color: red;
   }
 
-
-  // Notebook show-----------
-  #notebook-show-title {
-
-
+  /*Create note form---------------*/
+  
+  .note-new {
+    height: calc(100% - 330px);
   }
 
-    /*Create note form---------------*/
-    .note-new {
-      height: calc(100% - 330px);
-    }
+  form.create-note {
+    padding: 30px;
+    height: 100%;
+  }
 
-    form.create-note {
-      padding: 30px;
-      height: 100%;
-    }
+  #note-new-title {
+    padding: 0 20px;
+    width: calc(100% - 40px)
+  }
 
-    #note-new-title {
-      padding: 0 20px;
-      width: calc(100% - 40px)
-    }
+  #note-new-body {
+    height: 100%;
+    padding: 20px;
+    width: calc(100% - 40px)
+  }
 
-    #note-new-body {
-      height: 100%;
-      padding: 20px;
-      width: calc(100% - 40px)
-    }
+  #note-new-file {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+  }
 
-    #note-new-file {
-      font-size: 16px;
-      margin: 0 0 20px 0;
-    }
+  .create-note > label {
+    padding: 0 30px 0 0;
+  }
 
-    .create-note > label {
-      padding: 0 30px 0 0;
-    }
+  .create-note > input {
+    background: white;
+    display: block;
+    width: 100%;
+    font-size: 28px;
+    text-align: left;
+  }
 
-    .create-note > input {
-      background: white;
-      display: block;
-      width: 100%;
-      font-size: 28px;
-      text-align: left;
-    }
+  .create-note > textarea {
+    background: white;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+  }
 
-    .create-note > textarea {
-      background: white;
-      display: block;
-      width: 100%;
-      font-size: 20px;
-      text-align: left;
-      margin: 0;
-    }
+  option {
+    margin: 0 auto;
+  }
 
-    option {
-      margin: 0 auto;
-    }
-
-    .create-note > button {
-      color: white;
-      font-size: 15px;
-      text-align: center;
-      color: white;
-      width: 200px;
-      margin: 0 auto;
-    }
+  .create-note > button {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 200px;
+    margin: 0 auto;
+  }
 
 
 
-    // Shared--------------------------------------
+  // Shared--------------------------------------
 
-    button.shared1 {
-      position: absolute;
-      left: calc(20% + 400px);
-      top: 10px;
-      background: #fdff76;
-      height: 30px;
-      font-size: 23px;
-      font-weight: bold;
-    }
+  button.shared1 {
+    position: absolute;
+    left: calc(20% + 400px);
+    top: 10px;
+    background: #fdff76;
+    height: 30px;
+    font-size: 23px;
+    font-weight: bold;
+  }
 
-    button.shared2 {
-      position: absolute;
-      left: calc(20% + 640px);
-      top: 10px;
-      background: #fdff76;
-      height: 30px;
-      font-size: 23px;
-      font-weight: bold;
-    }
+  button.shared2 {
+    position: absolute;
+    left: calc(20% + 640px);
+    top: 10px;
+    background: #fdff76;
+    height: 30px;
+    font-size: 23px;
+    font-weight: bold;
+  }
 
-    h2.shared1 {
-      color: #80C229;
-    }
+  h2.shared1 {
+    color: #80C229;
+  }
 
-    h2.shared2 {
-      position: absolute;
-      left: 20%;
-      top: 0;
-      display: block;
-      text-align: center;
-    }
+  h2.shared2 {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    display: block;
+    text-align: center;
+  }
 
-    section.note-shared {
-      padding: 30px;
-      height: 100%;
-      border-left: 1px solid grey;
-      border-right: 1px solid grey;
-      width: 1000px;
-      margin: 0 auto;
-    }
+  section.note-shared {
+    padding: 30px;
+    height: 100%;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    width: 1000px;
+    margin: 0 auto;
+  }
 
-    h1 {
-      color: #4db0de;
-      font-size: 20px;
-      padding: 0 0 30px 0;
-    }
+  h1 {
+    color: #4db0de;
+    font-size: 20px;
+    padding: 0 0 30px 0;
+  }
 
 
-    // Link--------------------------------
+  // Link--------------------------------
 
-    .link-box {
-      position: absolute;
-      z-index: 1;
-      color: black;
-      background: white;
-      top: 85px;
-      height: 30px;
-      width: 450px;
-    }
+  .link-box {
+    position: absolute;
+    z-index: 1;
+    color: black;
+    background: white;
+    top: 85px;
+    height: 30px;
+    width: 450px;
+  }
 
-    .link-box > a {
-      color: black;
-      font-size: 20px;
-      padding: 5px;
-      margin: 0;
-    }
+  .link-box > a {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+  }

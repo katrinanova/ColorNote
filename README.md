@@ -4,65 +4,57 @@
 
 [heroku]: http://colornote.herokuapp.com/
 
-## Minimum Viable Product
-Colornote is a clone of Evernotr built on Rails and Backbone. Users can:
+## Features
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create notebooks
-- [ ] Create notes in notebooks
-- [ ] Save or edit notes automatically
-- [ ] Add image to note
-- [ ] Add link to source of note if applicable
-- [ ] Share link to note
-- [ ] Share notebook
-- [ ] Typeahead search bar
+ColorNote app allows users to create notes, organize them in notebooks and share notes freely through the provided links. Notes can also have various file attachments. Notes can be organized by color.
 
-## Design Docs
-* [View Wireframes][views]
-* [DB schema][schema]
+As an option, user can login with twitter account.
 
-[views]: ./docs/views.md
-[schema]: ./docs/schema.md
+I designed the website to have a consistent interface throughout the notes-index view, single notebook-view or search-view.
 
-## Implementation Timeline
+The search allows user to select from notebooks and notes at the same time, which I achieved with PgSearch library’s Multi-search.
 
-### Phase 1: User Authentication (~1 day)
-I will implement user authentication in Rails based on the practices learned at
-App Academy. The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on to phase 2.
+The selected or first note’s view is always present on the page. The user can edit the note in place, which is saved automatically.
 
-[Details][phase-one]
+The user can easily get a link to share the chosen note by clicking on the “share icon”.
 
-### Phase 2: Creating Notebooks and Notes via Backbone (~2 days)
-I will add API routes to serve notebook and note data as JSON, then add Backbone models and collections that fetch data from those routes. The 'NotebooksShow' view will be implemented as Backbone composite view. By the end of this phase, users will be able to create notebook and notes inside a Backbone app.
+ Users can:
 
-[Details][phase-two]
+- [√] Create accounts
+- [√] Create sessions (log in)
+- [√] Create notebooks
+- [√] Create notes in notebooks
+- [√] Save or edit notes automatically
+- [√] Add file to note
+- [√] Add link to source of note if applicable
+- [√] Share link to note
+- [√] Search for notes and notebooks simultaneously
 
-### Phase 3: Editing and Displaying Notes (~2 days)
-I plan to use third-party libraries to add functionality to the `NoteForm` and
-`NoteShow` views in this phase. First I'll need to add a Markdown editor to the
-`NoteForm`, and make sure that the Markdown is properly escaped and formatted in
-the `NoteShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to notes.
+## Languages
 
-[Details][phase-three]
+•	Ruby
+•	Javascript
+•	HTML/CSS
 
-### Phase 4: Sharing Notes and Notebooks (~1-2 days)
 
-I will add a functionality to extract and hash the link to notebook
-or single note and send it via email.
+## Frameworks
 
-[Details][phase-four]
+•	Ruby on Rails
+•	backbone.js
 
-### Phase 5: Searching for Notes (~2 days)
-I'll need to add `search` routes to Notes controller. On the
-Backbone side, there will be a `SearchResults` composite view.
-This view will use notes collection, but it will fetch from
-the new `search` route.
 
-[Details][phase-five]
+## Libraries and Technologies
 
-### Bonus Features (TBD)
+•	jQuery / AJAX
+•	paperclip / AWS
+•	pg_search
+•	kaminari
+•	figaro
+•	jbuilder
+•	omniauth
+
+### Future Features
+- [ ] Facebook Omniauth
 - [ ] Add friends
 - [ ] Have public notes and private notes
 - [ ] Share notes with certain groups of friends
@@ -71,9 +63,3 @@ the new `search` route.
 - [ ] Leave comment for a note
 - [ ] Leave comment for a comment
 - [ ] Like note/comment
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
