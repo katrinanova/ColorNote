@@ -861,12 +861,14 @@ a.l-twitter:hover ~ img.black {
 
   section.note-shared {
     padding: 30px;
-    height: 100%;
+    height: calc(100% - 100px);
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     width: 1000px;
     margin: 0 auto;
+    overflow: auto;
   }
+
 
   h1 {
     color: #4db0de;
