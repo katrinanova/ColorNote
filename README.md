@@ -32,26 +32,26 @@ The user can easily get a link to share the chosen note by clicking on the “sh
 
 ## Languages
 
-- •	Ruby
-- •	Javascript
-- •	HTML/CSS
+- Ruby
+- Javascript
+- HTML/CSS
 
 
 ## Frameworks
 
-- •	Ruby on Rails
-- •	backbone.js
+- Ruby on Rails
+- backbone.js
 
 
 ## Libraries and Technologies
 
-- •	jQuery / AJAX
-- •	paperclip / AWS
-- •	pg_search
-- •	kaminari
-- •	figaro
-- •	jbuilder
-- •	omniauth
+-	jQuery / AJAX
+-	paperclip / AWS
+-	pg_search
+- kaminari
+- figaro
+- jbuilder
+- omniauth
 
 ### Future Features
 - [ ] Facebook Omniauth
