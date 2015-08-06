@@ -763,7 +763,7 @@ a.l-twitter:hover ~ img.black {
   }
 
   /*Create note form---------------*/
-  
+
   .note-new {
     height: calc(100% - 330px);
   }
@@ -872,6 +872,14 @@ a.l-twitter:hover ~ img.black {
     color: #4db0de;
     font-size: 20px;
     padding: 0 0 30px 0;
+  }
+
+  a.file-name {
+    display: inline;
+    padding: 3px;
+    color: gray;
+    font-size: 18px;
+    background: #fdff76;
   }
 
 

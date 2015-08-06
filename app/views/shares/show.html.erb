@@ -16,6 +16,10 @@
   <%= simple_format(@note.body) %>
 
   <% @note.uploads.each do |upload| %>
-    <%= upload %>
+    <% if upload.uploaded_content_type.match("image") %>
+      <img src="<%= upload.uploaded.url%>">
+    <% else %>
+      <a class="file-name" href="<%= upload.uploaded.url%>">📎 <%= upload.uploaded_file_name %>"</a>
+    <% end %>
   <% end %>
 </section>
