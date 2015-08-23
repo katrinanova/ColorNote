@@ -87,13 +87,15 @@
 
  input#password {
    width: 220px;
-   color: white;
+   color: black;
    background: white;
  }
 
  input#email {
    width: 380px;
    font-size: 20px;
+   color: black;
+   background: white;
  }
 
  .one-note > img {
@@ -525,7 +527,8 @@ a.l-twitter:hover ~ img.black {
    position: relative;
    height: 200px;
    left: 400px;
-   transform: rotate(-44deg);
+   -webkit-transform: rotate(-44deg);
+   -ms-transform: rotate(-44deg);
    overflow: hidden;
 
  }
