@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'static_pages#landing'
+  get 'facebook', to: 'static_pages#facebook'
   get 'home', to: 'static_pages#root'
   resources :users
   resource :session, only: [:show, :new, :create, :destroy]
