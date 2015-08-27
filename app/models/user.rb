@@ -25,23 +25,25 @@ class User < ActiveRecord::Base
            uid: auth_hash[:uid])
 
     unless user
-      # if auth_hash[:provider] === facebook
-      #   user = User.create!(
-      #        provider: auth_hash[:provider],
-      #        email: auth_hash[:info][:email],
-      #        uid: auth_hash[:uid],
-      #        password_digest: SecureRandom::urlsafe_base64)
-      # else
+      if auth_hash[:provider] === "facebook"
+        user = User.create!(
+             provider: auth_hash[:provider],
+             email: "notemail@e.com",
+             uid: auth_hash[:uid],
+             password_digest: SecureRandom::urlsafe_base64)
+      else
         user = User.create!(
              provider: auth_hash[:provider],
              email: auth_hash[:info][:nickname], #bad solution
              uid: auth_hash[:uid],
              password_digest: SecureRandom::urlsafe_base64)
-      # end
+      end
     end
 
    user
  end
+
+ # auth_hash[:info][:email]
 
   def self.generate_session_token
     SecureRandom::urlsafe_base64(32)
