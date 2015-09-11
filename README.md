@@ -1,8 +1,8 @@
 # ColorNote
 
-[https://colornote.herokuapp.com/][heroku]
+[https//:katrinadev.com][link]
 
-[heroku]: http://colornote.herokuapp.com/
+[link]: http://katrinadev.com/
 
 ## Features
 
