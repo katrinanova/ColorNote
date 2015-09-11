@@ -1,8 +1,8 @@
 # ColorNote
 
-[https//:katrinadev.com][link]
+[live at https//:mycolornote.com][link]
 
-[link]: http://katrinadev.com/
+[link]: http://mycolornote.com/
 
 ## Features
 
