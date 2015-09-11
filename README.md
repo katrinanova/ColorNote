@@ -6,17 +6,15 @@
 
 ## Features
 
-ColorNote app allows users to create notes, organize them in notebooks and share notes freely through the provided links. Notes can also have various file attachments. Notes can be organized by color.
+ColorNote app allows users to create notes, organize them in notebooks and share notes freely through the provided links. Notes can also have various multiple file attachments. Notes can be organized by color.
 
-As an option, user can login with twitter account.
+As an option, user can login with facebook or twitter account.
 
-I designed the website to have a consistent interface throughout the notes-index view, single notebook-view or search-view.
+I designed the website to have a consistent interface throughout the notes-index view, single notebook-view or search-view. The selected or first note’s view is always present on the page. 
+
+The user can edit the note in place, which is saved automatically.
 
 The search allows user to select from notebooks and notes at the same time, which I achieved with PgSearch library’s Multi-search.
-
-The selected or first note’s view is always present on the page. The user can edit the note in place, which is saved automatically.
-
-The user can easily get a link to share the chosen note by clicking on the “share icon”.
 
  Users can:
 
