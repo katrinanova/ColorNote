@@ -27,7 +27,7 @@ The user can easily get a link to share the chosen note by clicking on the “sh
 - [√] Save or edit notes automatically
 - [√] Add file to note
 - [√] Add link to source of note if applicable
-- [√] Share link to note
+- [√] Share link to the note
 - [√] Search for notes and notebooks simultaneously
 
 ## Languages
@@ -54,7 +54,7 @@ The user can easily get a link to share the chosen note by clicking on the “sh
 - omniauth
 
 ### Future Features
-- [ ] Facebook Omniauth
+- [√] Facebook and Twitter Omniauth
 - [ ] Add friends
 - [ ] Have public notes and private notes
 - [ ] Share notes with certain groups of friends
