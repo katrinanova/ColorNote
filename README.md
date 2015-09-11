@@ -1,6 +1,6 @@
 # ColorNote
 
-[Live at https//:mycolornote.com][link]
+###Live at [https//:mycolornote.com][link]
 
 [link]: http://mycolornote.com/
 
