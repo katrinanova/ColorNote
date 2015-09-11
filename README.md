@@ -2,7 +2,7 @@
 
 ###Live at [https://mycolornote.com][link]
 
-[link]: http://mycolornote.com/
+[link]: https://mycolornote.com/
 
 ## Features
 
