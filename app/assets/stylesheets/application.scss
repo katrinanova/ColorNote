@@ -405,6 +405,24 @@ a.l-twitter:hover ~ img.black {
     box-shadow: inset 0 0 7px black;
   }
 
+  .big-r {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: red;
+    top: -5px;
+    left: -5px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 7px black;
+  }
+
+  .color-select-r:hover .big-r{
+    display: block;
+    z-index: 1;
+  }
+
   .color-select-b {
     position: relative;
     width: 25px;
@@ -415,6 +433,25 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+  }
+
+  .big-b {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: #4db0de;
+    top: -5px;
+    left: -5px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 7px black;
+  }
+
+
+  .color-select-b:hover .big-b{
+    display: block;
+    z-index: 1;
   }
 
   .color-select-g {
@@ -429,7 +466,25 @@ a.l-twitter:hover ~ img.black {
   // outline: 3px solid white;
   border-radius: 50%;
   outline-radius:50%;
+  }
 
+  .big-g {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: #80C229;
+    top: -5px;
+    left: -5px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 7px black;
+  }
+
+
+  .color-select-g:hover .big-g{
+    display: block;
+    z-index: 1;
   }
 
  .left {
@@ -669,12 +724,24 @@ a.l-twitter:hover ~ img.black {
    font-weight: bold;
    font-size: 20px;
    width: 800px;
-   color: white;
+   color: black;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    text-transform: uppercase;
  }
 
+ select#note-notebook-id {
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+  // color: black;
+  // font-weight: normal;
+  select#note-color {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
  .note-options > form > label {
    padding: 20px;
+   color: white;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
  }
 
  .files > a {
