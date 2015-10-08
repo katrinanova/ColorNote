@@ -11,6 +11,8 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
 
     this.book = options.book || false;
     this.search = false;
+
+    this.selector = false;
   },
 
   events: {
@@ -18,11 +20,14 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     "click .note-clickable > .fa-share-square-o": "copyToClipboard",
     "click .note-clickable": "switchNote",
     "click #search": "toggleSearchView",
-    "change .query": "search"
+    "change .query": "search",
+    "click .color-select-r": "red",
+    "click .color-select-b": "blue",
+    "click .color-select-g": "green",
   },
 
   render: function(options) {
-    var content = this.template({notes: this.collection, book: this.book});
+    var content = this.template({notes: this.collection, book: this.book, selector: this.selector});
 
     if (this.collection.length === 0) {
       this.$el.html(content);
@@ -142,5 +147,20 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
     }
 
     this.render();
-  }
+  },
+
+  red: function() {
+    this.selector = "Red";
+    this.render();
+  },
+
+  blue: function() {
+    this.selector = "Blue";
+    this.render();
+  },
+
+  green: function() {
+    this.selector = "Green";
+    this.render();
+  },
 })

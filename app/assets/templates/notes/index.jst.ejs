@@ -19,12 +19,33 @@
 
 
   <% if (notes.length === 1) { %>
-    <div class="note-count">1 note</div>
+    <div class="nTote-count">1 note</div>
   <% } else { %>
     <div class="note-count"><%= notes.length %> notes</div>
   <% } %>
 
   <div class="notes-clickable">
+
+
+
+    <% if (selector !== false) { %>
+
+      <% var notesSelect = []; %>
+      <% var notesOther = []; %>
+
+      <% notes.forEach (function(note) { %>
+
+        <% if (note.escape("color") === selector) { %>
+          <% notesSelect.push(note) } else { %>
+            <% notesOther.push(note) } %>
+
+      <% }) %>
+
+      <% notes = notesSelect.concat(notesOther) %>
+
+    <% } %>
+
+
     <% notes.forEach(function(note){ %>
 
       <% if (note instanceof Colornote.Models.Note) { %>
