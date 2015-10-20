@@ -92,7 +92,7 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
   },
 
   renderSearch: function() {
-    var content = this.template({notes: Colornote.searchResults, book: false});
+    var content = this.template({notes: Colornote.searchResults, book: false, selector: this.selector});
 
     this.$el.html(content);
 
