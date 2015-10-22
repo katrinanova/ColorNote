@@ -13,15 +13,15 @@ user.notebooks.first.notes.create!(title: "Downward Facing Cat", color: "Blue", 
 
 user.notebooks.first.notes.create!(title: "Cat-Cow Pose", color: "Green", body: "Cat-Cow Pose teaches us how to balance on our hands while using the entire body to support us. \r\n\r\nIt is a great way to strengthen the abdominals, and learn to use the breath to help us stay in a challenging pose. \r\n\r\nHow to do it: From all fours, tuck under your toes and lift your legs up off the mat. \r\n\r\nSlide your heels back enough until you feel you are one straight line of energy from your head to your feet. \r\n\r\nEngage the lower abdominals, draw the shoulders down and away from the ears, pull your ribs together and breathe deeply for 8-10 breaths.")
 
-user.notebooks.first.notes.create!(title: "Dolphin", body:'How to do it: Chant "bye-bye batwings"! \r\n\r\nBegin on your hands and knees, then lower your elbows to the floor, shoulder-distance apart. Interlace fingers, tuck your toes, and press hips up to create a long line between elbows and sitting bones (aka your butt). \r\n\r\nSlowly squeeze your upper arms inward to work biceps, triceps, and shoulders. \r\n\r\nBreathe and repeat.')
+user.notebooks.first.notes.create!(title: "Dolphin", body:"How to do it: Chant "bye-bye batwings"! \r\n\r\nBegin on your hands and knees, then lower your elbows to the floor, shoulder-distance apart. Interlace fingers, tuck your toes, and press hips up to create a long line between elbows and sitting bones (aka your butt). \r\n\r\nSlowly squeeze your upper arms inward to work biceps, triceps, and shoulders. \r\n\r\nBreathe and repeat.")
 
-user.notebooks.first.notes.create!(title: "Boat Pose", body:'How to do it: Celeb yogini loves this move! \r\n\r\nSit up high and straight, hands beneath your knees. \r\n\r\nSlowly tighten your abs and lift your feet off the floor, knees bent, with your legs at a 45-degree angle. \r\n\r\nIf this feels easy, straighten your legs and arms. Breathe and slowly lower.')
+user.notebooks.first.notes.create!(title: "Boat Pose", body:"How to do it: Celeb yogini loves this move! \r\n\r\nSit up high and straight, hands beneath your knees. \r\n\r\nSlowly tighten your abs and lift your feet off the floor, knees bent, with your legs at a 45-degree angle. \r\n\r\nIf this feels easy, straighten your legs and arms. Breathe and slowly lower.")
 
-user.notebooks.first.notes.create!(title: "Downward Dog Split Pose", body:'How to do it: Begin on hands and knees. \r\n\r\nTake a big breath out and push into Downward Dog by straightening legs and lifting your hips and butt in the air. \r\n\r\nRelax head between straightened arms. Exhale and lift one leg as high as you can into the air, flexing foot. \r\n\r\nRepeat on other side.')
+user.notebooks.first.notes.create!(title: "Downward Dog Split Pose", body:"How to do it: Begin on hands and knees. \r\n\r\nTake a big breath out and push into Downward Dog by straightening legs and lifting your hips and butt in the air. \r\n\r\nRelax head between straightened arms. Exhale and lift one leg as high as you can into the air, flexing foot. \r\n\r\nRepeat on other side.")
 
-user.notebooks.first.notes.create!(title: "Cow Pose", body:'How to do it: This move looks relaxing but is one of the toughest hip strengtheners and openers. Start on your hands and knees, and slide your right leg back to cross over your left leg. \r\n\r\nGradually sit back between your heels, using a rolled up towel or block if you can’t sit on the ground. \r\n\r\nHold as long as you feel comfortable, then switch legs and repeat.')
+user.notebooks.first.notes.create!(title: "Cow Pose", body:"How to do it: This move looks relaxing but is one of the toughest hip strengtheners and openers. Start on your hands and knees, and slide your right leg back to cross over your left leg. \r\n\r\nGradually sit back between your heels, using a rolled up towel or block if you can’t sit on the ground. \r\n\r\nHold as long as you feel comfortable, then switch legs and repeat.")
 
-user.notebooks.first.notes.create!(title: "Side Plank Pose", color: "Blue", body:'How to do it: From plank position, press your right hand into a mat and turn your body so your weight is on the outer edge of your right foot. \r\n\r\nBrace your core and keep your arms elevated over your head. \r\n\r\nOption to bend your leg and place it behind you for support, or, if you’re super fit, to rock a few mid-air crunches like our model Jillian Michaels!')
+user.notebooks.first.notes.create!(title: "Side Plank Pose", color: "Blue", body:"How to do it: From plank position, press your right hand into a mat and turn your body so your weight is on the outer edge of your right foot. \r\n\r\nBrace your core and keep your arms elevated over your head. \r\n\r\nOption to bend your leg and place it behind you for support, or, if you’re super fit, to rock a few mid-air crunches like our model Jillian Michaels!")
 
 user.notebooks.first.notes.create!(title: "Tadasana", body: "This basically means 'standing posture'. Stand straight by evenly spreading your weight on all areas of both feet.\r\n\r\n Make sure that your body is stretched, shoulders are aligned with your hips, hands are hanging straight at the sides of your thighs, neck is stretched and the crown of your head is raised. Breathe in and out deeply and slowly.")
 
@@ -29,15 +29,15 @@ user.notebooks.first.notes.create!(title: "Malasan", body: "This is the squattin
 
 The above are some of the basic yoga poses for beginners at home. There are many other postures that you can do either standing or sitting, such as forward bend, reclining position, side bend and twists that you can easily learn and quickly incorporate into your workout.")
 
-user.notebooks.first.notes.create!(title: "Threading The Needle", body: "INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Threading The Needle", body: "INSTRUCTIONS
 
-1. On you hands and knees in Table pose, slide the right hand between the left hand and left knee. Slide the arm all the way out to the left so that the right shoulder and side of the head rest comfortably on the floor.\r\n\r\n
+1. On you hands and knees in Table pose, slide the right hand between the left hand and left knee. Slide the arm all the way out to the left so that the right shoulder and side of the head rest comfortably on the floor.
 
-2. Inhale and reach the left hand up towards the ceiling. At first explore the posture with the arm, finding the place were you feel the deepest stretch, then stay there and reach out through the fingers.\r\n\r\n
+2. Inhale and reach the left hand up towards the ceiling. At first explore the posture with the arm, finding the place were you feel the deepest stretch, then stay there and reach out through the fingers.
 
-3. Breathe and hold for 3-6 breaths.\r\n\r\n
+3. Breathe and hold for 3-6 breaths.
 
-4. To release: exhale the palm back to the floor and slowly inhale back to Table pose.\r\n\r\n
+4. To release: exhale the palm back to the floor and slowly inhale back to Table pose.
 
 5. Repeat on the other side.")
 
@@ -45,164 +45,164 @@ user.notebooks.first.notes.create!(title: "Threading The Needle", body: "INSTRUC
 
 user.notebooks.first.notes.create!(title: "Sukhasana", body: "INSTRUCTIONS
 
-1. Come into a seated position with the buttocks on the floor, then cross the legs, placing the feet directly below the knees. Rest the hands on the knees or the lap with the palms facing up or down.\r\n\r\n
+1. Come into a seated position with the buttocks on the floor, then cross the legs, placing the feet directly below the knees. Rest the hands on the knees or the lap with the palms facing up or down.
 
-Optional: Use a hand mudra while seated in the posture.\r\n\r\n
+Optional: Use a hand mudra while seated in the posture.
 
-2. Press the hip bones down into the floor and reach the crown of the head up to lengthen the spine. Drop the shoulders down and back, and press the chest towards the front of the room.\r\n\r\n
+2. Press the hip bones down into the floor and reach the crown of the head up to lengthen the spine. Drop the shoulders down and back, and press the chest towards the front of the room.
 
-3. Relax the face, jaw, and belly. Let the tongue rest on the roof of the mouth, just behind the front teeth.\r\n\r\n
+3. Relax the face, jaw, and belly. Let the tongue rest on the roof of the mouth, just behind the front teeth.
 
-4. Breathe deeply through the nose down into the belly. Hold as long as comfortable.\r\n\r\n
+4. Breathe deeply through the nose down into the belly. Hold as long as comfortable.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Easy pose is a comfortable seated position for meditation. This pose open the hips, lengthens the spine and promotes groundedness and inner calm.\r\n\r\n
+Benefits: Easy pose is a comfortable seated position for meditation. This pose open the hips, lengthens the spine and promotes groundedness and inner calm.
 
-Contraindications: Recent or chronic knee or hip injury or inflammation.\r\n\r\n
+Contraindications: Recent or chronic knee or hip injury or inflammation.
 
-MODIFICATIONS + VARIATIONS\r\n\r\n
+MODIFICATIONS + VARIATIONS
 
 Modifications: Place folded blanket under knees or under the hip bones.
 
 Variations: This pose is very similar to Accomplished pose, Siddhasana.")
 
-user.notebooks.first.notes.create!(title: "Seated Forward Bend", color: "Red", body: "INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Seated Forward Bend", color: "Red", body: "INSTRUCTIONS
 
-1. From Staff pose, inhale the arms up over the head and lift and lengthen up through the fingers and crown of the head.\r\n\r\n
+1. From Staff pose, inhale the arms up over the head and lift and lengthen up through the fingers and crown of the head.
 
-2. Exhale and hinging at the hips, slowly lower the torso towards the legs.  Reach the hands to the toes, feet or ankles.\r\n\r\n
+2. Exhale and hinging at the hips, slowly lower the torso towards the legs.  Reach the hands to the toes, feet or ankles.
 
-3. To deepen the stretch: A) Use the arms to gently pull the head and torso closer to the legs.  B) Press out through the heels and gently draw the toes towards you.\r\n\r\n
+3. To deepen the stretch: A) Use the arms to gently pull the head and torso closer to the legs.  B) Press out through the heels and gently draw the toes towards you.
 
-4. Breathe and hold for 3-8 breaths.\r\n\r\n
+4. Breathe and hold for 3-8 breaths.
 
-5. To release: A) Slowly roll up the spine back into Staff pose.  B) Inhale the arms back over your head as you lift the torso back into Staff pose.\r\n\r\n
+5. To release: A) Slowly roll up the spine back into Staff pose.  B) Inhale the arms back over your head as you lift the torso back into Staff pose.
+BENEFITS + CONTRAINDICATIONS
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+Benefits: Seated forward fold provides a deep stretch for entire back side of body from the heels to the neck. Forward fold calms the nervous system and emotions and stimulates the reproductive and urinary systems.
 
-Benefits: Seated forward fold provides a deep stretch for entire back side of body from the heels to the neck. Forward fold calms the nervous system and emotions and stimulates the reproductive and urinary systems.\r\n\r\n
+Contraindications: Recent or chronic injury to the arms, hips, ankles or shoulders.
 
-Contraindications: Recent or chronic injury to the arms, hips, ankles or shoulders.\r\n\r\n
+MODIFICATIONS + VARIATIONS
 
-MODIFICATIONS + VARIATIONS\r\n\r\n
-
-Modifications: If you cannot reach your hands to the feet: A) Use a yoga strap around the feet and hold on to the strap with both hands.  B) Bend the knees enough to reach the feet with the hands and to place the head on the knees.\r\n\r\n
+Modifications: If you cannot reach your hands to the feet: A) Use a yoga strap around the feet and hold on to the strap with both hands.  B) Bend the knees enough to reach the feet with the hands and to place the head on the knees.
 
 Variations: If you have the flexibility, reach the hands in front of the foot, clasping hand to wrist.")
 
-user.notebooks.first.notes.create!(title: "Child", body:"INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Child", body:"INSTRUCTIONS
 
-1. From Table pose, exhale and lower the hips to the heels and forehead to the floor. Have the knees together or if more comfortable, spread the knees slightly apart.\r\n\r\n
+1. From Table pose, exhale and lower the hips to the heels and forehead to the floor. Have the knees together or if more comfortable, spread the knees slightly apart.
 
-2. The arms can be overhead with the palms on the floor, the palms or fists can be stacked under the forehead, or the arms can be along side the body with the palms up.\r\n\r\n
+2. The arms can be overhead with the palms on the floor, the palms or fists can be stacked under the forehead, or the arms can be along side the body with the palms up.
 
-3. Breathe slowly and deeply, actively pressing the belly against the thighs on the inhale.\r\n\r\n
+3. Breathe slowly and deeply, actively pressing the belly against the thighs on the inhale.
 
-4. Breathe and hold for 4-12 breaths.\r\n\r\n
+4. Breathe and hold for 4-12 breaths.
 
-5. To release: place the palms under the shoulders and slowly inhale up to a seated position.\r\n\r\n
+5. To release: place the palms under the shoulders and slowly inhale up to a seated position.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Child pose calms the body, mind and spirit and stimulates the third eye point. Child pose gently stretches the low back, massages and tones the abdominal organs, and stimulates digestion and elimination.\r\n\r\n
+Benefits: Child pose calms the body, mind and spirit and stimulates the third eye point. Child pose gently stretches the low back, massages and tones the abdominal organs, and stimulates digestion and elimination.
 
-Contraindications: Recent or chronic injury to the knees.\r\n\r\n
+Contraindications: Recent or chronic injury to the knees.
 
-MODIFICATIONS + VARIATIONS\r\n\r\n
+MODIFICATIONS + VARIATIONS
 
-Modifications: A) Place a blanket under the hips, knees and/or head. B) If pregnant, spread the knees wide apart to remove any pressure on the abdomen.\r\n\r\n
+Modifications: A) Place a blanket under the hips, knees and/or head. B) If pregnant, spread the knees wide apart to remove any pressure on the abdomen.
 
 Variations: Open the knees wider to slide the arms between the legs reaching under the body and turn the head to the side.")
 
-user.notebooks.first.notes.create!(title: "Accomplished Pose", color: "Blue", body:"INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Accomplished Pose", color: "Blue", body:"INSTRUCTIONS
 
-1. With the buttocks on the floor, cross the legs, placing one foot to close to the inner thigh and then the other foot close to the ankle so both heels are almost at your midline. Rest the hands on the knees or in the lap with the palms facing up or down.\r\n\r\n
+1. With the buttocks on the floor, cross the legs, placing one foot to close to the inner thigh and then the other foot close to the ankle so both heels are almost at your midline. Rest the hands on the knees or in the lap with the palms facing up or down.
 
-Optional: Use a hand mudra while seated in the posture.\r\n\r\n
+Optional: Use a hand mudra while seated in the posture.
 
-2. Press the hip bones down into the floor and reach the crown of the head up to lengthen the spine. Drop the shoulders down and back, and press the chest towards the front of the room.\r\n\r\n
+2. Press the hip bones down into the floor and reach the crown of the head up to lengthen the spine. Drop the shoulders down and back, and press the chest towards the front of the room.
 
-3. Relax the face, jaw, and belly. Let the tongue rest on the roof of the mouth, just behind the front teeth.\r\n\r\n
+3. Relax the face, jaw, and belly. Let the tongue rest on the roof of the mouth, just behind the front teeth.
 
-4. Breathe deeply through the nose down into the belly. Hold as long as comfortable.\r\n\r\n
+4. Breathe deeply through the nose down into the belly. Hold as long as comfortable.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Accomplished pose is a comfortable seated position for meditation. This pose open the hips, lengthens the spine and promotes groundedness and inner calm.\r\n\r\n
+Benefits: Accomplished pose is a comfortable seated position for meditation. This pose open the hips, lengthens the spine and promotes groundedness and inner calm.
 
-Contraindications: Recent or chronic knee or hip injury or inflammation.\r\n\r\n
+Contraindications: Recent or chronic knee or hip injury or inflammation.
 
-MODIFICATIONS + VARIATIONS\r\n\r\n
+MODIFICATIONS + VARIATIONS
 
-Modifications: Place folded blanket under knees or under the hip bones.\r\n\r\n
+Modifications: Place folded blanket under knees or under the hip bones.
 
 Variations: This pose is very similar to Easy pose, Sukhasana.")
 
-user.notebooks.first.notes.create!(title: "Balancing Table", body:"INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Balancing Table", body:"INSTRUCTIONS
 
-1. On your hands and knees in Table pose, inhale the right leg up parallel to the floor, reaching the toes towards the back wall.\r\n\r\n
+1. On your hands and knees in Table pose, inhale the right leg up parallel to the floor, reaching the toes towards the back wall.
 
-2. Starring at a point between the palms, slowly inhale the left arm up parallel to the floor, reaching the fingers towards the front wall.\r\n\r\n
+2. Starring at a point between the palms, slowly inhale the left arm up parallel to the floor, reaching the fingers towards the front wall.
 
-3. Breathe and hold for 3-6 breaths.\r\n\r\n
+3. Breathe and hold for 3-6 breaths.
 
-4. To release: slowly exhale the left arm down, and then lower the knee down, back into table position.\r\n\r\n
+4. To release: slowly exhale the left arm down, and then lower the knee down, back into table position.
 
-5. Repeat on other side.\r\n\r\n
+5. Repeat on other side.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Balancing Table pose improves balance, memory, focus and coordination. This posture builds core body strength and lengthens the spine.\r\n\r\n
+Benefits: Balancing Table pose improves balance, memory, focus and coordination. This posture builds core body strength and lengthens the spine.
 
 Contraindications: Recent or chronic injury to the knees, back, arms or shoulders.")
 
-user.notebooks.first.notes.create!(title: "One-Legged King Pigeon", body:"INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "One-Legged King Pigeon", body:"INSTRUCTIONS
 
-1. From the Table or Down Dog, slide the right knee forward between the hands and let the right foot slide over to the left. Slide the left leg back, lowering the hips towards the floor.\r\n\r\n
+1. From the Table or Down Dog, slide the right knee forward between the hands and let the right foot slide over to the left. Slide the left leg back, lowering the hips towards the floor.
 
-2. Press down into the palms or fingertips, inhale and reach the crown of the head up, lengthening the spine. Exhale and sink the hips down into the floor. Roll the shoulders down and back and press and lean forward through the chest.\r\n\r\n
+2. Press down into the palms or fingertips, inhale and reach the crown of the head up, lengthening the spine. Exhale and sink the hips down into the floor. Roll the shoulders down and back and press and lean forward through the chest.
 
-3. Move as deep into the posture as you can while still maintaining full deep breathing. Breathe and hold for 3-6 breaths.\r\n\r\n
+3. Move as deep into the posture as you can while still maintaining full deep breathing. Breathe and hold for 3-6 breaths.
 
-4. To release: support your weight with the hands as you slide the right knee back into Table or step the right foot back into Down Dog.\r\n\r\n
+4. To release: support your weight with the hands as you slide the right knee back into Table or step the right foot back into Down Dog.
 
-5. Repeat on other side.\r\n\r\n
+5. Repeat on other side.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Pigeon pose opens the hips and chest, facilitates deeper breathing, and opens the heart center. This posture stimulates the nervous, endocrine and reproductive systems.\r\n\r\n
+Benefits: Pigeon pose opens the hips and chest, facilitates deeper breathing, and opens the heart center. This posture stimulates the nervous, endocrine and reproductive systems.
 
-Contraindications: Recent or chronic back, knee, or hip injury or inflammation.\r\n\r\n
-MODIFICATIONS + VARIATIONS\r\n\r\n
+Contraindications: Recent or chronic back, knee, or hip injury or inflammation.
 
-Modifications: A) Place a folded blanket underneath the hip of the bent knee to keep the hips level. B) Use yoga blocks under the hands. C) Adjust the level of stretch in the hips by how close the foot of the bent knee is to the hips; bring it closer to the hips for less stretch, slide it away for more stretch.\r\n\r\n
+MODIFICATIONS + VARIATIONS
+
+Modifications: A) Place a folded blanket underneath the hip of the bent knee to keep the hips level. B) Use yoga blocks under the hands. C) Adjust the level of stretch in the hips by how close the foot of the bent knee is to the hips; bring it closer to the hips for less stretch, slide it away for more stretch.
 
 Variations: A) Lead with the chest as you exhale forward, coming into Extended Pigeon. B) Bring the hands to the front bent knee, lifting yourself up a little higher. C) Interlace the fingers behind your back, squeezing the shoulder blades together. D) Inhale the arms over your head, in a H position, palms together with thumbs crossed, or interlace the fingers and point the index finger.
 
 ")
 
-user.notebooks.first.notes.create!(title: "Extended One-Legged Pigeon", body:"INSTRUCTIONS\r\n\r\n
+user.notebooks.first.notes.create!(title: "Extended One-Legged Pigeon", body:"INSTRUCTIONS
 
-1. From the Table or Down Dog, slide the right knee forward between the hands and let the right foot slide over to the left. Slide the left leg back, lowering the hips towards the floor.\r\n\r\n
+1. From the Table or Down Dog, slide the right knee forward between the hands and let the right foot slide over to the left. Slide the left leg back, lowering the hips towards the floor.
 
-2. Slowly walk the hands forward to lower the torso and head to the floor. If the head doesn’t touch the floor, support it with stacked hands or fists.\r\n\r\n
+2. Slowly walk the hands forward to lower the torso and head to the floor. If the head doesn’t touch the floor, support it with stacked hands or fists.
 
-3. Move as deep into the posture as you can while still maintaining full deep breathing. Breathe and hold for 3-6 breaths.\r\n\r\n
+3. Move as deep into the posture as you can while still maintaining full deep breathing. Breathe and hold for 3-6 breaths.
 
-4. To release: slowly walk the hands back under your shoulders and you slide the right knee back into Table or step the right foot back into Down Dog.\r\n\r\n
+4. To release: slowly walk the hands back under your shoulders and you slide the right knee back into Table or step the right foot back into Down Dog.
 
-5. Repeat on other side.\r\n\r\n
+5. Repeat on other side.
 
-BENEFITS + CONTRAINDICATIONS\r\n\r\n
+BENEFITS + CONTRAINDICATIONS
 
-Benefits: Extended Pigeon pose deeply opens the hips and groin. This forward folding pose is calming and deeply introspective.\r\n\r\n
+Benefits: Extended Pigeon pose deeply opens the hips and groin. This forward folding pose is calming and deeply introspective.
 
-Contraindications: Recent or chronic knee, or hip injury or inflammation.\r\n\r\n
+Contraindications: Recent or chronic knee, or hip injury or inflammation.
 
-MODIFICATIONS + VARIATIONS\r\n\r\n
+MODIFICATIONS + VARIATIONS
 
-Modifications: A) Place a folded blanket underneath the hip of the bent knee to keep the hips level. B) Use a yoga block under the forehead. C) Adjust the level of stretch in the hips by how close the foot of the bent knee is to the hips; bring it closer to the hips for less stretch, slide it away for more stretch.\r\n\r\n
+Modifications: A) Place a folded blanket underneath the hip of the bent knee to keep the hips level. B) Use a yoga block under the forehead. C) Adjust the level of stretch in the hips by how close the foot of the bent knee is to the hips; bring it closer to the hips for less stretch, slide it away for more stretch.
 
 Variations: Twisted Pigeon – with the right knee forward slide the left arm in front of the knee to the right. Reach the right arm up and around your back, and if possible hold onto the right foot.
 
