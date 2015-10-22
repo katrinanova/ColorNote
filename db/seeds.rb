@@ -295,92 +295,81 @@ Capacity Planning \r\n
 
 Capacity planning is an exercise of figuring out the required hardware to handle expected load in production. Usually it involves figuring out performance of application with fewer boxes and based on performance per box projecting it. Finally verifying it with load/performance tests.")
 
-user.notebooks.find(3).notes.create!(title: "React.js vs traditional MVC", body: "I've been working with React for the last two weeks, and I think it's quite a revolutionary library. In this blog, I will tell you why.\r\n
+user.notebooks.find(3).notes.create!(title: "React.js vs traditional MVC", body: "I've been working with React for the last two weeks, and I think it's quite a revolutionary library. In this blog, I will tell you why.
 
-If you don't know what React is, visit the doc and read up on it. The basic idea is this:\r\n
+If you don't know what React is, visit the doc and read up on it. The basic idea is this:
 
-Since DOM manipulations are slow, React replicates the DOM virtually. Your application talks to the virtual DOM that is very fast, and then React diffs the virtual DOM with the real DOM and applies all changes efficiently.\r\n
+Since DOM manipulations are slow, React replicates the DOM virtually. Your application talks to the virtual DOM that is very fast, and then React diffs the virtual DOM with the real DOM and applies all changes efficiently.
 
-In case you wonder how this fits into todays MVC landscape, let me quote the react guys: 'Many people choose to think of React as the V in MVC.'\r\n
+In case you wonder how this fits into todays MVC landscape, let me quote the react guys: 'Many people choose to think of React as the V in MVC.'
 
-I personally think that this is a conservative statement that should appeal to people who don't like to try new things so much. If I interpret the statement correctly, they themselves don't think that way.\r\n
+I personally think that this is a conservative statement that should appeal to people who don't like to try new things so much. If I interpret the statement correctly, they themselves don't think that way.
 
-React's way of doing things is a lot more than 'the V in MVC'. React's fast, virtual DOM lets you do things that were so out of the question before, most people will not be able to fully grasp the big advantage of it for a while.\r\n
+React's way of doing things is a lot more than 'the V in MVC'. React's fast, virtual DOM lets you do things that were so out of the question before, most people will not be able to fully grasp the big advantage of it for a while.
 
 A real-life scenario\r\n
-At my company, we developed a SPA called concat. One part of this app is a list of 5000 companies and their stock returns.\r\n
+At my company, we developed a SPA called concat. One part of this app is a list of 5000 companies and their stock returns.
 
-you can filter this list by\r\n
+you can filter this list by
 
-country\r\n
-industry\r\n
-text search\r\n
-whether they had news over a given time period\r\n
-other features are:\r\n
+country
+industry
+text search
+whether they had news over a given time period
+other features are:
 
 custom favorite lists per user\r\n
 a date range selector\r\n
 the filters contain summary stats. For example you see how many companies you have in the list for each country with your current filter-setting.
-The app was implemented in chaplin which is a framework based on Backbone. The problem with this list-widget is that whenever a user triggers a filter, a lot of views need to be re-rendered because of the summary stats on the different filters. This needs a lot of controller code.\r\n
+The app was implemented in chaplin which is a framework based on Backbone. The problem with this list-widget is that whenever a user triggers a filter, a lot of views need to be re-rendered because of the summary stats on the different filters. This needs a lot of controller code.
 
-Now there are tools available to implement this in a sane way. With Backbone you would do the talking between the different parts via events, favorably with a controller receiving all the user inputs, manipulating the models if needed and then calling the views and tell them to re-render if necessary.\r\n
+Now there are tools available to implement this in a sane way. With Backbone you would do the talking between the different parts via events, favorably with a controller receiving all the user inputs, manipulating the models if needed and then calling the views and tell them to re-render if necessary.
 
-There are other frameworks that provide simpler ways of doing this (2-way data binding), usually at the cost of flexibility.\r\n
+There are other frameworks that provide simpler ways of doing this (2-way data binding), usually at the cost of flexibility.
 
+The question is: Is there generally a better way? Or let's rephrase the question: What would be the best way?
 
-The question is: Is there generally a better way? Or let's rephrase the question: What would be the best way?\r\n
+How about this: 'When a user interaction occurs on the stock-list, re-render everything'
 
+This is the intuitive thing to do. Im sure this is what naive, inexperienced devs would try first. It's the simplest and therefore easiest approach. However, everybody knows this won't work due to render performance. With React, this suddenly becomes a viable design pattern.
 
-How about this: 'When a user interaction occurs on the stock-list, re-render everything'\r\n
+Think about what this means for a while. You can rerender everything all the time. This means that half of the work - the more complicated half - will simply vanish, because you don't need to develop something that orchestrates the partial rendering and handles all the side-effects carefully.
 
+Let me quote myself from before:
 
-This is the intuitive thing to do. Im sure this is what naive, inexperienced devs would try first. It's the simplest and therefore easiest approach. However, everybody knows this won't work due to render performance. With React, this suddenly becomes a viable design pattern.\r\n
+The problem with this list-widget is that whenever a user triggers a filter, a lot of views need to be rerendered because of the summary stats on the different filters.
 
+With React, the problem is:
 
-Think about what this means for a while. You can rerender everything all the time. This means that half of the work - the more complicated half - will simply vanish, because you don't need to develop something that orchestrates the partial rendering and handles all the side-effects carefully.\r\n
+The problem with this list-widget is that whenever a user triggers a filter, I re-render everything because of the summary stats on the different filters.
 
+This sounds a lot easier doesn't it? Now different frameworks provide similar simplifying solutions for some specific scenarios. But React provides them ubiquitously. The virtual DOM is always there.
 
-Let me quote myself from before:\r\n
+I have rewritten the stock-list in React, and I have been blown away. Things become so much easier to build and understand. Things tend to simply go away:
 
+Backbone Events: I have yet to see a case where I would need them. (I'm sure there are some)
 
-The problem with this list-widget is that whenever a user triggers a filter, a lot of views need to be rerendered because of the summary stats on the different filters.\r\n
+Backbone Models/Collections? Plain objects are enough.
 
+Memory leaks because of non-disposal of Views? Gone.
 
-With React, the problem is:\r\n
+My complex controllers are nicely split up.
 
+Except for ajax stuff, I didn't need jQuery so far.
 
-The problem with this list-widget is that whenever a user triggers a filter, I re-render everything because of the summary stats on the different filters.\r\n
-
-
-This sounds a lot easier doesn't it? Now different frameworks provide similar simplifying solutions for some specific scenarios. But React provides them ubiquitously. The virtual DOM is always there.\r\n
-
-
-I have rewritten the stock-list in React, and I have been blown away. Things become so much easier to build and understand. Things tend to simply go away:\r\n
-
-
-Backbone Events: I have yet to see a case where I would need them. (I'm sure there are some)\r\n
-
-Backbone Models/Collections? Plain objects are enough.\r\n
-
-Memory leaks because of non-disposal of Views? Gone.\r\n
-
-My complex controllers are nicely split up.\r\n
-
-Except for ajax stuff, I didn't need jQuery so far.\r\n
-
-My application state is minimized (!!!).\r\n
+My application state is minimized (!!!).
 
 My code is clean, oganized and extensible without any major refactoring.\r\n
 It took me less discipline to not make a mess (global publish/subscribe à la Backbone.Events is almost as evil as global variables)\r\n
-Also, I have never felt 'restrained' by React. It doesn't trade\r\n simplicity/robustness for flexibility like most frameworks out there.\r\n
+Also, I have never felt 'restrained' by React. It doesn't trade\r\n simplicity/robustness for flexibility like most frameworks out there.
 
-You need to fully embrace the possibilities of React though. I've seen some posts where people just switch Backbone Views with React. This can make sense in a transition/try-out phase. But if you start a new project, I suggest to throw everything out of the window first and try to fully embrace React. I think not much else (except a Router) is needed besides React to build a complex and fast SPA with a clean, simple and maintainable codebase (Obviously there are exceptions to this).\r\n
+You need to fully embrace the possibilities of React though. I've seen some posts where people just switch Backbone Views with React. This can make sense in a transition/try-out phase. But if you start a new project, I suggest to throw everything out of the window first and try to fully embrace React. I think not much else (except a Router) is needed besides React to build a complex and fast SPA with a clean, simple and maintainable codebase (Obviously there are exceptions to this).
 
-Your code will not contain the usual MV* patterns. Don't be scared of that. Code will be organized. Concerns will be separated. And so far, I feel like the React way is superior to MV* for a lot of use cases. You could easily marry the two if push comes to shove, but: It's likely you'd want to do this because MV* is familiar, not because it improves your codebase objectively.\r\n
+Your code will not contain the usual MV* patterns. Don't be scared of that. Code will be organized. Concerns will be separated. And so far, I feel like the React way is superior to MV* for a lot of use cases. You could easily marry the two if push comes to shove, but: It's likely you'd want to do this because MV* is familiar, not because it improves your codebase objectively.
 
-There is one thing that sucks a little with React.js: Talking to the virtual DOM differs from talking to the real one (JSX, coffeescript craziness). But it's a trade-off that I'm willing to accept in a heartbeat.\r\n
+There is one thing that sucks a little with React.js: Talking to the virtual DOM differs from talking to the real one (JSX, coffeescript craziness). But it's a trade-off that I'm willing to accept in a heartbeat.
 
-If you'd like to know how React works in practice, look at this little tutorial, it taught me the most out of everything I've read.\r\n
+If you'd like to know how React works in practice, look at this little tutorial, it taught me the most out of everything I've read.
 
 One thing is for sure: React does things so differently, you can not judge it from a distance. You need to try it extensively in real-life to figure out if it works for you.")
 
