@@ -403,6 +403,8 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
   .big-r {
@@ -416,6 +418,8 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
   .color-select-r:hover .big-r{
@@ -446,6 +450,8 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
   .big-b {
@@ -459,6 +465,8 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
 
@@ -476,9 +484,10 @@ a.l-twitter:hover ~ img.black {
     left: 300px;
     box-shadow: inset 0 0 7px black;
     border: 3px solid white;
-  // outline: 3px solid white;
-  border-radius: 50%;
-  outline-radius:50%;
+    border-radius: 50%;
+    outline-radius:50%;
+    cursor: pointer;
+    cursor: hand;
   }
 
   .big-g {
@@ -492,6 +501,8 @@ a.l-twitter:hover ~ img.black {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: inset 0 0 7px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
 
@@ -609,6 +620,8 @@ a.l-twitter:hover ~ img.black {
    border-top: 4px solid white;
    border-bottom: 4px solid white;
    position: relative;
+   cursor: pointer;
+   cursor: hand;
  }
 
  .notebook-title{
@@ -677,6 +690,8 @@ a.l-twitter:hover ~ img.black {
 
  #note-file {
    padding: 20px 30px;
+   cursor: pointer;
+   cursor: hand;
  }
 
  input {
@@ -744,11 +759,15 @@ a.l-twitter:hover ~ img.black {
 
  select#note-notebook-id {
    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   cursor: pointer;
+   cursor: hand;
  }
   // color: black;
   // font-weight: normal;
   select#note-color {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+    cursor: hand;
   }
 
  .note-options > form > label {
@@ -865,6 +884,8 @@ a.l-twitter:hover ~ img.black {
     background: #4db0de;
     width: 200px;
     border-radius: 5%;
+    cursor: pointer;
+    cursor: hand;
   }
 
   button:hover {
