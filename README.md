@@ -1,6 +1,8 @@
 # ColorNote
 
-###Live at [https://mycolornote.com][link]
+####Evernote clone with simplified colorful design that I implemeted for my baby brother
+
+####Live at [https://mycolornote.com][link]
 
 [link]: http://www.mycolornote.com/
 
