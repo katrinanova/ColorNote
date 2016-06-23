@@ -706,10 +706,14 @@ a.l-twitter:hover ~ img.black {
    border: 1px solid #fff;
  }
 
- .note-clickable:hover {
+ .note-clickable:hover{
    background: #8bd3b2;
    color: #4db0de;
-   font-weight: bold;
+   border-bottom: 20px solid #8bd3b2;
+ }
+
+ .note-clickable:hover > .note-body {
+   color: white;
  }
 
  .note-count {
