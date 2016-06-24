@@ -1,19 +1,70 @@
 <div class="landing">
-  <div class="frame2 group">
+  <div class="easy">
+    <img src="<%= image_url('easy.png')%>">
+  </div>
+    <div class="line"></div>
 
     <logo>
-      <img class="logo" src="<%= image_url('logo-2.png')%>">
+      <img class="logo landing" src="<%= image_url('longlogo.png')%>">
     </logo>
 
-    <ul class="points">
-      <li class="one">- All your notes in one place</li>
-      <li class="two">- Access from anywhere</li>
-      <li class="three">- Easy to share</li>
-      <li class="four">- Easy to find</li>
-      <li class="five">- Easy to organize</li>
-    </ul>
 
-    <div class="clips group">
+    <div class="right-line group">
+
+        <div class="sign-up">
+          <a href="<%= new_user_url%>">Sign Up</a>
+        </div>
+        <div class="sign-in">
+          <a href="<%= new_session_url%>">Sign In</a>
+        </div>
+
+      <img class="facebook" src='<%= image_url("fb-min.png")%>'>
+
+      <img class="twitter" src='<%= image_url("tw-min.png")%>'>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <div id="points" class="group">
+      <div class="first-3">
+        <div class="one">All your notes in <strong>one place</strong></div>
+        <div class="two"><strong>Access</strong> from anywhere</div>
+        <div><strong>Store</strong> your images and files</div>
+      </div>
+      <div class="second-3">
+        <div><strong>Easy</strong> to <strong>share</strong></div>
+        <div><strong>Easy</strong> to <strong>find</strong></div>
+        <div><strong>Easy</strong> to <strong>organize<strong></div>
+      </div>
+    </div>
+
+<!--
+    <div class="right-box">
+      <img class="facebook" src='<%= image_url("fb.png")%>'>
+
+      <img class="twitter" src='<%= image_url("tw.png")%>'>
+
+      <div class="signs group">
+        <div class="sign-up">
+          <a href="<%= new_user_url%>">Sign Up</a>
+        </div>
+        <div class="sign-in">
+          <a href="<%= new_session_url%>">Sign In</a>
+        </div>
+      </div>
+
+
+    </div> -->
+
+
+    <!-- <div class="clips group">
 
       <a class="l-signup" href="<%= new_user_url%>">Sign up</a>
       <a class="l-demo" href="<%= demo_url %>">Demo</a>
@@ -30,6 +81,5 @@
       <img class="r-twitter" src='<%= image_url("r-twitterQ.png")%>'>
       <img class="r-facebook" src='<%= image_url("r-facebookQ.png")%>'>
 
-  </div>
 
-</div>
+</div> -->
