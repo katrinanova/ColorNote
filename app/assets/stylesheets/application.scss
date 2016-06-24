@@ -256,12 +256,6 @@ img.logo.landing {
   background: transparent;
 }
 
-.signs {
-  width: 290px;
-  height: 290px;
-  margin: 0 auto;
-}
-
 .sign {
   background: white;
   float: right;
@@ -270,46 +264,16 @@ img.logo.landing {
   margin-right: 20px;
 }
 
-// .sign-in {
-//   background: white;
-//   background: transparent;
-//   float: right;
-//   border-radius: 5px;
-// }
-//
-// .demo {
-//   background: white;
-//   background: transparent;
-//   float: right;
-//   border-radius: 5px;
-// }
+.sign > a:hover {
+  color: white;
+}
 
 .sign > a {
-  color: black;
   color: #4D5E63;
   font-size: 18px;
   font-family: Arial;
   margin: 5px;
-  // margin-left: 23px;
 }
-
-// .sign-in > a {
-//   color: black;
-//   color: #4D5E63;
-//   font-size: 18px;
-//   font-family: Arial;
-//   margin: 5px;
-//   // margin-left: 23px;
-// }
-//
-// .demo > a {
-//   color: black;
-//   color: #4D5E63;
-//   font-size: 18px;
-//   font-family: Arial;
-//   margin: 5px;
-//   // margin-left: 23px;
-// }
 
 .right-line {
   position: absolute;
@@ -328,13 +292,13 @@ img.logo.landing {
   float: right;
   margin-right: 10px;
   margin-left: 10px;
-
+  cursor: pointer;
 }
 
 .facebook {
   width: 100px;
   float: right;
-
+  cursor: pointer;
 }
 
 ul.points {
