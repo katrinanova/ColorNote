@@ -156,6 +156,15 @@
   opacity: .5;
 }
 
+.line-first {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background: white;
+  opacity: .3;
+}
+
 .easy {
   position: absolute;
   top: 100px;
@@ -207,7 +216,7 @@ img.logo {
 
 img.logo.landing {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 10px;
   width: 200px;
   height: auto;
@@ -220,61 +229,79 @@ img.logo.landing {
   margin: 0 auto;
 }
 
-.sign-up {
-  width: 200px;
-  height: 50px;
+.sign {
   background: white;
-  float: left;
-  border-radius: 5px;
+  float: right;
   background: transparent;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 
-.sign-in {
-  width: 200px;
-  height: 50px;
-  background: white;
-  background: transparent;
-  float: left;
-  border-radius: 5px;
-}
+// .sign-in {
+//   background: white;
+//   background: transparent;
+//   float: right;
+//   border-radius: 5px;
+// }
+//
+// .demo {
+//   background: white;
+//   background: transparent;
+//   float: right;
+//   border-radius: 5px;
+// }
 
-.sign-up > a {
+.sign > a {
   color: black;
   color: #4D5E63;
   font-size: 18px;
   font-family: Arial;
-  // margin: 13px;
+  margin: 5px;
   // margin-left: 23px;
 }
 
-.sign-in > a {
-  color: black;
-  color: #4D5E63;
-  font-size: 18px;
-  font-family: Arial;
-  // margin: 13px;
-  // margin-left: 23px;
-}
+// .sign-in > a {
+//   color: black;
+//   color: #4D5E63;
+//   font-size: 18px;
+//   font-family: Arial;
+//   margin: 5px;
+//   // margin-left: 23px;
+// }
+//
+// .demo > a {
+//   color: black;
+//   color: #4D5E63;
+//   font-size: 18px;
+//   font-family: Arial;
+//   margin: 5px;
+//   // margin-left: 23px;
+// }
 
 .right-line {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 500px;
+  width: 600px;
   height: 700px;
+
   background: transparent;
 }
 
 
 
 .twitter {
-  width: 40px;
-  float: left;
+  width: 100px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+
 }
 
 .facebook {
-  width: 40px;
-  float: left;
+  width: 100px;
+  float: right;
+
 }
 
 ul.points {
@@ -306,8 +333,9 @@ ul.points {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #DFEDE5;
-  background-image: image-url("relax.jpg");
+  background: #b6b4ab;
+  background-image: image-url("relax-big.jpg");
+  background-repeat: no-repeat;
   background-position: center;
 }
 

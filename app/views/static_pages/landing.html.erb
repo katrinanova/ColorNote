@@ -2,6 +2,7 @@
   <div class="easy">
     <img src="<%= image_url('easy.png')%>">
   </div>
+    <div class="line-first"></div>
     <div class="line"></div>
 
     <logo>
@@ -10,17 +11,21 @@
 
 
     <div class="right-line group">
+        <img class="facebook" src='<%= image_url("fs.png")%>'>
 
-        <div class="sign-up">
-          <a href="<%= new_user_url%>">Sign Up</a>
-        </div>
-        <div class="sign-in">
+        <img class="twitter" src='<%= image_url("ts.png")%>'>
+        <div class="sign">
           <a href="<%= new_session_url%>">Sign In</a>
         </div>
+        <div class="sign">
+          <a href="<%= new_user_url%>">Sign Up</a>
+        </div>
+        <div class="sign">
+          <a href="<%= demo_url %>">Try Demo</a>
+        </div>
 
-      <img class="facebook" src='<%= image_url("fb-min.png")%>'>
 
-      <img class="twitter" src='<%= image_url("tw-min.png")%>'>
+
 
 
 
