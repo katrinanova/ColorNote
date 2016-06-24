@@ -151,7 +151,8 @@
   position: absolute;
   top: 0px;
   width: 100%;
-  height: 250px;
+  height: calc(100% / 4);
+  min-height: 250px;
   background: white;
   opacity: .5;
 }
@@ -186,7 +187,6 @@
   font-size: 30px;
   font-family: sans-serif;
   margin: 8px;
-
 }
 
 .first-3 {
@@ -201,7 +201,7 @@
 .second-3 {
   position: absolute;
   top: 40px;
-  right: 10px;
+  right: 50px;
   width: 400px;
   height: 400px;
   text-align: center;
@@ -1218,3 +1218,124 @@ a.l-twitter:hover ~ img.black {
     padding: 5px;
     margin: 0;
   }
+
+@media screen and (max-width: 1110px) {
+
+  .first-3 {
+    left: -40px;
+  }
+
+  .second-3 {
+    right: 0px;
+  }
+}
+
+// Mobile
+
+@media screen and (max-width: 890px) {
+  .right-line {
+    width: 100%;
+    top: 10px;
+  }
+
+  img.logo.landing {
+    width: 100px;
+    margin-top: 17px;
+  }
+
+  // .right-line {
+  //   position: absolute;
+  //   top: 10px;
+  //   right: 10px;
+  //   width: 600px;
+  //   height: 700px;
+  //
+  //   background: transparent;
+  // }
+
+  .sign > a {
+    font-size: 13px;
+  }
+
+  .sign {
+    margin-right: 5px;
+  }
+
+  .facebook {
+    width: 80px;
+  }
+
+  .twitter {
+    width: 80px;
+  }
+
+  .first-3 {
+    left: -100px;
+  }
+
+  .second-3 {
+    right: -40px;
+  }
+
+  // .first-3 {
+  //   float: none;
+  //   height: 100px;
+  //   width: 100%;
+  //   position: relative;
+  // }
+  //
+  // .second-3 {
+  //   margin-top: 50px;
+  //   float: none;
+  //   height: 100px;
+  //   width: 100%;
+  //   position: relative;
+  // }
+
+  #points {
+    // top: 130px;
+    // height: 100%;
+    opacity: 0.8;
+  }
+
+  #points > div > div {
+    color: #4D5E63;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .right-line {
+    width: 100%;
+    top: 10px;
+  }
+
+  .first-3 {
+    float: none;
+    height: 100px;
+    width: 100%;
+    position: relative;
+  }
+
+  .second-3 {
+    margin-top: 50px;
+    float: none;
+    height: 100px;
+    width: 100%;
+    position: relative;
+  }
+
+  .easy {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  img.logo.landing {
+    position: absolute;
+    top: calc(100% - 50px);
+    left: 0px;
+  }
+}
