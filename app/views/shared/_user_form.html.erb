@@ -1,12 +1,31 @@
 <% action = (type == :newuser) ? users_url : session_url %>
-<% button_text = (type == :newuser) ? "Sign Up" : "Log In" %>
+<% button_text = (type == :newuser) ? "Sign Up" : "Sign In" %>
 
 
 <section class="landing">
 
+  <logo>
+    <img class="logo landing" src="<%= image_url('longlogo.png')%>">
+  </logo>
+
+  <div class="right-line group">
+      <img class="facebook" src='<%= image_url("fs.png")%>'>
+
+      <img class="twitter" src='<%= image_url("ts.png")%>'>
+      <div class="sign">
+        <a href="<%= new_session_url%>">Sign In</a>
+      </div>
+      <div class="sign">
+        <a href="<%= new_user_url%>">Sign Up</a>
+      </div>
+      <div class="sign">
+        <a href="<%= demo_url %>">Try Demo</a>
+      </div>
+  </div>
+
   <section class="frame2">
     <div class="one-note">
-      <img src="<%= image_url('one-noteQ.png')%>">
+      <div class="login-box-background"></div>
       <div class="login-box"
 
         <sectiion class="errors"></sectiion>

@@ -74,30 +74,52 @@
 
  /*Login------------------*/
 
-
+ .login-box-background {
+   background: black;
+   position: absolute;
+   top: 250px;
+   left: calc(50% - 220px);
+   width: 440px;
+   height: 340px;
+   margin: 0 auto;
+   opacity: 0.6;
+   border-radius: 20px;
+ }
 
  .login-box {
    position: absolute;
    top: 250px;
    width: 440px;
    margin: 0 auto;
-   left: calc(50% - 200px);
+   left: calc(50% - 220px);
    height: auto;
  }
+
+ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: white !important;
+    background: white !important;
+    color: transparent !important;
+  }
 
  form.login > button {
    margin: 0 auto;
  }
 
  input#password {
-   width: 220px;
+   width: 380px;
+   height: 30px;
+   border-radius: 5px;
+   font-size: 18px;
    color: black;
    background: #fff;
+
  }
 
  input#email {
    width: 380px;
-   font-size: 20px;
+   height: 30px;
+   border-radius: 5px;
+   font-size: 18px;
    color: black;
    background: #fff;
  }
@@ -129,12 +151,23 @@
    padding: 20px;
  }
 
+ form.login > button {
+   font-size: 20px;
+   margin: 0 auto;
+   text-align: center;
+ }
+
  form.login > button:hover {
    background: #80C229;
+   font-size: 20px;
+   margin: 0 auto;
+   text-align: center;
  }
 
 .login > label {
-  color: grey;
+  font-size: 20px;
+  color: #dad7d0;
+  width: 100%;
 }
 
 .login > button {
@@ -338,118 +371,6 @@ ul.points {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-// .frame2 {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   background-image: image-url("frame.png");
-//   background-size: 100% 100%;
-// }
-
-.clips {
-  position: absolute;
-  height: 100%;
-  right: 10%;
-}
-
-.clips > a {
-  position: absolute;
-  margin: 0;
-  z-index: 1;
-  }
-
-.clips > img {
-  width: auto;
-  height: 100%;
-  display: none;
-}
-
-.clips > img.black {
-  display: block;
-
-}
-
-a.l-signin {
-  left: 45%;
-  width: 40%;
-  bottom: 20%;
-  height: 10%;
-  font-size: 0px;
-}
-
-a.l-signup {
-  left: 47%;
-  width: 40%;
-  top: 16%;
-  height: 12%;
-  font-size: 0px;
-}
-
-a.l-demo {
-  left: 47%;
-  width: 45%;
-  top: 28%;
-  height: 12%;
-  font-size: 0px;
-}
-
-a.l-twitter {
-  left: 14%;
-  width: 15%;
-  top: 39%;
-  height: 12%;
-  font-size: 0px;
-}
-
-a.l-facebook {
-  left: 30%;
-  width: 12%;
-  top: 45%;
-  height: 12%;
-  font-size: 0px;
-}
-
-a.l-signin:hover ~ img.r-signin {
-  display: block;
-}
-
-a.l-signup:hover ~ img.r-signup {
-  display: block;
-}
-
-a.l-demo:hover ~ img.r-demo {
-  display: block;
-}
-
-a.l-twitter:hover ~ img.r-twitter {
-  display: block;
-}
-
-a.l-facebook:hover ~ img.r-facebook {
-  display: block;
-}
-
-a.l-signin:hover ~ img.black {
-  display: none;
-}
-
-a.l-signup:hover ~ img.black {
-  display: none;
-}
-
-a.l-demo:hover ~ img.black {
-  display: none;
-}
-
-a.l-facebook:hover ~ img.black {
-  display: none;
-}
-
-a.l-twitter:hover ~ img.black {
-  display: none;
-}
-
 
 
 /*Sidebar-----------------------------*/
@@ -1049,7 +970,7 @@ a.l-twitter:hover ~ img.black {
     padding: 10px;
     background: #4db0de;
     width: 200px;
-    border-radius: 5%;
+    border-radius: 5px;
     cursor: pointer;
     cursor: hand;
   }
@@ -1243,16 +1164,6 @@ a.l-twitter:hover ~ img.black {
     margin-top: 17px;
   }
 
-  // .right-line {
-  //   position: absolute;
-  //   top: 10px;
-  //   right: 10px;
-  //   width: 600px;
-  //   height: 700px;
-  //
-  //   background: transparent;
-  // }
-
   .sign > a {
     font-size: 13px;
   }
@@ -1277,24 +1188,7 @@ a.l-twitter:hover ~ img.black {
     right: -40px;
   }
 
-  // .first-3 {
-  //   float: none;
-  //   height: 100px;
-  //   width: 100%;
-  //   position: relative;
-  // }
-  //
-  // .second-3 {
-  //   margin-top: 50px;
-  //   float: none;
-  //   height: 100px;
-  //   width: 100%;
-  //   position: relative;
-  // }
-
   #points {
-    // top: 130px;
-    // height: 100%;
     opacity: 0.8;
   }
 
@@ -1338,4 +1232,57 @@ a.l-twitter:hover ~ img.black {
     top: calc(100% - 50px);
     left: 0px;
   }
+
+  .login-box-background {
+    background: black;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 200px;
+    width: calc(100% - 20px);
+    height: 340px;
+    margin: 0 auto;
+    opacity: 0.6;
+    border-radius: 20px;
+  }
+
+  .login-box {
+    position: absolute;
+    top: 100px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    left: calc(50% - 100px);
+    left: 0;
+    height: auto;
+  }
+
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+     background-color: white !important;
+     background: white !important;
+     color: transparent !important;
+   }
+
+  form.login > button {
+    margin: 0 auto;
+  }
+
+  input#password {
+    width: calc(100% - 10px);
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    background: #fff;
+
+  }
+
+  input#email {
+    width: calc(100% - 10px);
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    background: #fff;
+  }
+
 }
