@@ -52,7 +52,7 @@
    height:100%;
    position: relative;
    overflow: hidden;
-   font-family: Helvetica;
+   font-family: Gotham;
    font-weight: lighter;
    color: grey;
  }
@@ -739,14 +739,19 @@ ul.points {
    color: gray;
    position: relative;
    top: 15%;
-   left: 20px;
+   left: 30px;
    color: black;
  }
 
  #note-file {
-   padding: 20px 30px;
+   position: relative;
+   padding-left: 30px;
+   padding-bottom: 3#note-body0px;
    cursor: pointer;
-   cursor: hand;
+   width: 100%;
+   font-size: 15px;
+   font-family: sans-serif;
+  //  float: left;
  }
 
  input {
@@ -766,12 +771,18 @@ ul.points {
  .note-count {
    color: #4db0de;
    padding: 20px;
+   padding-left: 30px;
    display: block;
    border-bottom: 5px solid #fff;
  }
 
+ .left > h2 {
+   padding-left: 30px;
+ }
+
 
 /*Right side--------------*/
+
 
   .note-show {
     width: 100%;
@@ -827,8 +838,9 @@ ul.points {
 
  .note-options > form > label {
    padding: 20px;
+   padding-left: 30px;
    color: grey;
-   font-size: 26px;
+   font-size: 17px;
  }
 
  .files > a {
@@ -839,13 +851,49 @@ ul.points {
    background: #DFEDE5;
  }
 
+ .share-box {
+   width: 100%;
+   height: 60px;
+  }
+
  #note-title {
    color: #4db0de;
-   padding: 30px 30px 20px 30px;
-   width: 800px;
-
-   font-size: 20px;
+   padding-left: 30px;
+   padding-top: 30px;
+   width: 100%;
+   font-size: 25px;
+   float: left;
  }
+
+ p.share-note {
+   color: #4db0de;
+   float: left;
+   padding-left: 30px;
+   padding-top: 7px;
+ }
+
+ p.share-note:hover {
+   text-decoration: underline;
+   cursor: pointer;
+ }
+
+ #right-share-icon {
+   position: relative;
+   font-size: 23px;
+   color: #4db0de;
+   margin-top: 21px;
+   margin-left: 3px;
+   font-size: 23px;
+   display: inline;
+   float: left;
+   top: auto;
+   left: auto;
+ }
+
+ #right-share-icon:hover {
+   cursor: pointer;
+ }
+
 
  #note-show-form {
    height: 100%;
@@ -853,10 +901,11 @@ ul.points {
  }
 
  #note-body {
-   padding: 0 30px;
+   padding: 20px 30px 20px 30px;
+   padding-right: 40px;
    display: block;
-   color: grey;
-   width: calc(100% - 40px);
+   color: #6B6E6E;
+   width: calc(100% - 65px);
    height: 100%;
    border: none;
    font-size: 16px;
@@ -875,8 +924,6 @@ ul.points {
    border: none;
    font-size: 16px;
    text-align: justify;
-
-    left: -10px;
   }
 
 .left.stretch {
