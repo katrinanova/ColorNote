@@ -764,6 +764,10 @@ ul.points {
    border-bottom: 20px solid #8bd3b2;
  }
 
+ .note-clickable > .note-body {
+   color: #A8A8A8;
+ }
+
  .note-clickable:hover > .note-body {
    color: white;
  }
