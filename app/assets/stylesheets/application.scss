@@ -783,6 +783,24 @@ ul.points {
 
 /*Right side--------------*/
 
+  .auto-save-box{
+    width: 900px;
+  }
+
+  .auto-save-message {
+    float: left;
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 8px;
+    padding: 0;
+    color: #D9D9D9;
+    font-weight: light;
+  }
+
+  .fa-floppy-o {
+    color: #D9D9D9;
+  }
+
 
   .note-show {
     width: 100%;
@@ -897,7 +915,6 @@ ul.points {
  #link-to-note {
    float: left;
    width: 500px;
-   height: 50px;
  }
 
  #link-to-note > a {
