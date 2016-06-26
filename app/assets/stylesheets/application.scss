@@ -1137,11 +1137,14 @@ ul.points {
     color: #6B6E6E;
     width: calc(100% - 65px);
     max-width: 1000px;
-    height: 100%;
+    height: calc(100% - 200px);
     border: none;
     font-size: 16px;
     left: 20px;
     overflow: auto;
+    display: block;
+    width: calc(100% - 65px);
+    text-align: justify;
   }
 
 
