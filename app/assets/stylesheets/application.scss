@@ -611,6 +611,7 @@ ul.points {
  input[type="text"].query {
    display: block;
    width: 100%;
+   margin-left: 20px;
 
  }
 
@@ -780,7 +781,7 @@ ul.points {
    border-bottom: 5px solid #fff;
  }
 
- .left > h2 {
+ h2 {
    padding-left: 30px;
  }
 
@@ -1138,11 +1139,23 @@ ul.points {
     float: left;
     margin-top: 10px;
     margin-left: 10px;
+    padding: 0;
   }
 
   button.shared > .button_to > input {
     position: relative;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
     left: auto;
+    background: #4db0de;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button.shared > .button_to > input:hover {
+    background: #80C229;
   }
 
   h2.shared {
