@@ -36,8 +36,10 @@
      <input id="note-title" class="nnnote-title" type="text" name="title" value="<%= note.escape("title")%>">
      <div class="share-box">
        <p class="share-note">share note</p>
-       <i class="fa fa-share-square-o" id="right-share-icon" aria-hidden="true"></i>
+       <i class="fa fa-share-square-o" id="right-share-icon" aria-hidden="true" data-link="<%=note.escape('link')%>"></i>
+       <div id="link-to-note"></div>
      </div>
+
 
 
      <section class="images"></section>

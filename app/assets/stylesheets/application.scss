@@ -894,6 +894,21 @@ ul.points {
    cursor: pointer;
  }
 
+ #link-to-note {
+   float: left;
+   width: 500px;
+   height: 50px;
+ }
+
+ #link-to-note > a {
+   margin-top: 24px;
+   font-size: 16px;
+   color: #4db0de;
+ }
+
+ #link-to-note > a:hover {
+   text-decoration: underline;
+ }
 
  #note-show-form {
    height: 100%;
@@ -1078,54 +1093,68 @@ ul.points {
 
   // Shared--------------------------------------
 
-  button.shared1 {
-    position: absolute;
-    left: calc(20% + 400px);
-    top: 10px;
-    background: #DFEDE5;
+  .shared-header {
+    // border-bottom: 1px solid #B0B0B0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .line-accross {
+    height: 2px;
+    width: 100%;
+    color: gray;
+    z-index: 1;
+    margin: 10px;
+
+  }
+
+  button.shared {
     height: 30px;
-    font-size: 23px;
+    color: white;
     font-weight: bold;
-  }
-
-  button.shared2 {
-    position: absolute;
-    left: calc(20% + 640px);
-    top: 10px;
-    background: #DFEDE5;
-    height: 30px;
-    font-size: 23px;
-    font-weight: bold;
-  }
-
-  h2.shared1 {
-    color: #80C229;
-  }
-
-  h2.shared2 {
-    position: absolute;
-    left: 20%;
-    top: 0;
-    display: block;
     text-align: center;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  button.shared > .button_to > input {
+    position: relative;
+    left: auto;
+  }
+
+  h2.shared {
+    display: block;
+    float: left;
   }
 
   section.note-shared {
-    padding: 30px;
-    height: calc(100% - 100px);
-    // border-left: 1px solid grey;
-    // border-right: 1px solid grey;
-    width: 1000px;
     margin: 0 auto;
-    overflow: auto;
+    padding: 50px 30px 20px 30px;
+    padding-right: 40px;
+    display: block;
+    color: #6B6E6E;
+    width: calc(100% - 65px);
+    max-width: 1000px;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    left: 20px;
   }
+
 
 
   h1 {
     color: #4db0de;
-    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 30px;
+    width: 100%;
+    font-size: 25px;
+    float: left;
     padding: 0 0 30px 0;
   }
+
 
   a.file-name {
     display: inline;
@@ -1140,7 +1169,6 @@ ul.points {
 
   .link-box {
     position: absolute;
-    z-index: 1;
     color: black;
     background: #fff;
     top: 85px;

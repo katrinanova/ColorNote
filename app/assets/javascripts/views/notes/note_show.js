@@ -1,4 +1,4 @@
-Colornote.Views.NoteShow = Backbone.View.extend({
+Colornote.Views.NoteShow = Backbone.CompositeView.extend({
   template: JST["notes/show"],
 
   className: "right",
@@ -16,7 +16,8 @@ Colornote.Views.NoteShow = Backbone.View.extend({
     "keydown": "saveNote",
     "change #note-file": "saveNote",
     "change #note-notebook-id": "saveNote",
-    "change #note-color": "saveNote"
+    "change #note-color": "saveNote",
+    "click .share-box": "showLink",
   },
 
   render: function() {
@@ -75,5 +76,12 @@ Colornote.Views.NoteShow = Backbone.View.extend({
         that.collection.add(that.model, { merge: true })
       }
     })
+  },
+
+  showLink: function(event){
+    var link = "/shared/" + $(event.currentTarget).find("i").attr("data-link");
+    $("#link-to-note").html('<a href=' + link + '>link to this note:' + link)
+    // var linkView = new Colornote.Views.noteLink({model: link});
+    // this.addSubview("#link-to-note", linkView);
   }
 });
