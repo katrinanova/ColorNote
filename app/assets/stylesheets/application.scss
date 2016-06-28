@@ -52,7 +52,7 @@
    height:100%;
    position: relative;
    overflow: hidden;
-   font-family: Gotham, Arial;
+   font-family: Gotham, Calibri;
    font-weight: lighter;
    color: grey;
  }
@@ -669,15 +669,19 @@ ul.points {
  .note-clickable {
    color: grey;
    border-top: 1px solid lightgrey;
-   height: 142px;
+   height: 138px;
    display: block;
-  //  border-bottom: 1px solid darkgrey;
    overflow: hidden;
-  //  border-top: 1px solid grey;
-   border-bottom: 20px solid #fff;
+   border-bottom: 25px solid #fff;
    position: relative;
    cursor: pointer;
    cursor: hand;
+ }
+
+ .note-clickable:hover{
+   background: #8bd3b2;
+   color: #4db0de;
+   border-bottom: 25px solid #8bd3b2;
  }
 
  .notebook-title{
@@ -696,10 +700,6 @@ ul.points {
 
  .notes-clickable {
    height: 100%;
- }
-
- .note-clickable:last-child {
-  //  border-bottom: 8px solid #fff;
  }
 
  .color {
@@ -757,12 +757,6 @@ ul.points {
 
  input {
    border: 1px solid #fff;
- }
-
- .note-clickable:hover{
-   background: #8bd3b2;
-   color: #4db0de;
-   border-bottom: 20px solid #8bd3b2;
  }
 
  .note-clickable > .note-body {
@@ -971,8 +965,7 @@ ul.points {
    padding: 0 30px;
    display: block;
    color: grey;
-   top: 35%;
-
+   top: 42px;
    height: 30px;
    border: none;
    font-size: 16px;
