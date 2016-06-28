@@ -788,6 +788,18 @@ ul.points {
 
 /*Right side--------------*/
 
+  section.images {
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  section.images > img {
+  	width:auto;
+  	max-width:100%;
+  	height:auto;
+  }
+
   .auto-save-box{
     width: 900px;
   }
@@ -1062,14 +1074,25 @@ ul.points {
   }
 
   #note-new-title {
-    padding: 0 20px;
-    width: calc(100% - 40px)
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+    height: 30px;
+
+
+    color: #4db0de;
+    font-size: 25px;
+    float: left;
   }
 
   #note-new-body {
     height: 100%;
     padding: 20px;
-    width: calc(100% - 40px)
+    width: calc(100% - 40px);
+
+    display: block;
+    color: #6B6E6E;
+    font-size: 16px;
+    text-align: justify;
   }
 
   #note-new-file {
