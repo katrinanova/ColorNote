@@ -790,7 +790,7 @@ ul.points {
 
   section.images {
     margin-top: 60px;
-    width: 100%;
+    width: calc(100% - 60px);
     margin-left: 30px;
     margin-right: 30px;
   }
