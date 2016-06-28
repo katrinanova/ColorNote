@@ -892,6 +892,10 @@ ul.points {
    height: 60px;
   }
 
+  .share-box > p {
+    margin: 0;
+  }
+
  #note-title {
    color: #4db0de;
    padding-left: 30px;
@@ -899,6 +903,7 @@ ul.points {
    width: 100%;
    font-size: 25px;
    float: left;
+   padding-bottom: 20px;
  }
 
  p.share-note {
@@ -917,7 +922,7 @@ ul.points {
    position: relative;
    font-size: 23px;
    color: #4db0de;
-   margin-top: 21px;
+   margin-top: 3px;
    margin-left: 3px;
    font-size: 23px;
    display: inline;
@@ -935,7 +940,8 @@ ul.points {
  }
 
  #link-to-note > a {
-   margin-top: 24px;
+   margin-top: 9px;
+   margin-left: 30px;
    font-size: 16px;
    color: #4db0de;
  }
