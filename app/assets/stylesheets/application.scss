@@ -573,8 +573,8 @@ ul.points {
  }
 
  .fa-share-square-o  {
-   left: 280px;
-   top: 10px;
+   left: 313px;
+   top: 15px;
    color: #fff;
    position: absolute;
    font-size: 23px;
@@ -583,13 +583,17 @@ ul.points {
  }
 
  .trash-notes {
-   left: 313px;
-   top: 8px;
+   left: 345px;
+   top: 13px;
    color: #fff;
    position: absolute;
    font-size: 23px;
    color: black;
    display: none;
+ }
+
+ .trash-notes:hover, .fa-share-square-o:hover {
+   color: white;
  }
 
  .note-clickable:hover .trash-notes {
@@ -928,7 +932,6 @@ ul.points {
 
  #link-to-note {
    float: left;
-   width: 500px;
  }
 
  #link-to-note > a {
@@ -1227,18 +1230,19 @@ ul.points {
   .link-box {
     position: absolute;
     color: black;
-    background: #fff;
-    top: 85px;
+    top: 75px;
     height: 30px;
     width: 450px;
+    padding-left: 20px;
   }
 
   .link-box > a {
     color: black;
-    font-size: 16px;
-    padding: 5px;
+    font-size: 13px;
+    // padding: 5px;
     margin: 10px;
     color: #4db0de;
+    background: #fff;
   }
 
   .link-box > a:hover {

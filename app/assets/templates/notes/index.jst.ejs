@@ -53,8 +53,6 @@
         <section class="note-clickable" data-type="Note" data-id="<%=note.escape('id')%>">
 
           <div class="note-title"><%= note.escape("title") %></div>
-          <i class="fa fa-share-square-o" id="share-note" data-link="<%=note.escape('link')%>"></i>
-
           <i class="fa fa-trash trash-notes"></i>
           <div class="note-body"><%= note.escape("body")%></div>
           <div class='<%="color " + note.escape("color") %>'></div>

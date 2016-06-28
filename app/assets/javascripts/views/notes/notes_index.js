@@ -81,14 +81,6 @@ Colornote.Views.NotesIndex = Backbone.CompositeView.extend({
       })
     }
     that.render();
-
-  },
-
-  copyToClipboard: function(event) {
-    //not yet implemening copy to clip board, for now just show link
-    var link = $(event.currentTarget).attr("data-link");
-    var linkView = new Colornote.Views.noteLink({model: link});
-    this.addSubview(".link", linkView);
   },
 
   renderSearch: function() {

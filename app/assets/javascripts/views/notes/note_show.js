@@ -80,7 +80,7 @@ Colornote.Views.NoteShow = Backbone.CompositeView.extend({
 
   showLink: function(event){
     var link = "/shared/" + $(event.currentTarget).find("i").attr("data-link");
-    $("#link-to-note").html('<a href=' + link + '>link to this note:' + link)
+    $("#link-to-note").html('<a href=' + link + '>link to this note:  http://www.mycolornote.coms' + link)
     // var linkView = new Colornote.Views.noteLink({model: link});
     // this.addSubview("#link-to-note", linkView);
   }
