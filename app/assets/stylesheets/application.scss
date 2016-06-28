@@ -958,6 +958,7 @@ ul.points {
    display: block;
    color: #6B6E6E;
    width: calc(100% - 65px);
+   max-width: 1200px;
    height: 100%;
    border: none;
    font-size: 16px;
@@ -1091,7 +1092,6 @@ ul.points {
     height: 100%;
     padding: 20px;
     width: calc(100% - 40px);
-
     display: block;
     color: #6B6E6E;
     font-size: 16px;
