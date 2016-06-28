@@ -1203,7 +1203,11 @@ ul.points {
     text-align: justify;
   }
 
-
+  note-shared > img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
 
   h1 {
     color: #4db0de;
