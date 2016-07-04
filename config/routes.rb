@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     get '/search', to: 'searches#search'
     resources :notebooks, except: :edit
     resources :notes
+  end
 
+  namespace :ios_app, defaults: { format: :json } do
+    get '/get_notes', to: 'notes#get_notes'
   end
 
   get "/auth/:provider/callback", to: "sessions#omni"
