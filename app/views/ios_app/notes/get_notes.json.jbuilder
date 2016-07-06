@@ -1,10 +1,7 @@
-# json.notes @notes do |note|
-#   json.partial! "api/notes/note", note: note
-# end
+json.array! @notebooks do |notebook|
+  json.(notebook, :id, :title)
 
-json.array! @notes do |note|
-  json.partial! "api/notes/note", note: note
+  json.notes notebook.notes do |note|
+    json.partial! 'api/notes/note', note: note
+  end
 end
-
-
-# json.partial! "api/notes/note", collection: @notes, as: :note

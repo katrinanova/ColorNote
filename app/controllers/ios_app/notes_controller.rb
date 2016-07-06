@@ -10,7 +10,9 @@ class IosApp::NotesController < ApplicationController
     end
 
     if user
-      @notes = user.notes.includes(:notebook).includes(:uploads)
+      # @notes = user.notes.includes(:notebook).includes(:uploads)
+      # render :get_notes
+      @notebooks = user.notebooks.includes(notes: :uploads)
       render :get_notes
     else
       not_found
